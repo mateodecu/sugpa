@@ -1,0 +1,223 @@
+.titulo{
+	color: white;
+	font-size:100px;
+}
+
+.contenedor-titulo{
+	padding-left: 61px;
+	margin-bottom:8px;
+}
+
+.boton{
+    background-color: rgb(252,248,116);
+    border: none;
+    color: black; 
+    padding: 10px 30px;
+    font-size: 16px;
+    
+}
+
+.boton:hover{
+    background-color: rgb(252,248,116));
+    border: none;
+    color: black;
+    padding: 10px 30px;
+    font-size: 16px;
+}
+
+.boton-registrar{
+    background-color: rgb(95, 63, 61);
+    border: none;
+    color: black;
+    padding: 10px 30px;
+    font-size: 16px;
+    width:167px;
+}
+
+.input-ingresar:focus {
+    border: 3px solid #555;
+    width: 207px;
+    height: 39px;
+    padding: 2px 2px;
+    
+}
+
+input{
+	width: 207px;
+    height: 39px;
+    color:black;
+}
+
+.boton-margen-inferior{
+	margin-top:10px;
+}
+
+.contenedor-login{
+	
+	border: 1px solid;
+    position: absolute;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 20px;
+    padding-top: 23px;
+    margin-right: 200px;
+	background-color: snow;
+}
+
+.contenedor-listaVehiculos{
+	
+	border: 1px solid;
+    position: absolute;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    padding-top: 23px;
+    margin-right: 100px;
+    margin-left: 50px;
+	background-color: snow;
+}
+
+.registrate{
+	
+	    margin-top: 354px;
+}
+
+
+.link-registrate:link, .link-registrate:visited {
+    background-color: rgb(95, 63, 61);
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contenedor-link-registrate{
+	    padding-left: 50px;
+}
+
+.contenedor-titulo{
+	
+    border-bottom: 1px solid slategrey;
+    background-color: rgb(252,248,116);;
+}
+}
+
+.imagen-logo{    
+	width: 172px;
+    height: 203px;
+    float:left;
+}
+
+.imagen-grafico:hover{    
+	width: 352x;
+    height: 563px;
+    float:center;
+}
+.imagen-ofertas{    
+	width: 600px;
+    height: 400px;
+    float:left;
+}
+.imagen-logo:hover{    
+	width: 172px;
+    height: 203px;
+    float:center;
+    opacity:0.4;
+}
+
+.footer{
+	    margin-top: 500px;
+	    
+}
+
+.copyright{
+	    margin-left: 400px;
+}
+
+nav{
+	padding-top:15px;
+	background:rgb(252,248,116);;
+}
+
+
+
+
+
+.horizontal-menu {
+  box-sizing: border-box; }
+  .horizontal-menu__lista {
+    padding: 0;
+    margin: 1px 0px; }
+  .horizontal-menu__item {
+    display: inline;
+    margin-right: 40px; }
+    .horizontal-menu__item a {
+      color: black; }
+    .horizontal-menu__item a:hover {
+      border-bottom: 1px solid #ffffff; }
+      
+      
+.contenedor-registro{
+	width:207px;
+	margin:auto;
+}
+
+.footer-pagina {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 20em;
+}
+
+
+.input-registro{
+	
+	margin-top:19px;
+}
+
+
+.texto-normal{
+	
+	font-size:large;
+}
+
+.oferta{
+	
+	margin-top:50px;
+}
+
+
+
+
+.input-select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-sumitt {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
