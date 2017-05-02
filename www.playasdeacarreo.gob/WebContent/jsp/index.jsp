@@ -14,7 +14,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
+  
 
 <title>Playa de Acarreo D.G.C.A.T.y.S.V.</title>
 
@@ -31,6 +31,7 @@
 				<label for="texto-normal">Usuario:</label><input class="input-ingresar" required name="usuario" type="text"/>
 				<label for="boton-margen-inferior texto-normal">Contraseña:</label><input class="input-ingresar" name="clave" required type="password"/></p>
 				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="ingresar" value="Ingresar"/></p>
+
 			</div>
 		</div>
 		<div class="col-md-4"></div>		

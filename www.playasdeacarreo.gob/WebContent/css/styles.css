@@ -113,6 +113,7 @@ input{
 	width: 352x;
     height: 563px;
     float:center;
+    display:none;
 }
 .imagen-ofertas{    
 	width: 600px;
@@ -221,3 +222,25 @@ nav{
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+
+/**************** calendar ************************/
+
+.yui3-button {
+    margin:10px 0px 10px 0px;
+    color: #fff;
+    background-color: #3476b7;
+}
+
+.yui3-skin-mine .yui3-calendar-header-label {
+    text-align: center;
+}
+.yui3-skin-mine .yui3-calendar-header-label {
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+.yui3-calendar-header-label {
+    width: 100%;
+}
+/***************************************************************+*/

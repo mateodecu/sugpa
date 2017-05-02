@@ -24,6 +24,12 @@
 			<p>o</p>
 			<label for="acta">Por acta de comprobacion:</label>
 			<input class="input-ingresar"  name="acta" type="text"/>	
+			<p>o</p>
+			<label for="acta">Por boleta de citacion:</label>
+			<input class="input-ingresar"  name="boleta" type="text"/>
+			<p>o</p>
+			<label for="acta">Por acta de constatacion:</label>
+			<input class="input-ingresar"  name="actaAlco" type="text"/>
 			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="buscar" value="Buscar"/></p>
 			</div>	
 		</div>	

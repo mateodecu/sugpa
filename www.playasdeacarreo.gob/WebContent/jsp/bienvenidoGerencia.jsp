@@ -7,7 +7,7 @@
 </head>
 <body>
  <%@include file="header.jsp" %>
-	<h1>Gerencia Operativa:  <%=request.getAttribute("usuario")%></h1>
+	<h1>Direccion General:  <%=request.getAttribute("usuario")%></h1>
 	
 	<h2>Que desea realizar?:</h2>
 	

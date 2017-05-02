@@ -26,7 +26,14 @@
 			    <select id="tipo" name="tipo">
 			      <option value="titular">TITULAR</option>
 			      <option value="ca">CONDUCTOR AUTORIZADO</option>
-			    </select>				
+			    </select>
+			<label for="licencia">Copia Licencia: </label>    	
+			<input type="file" name="licencia" />    			
+			<label for="cedula">Copia Cedula: </label>    	
+			<input type="file" name="cedula" />
+			<label for="seguro">Copia Seguro: </label>    	
+			<input type="file" name="seguro" />
+			
 			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="cargar" value="Cargar Egreso"/></p>
 			</div>	
 		</div>
