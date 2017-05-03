@@ -11,8 +11,10 @@
 </head>
 <body>
  <%@include file="header.jsp" %>
-	
+ 
+ <div class="jumbotron text-center">	
 <h1>Busqueda de vehiculos </h1>	
+</div>
 
 	<form method="post" action="/www.playasdeacarreo.gob/mostrarVehiculo">
 	<div class="row">

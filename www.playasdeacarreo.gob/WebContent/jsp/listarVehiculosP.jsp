@@ -10,24 +10,28 @@
 </head>
 <body>
  <%@include file="header.jsp" %>
-	
-<h1>Listado de Vehiculos </h1>	
 
-	<div class="row">
-		<div class="col-md-2 text-center">
-			<div class="contenedor-listaVehiculos">
-			<div class="col-md-8 text-center"><h3>Playa Rio Cuarto:</h3></div>
-				<BR>
-				<table border="1">
-					<tr>
-						<th><div class="col-md-2 text-center">REGISTRO</div></th>
-						<th><div class="col-md-2 text-center">FECHA</div></th>
-						<th><div class="col-md-2 text-center">HORA</div></th>
-						<th><div class="col-md-2 text-center">DOMINIO</div></th>
-						<th><div class="col-md-2 text-center">MARCA</div></th>
-						<th><div class="col-md-2 text-center">MODELO</div></th>
-						<th><div class="col-md-2 text-center">MOTIVO</div></th>
-					</tr>
+<div class="jumbotron text-center">	
+<h1>Listado de Vehiculos </h1>	
+</div>
+
+
+<div class="container">
+  <h2>Playa rio cuarto</h2>
+  <p>Esta tabla representa los vehiculos en playa:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+		 <th>REGISTRO</th>
+		 <th>FECHA</th>
+		 <th>HORA</th>
+		 <th>DOMINIO</th>
+		 <th>MARCA</th>
+		 <th>MODELO</th>
+		 <th>MOTIVO</th>        
+      </tr>
+    </thead>
+    <tbody>
 					<%
 						List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
 						for (Vehiculo vehiculo : vehiculos) {
@@ -43,24 +47,25 @@
 						
 					</tr>
 					<% } %>
-				</table>
-			<div class="col-md-2"></div>
-				<BR>
-				
-			<div class="col-md-8 text-center"><h3>Playa Sarmiento:</h3></div>
-				
-				
-				<BR>
-				<table border="1">
-					<tr>
-						<th><div class="col-md-2 text-center">REGISTRO</div></th>
-						<th><div class="col-md-2 text-center">FECHA</div></th>
-						<th><div class="col-md-2 text-center">HORA</div></th>
-						<th><div class="col-md-2 text-center">DOMINIO</div></th>
-						<th><div class="col-md-2 text-center">MARCA</div></th>
-						<th><div class="col-md-2 text-center">MODELO</div></th>
-						<th><div class="col-md-2 text-center">MOTIVO</div></th>
-					</tr>
+    </tbody>
+  </table>
+  
+  <h2>Playa Sarmiento</h2>
+  <p>Esta tabla representa los vehiculos en playa:</p> 
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+		 <th>REGISTRO</th>
+		 <th>FECHA</th>
+		 <th>HORA</th>
+		 <th>DOMINIO</th>
+		 <th>MARCA</th>
+		 <th>MODELO</th>
+		 <th>MOTIVO</th>        
+      </tr>
+    </thead>
+    <tbody>
 					<%
 						for (Vehiculo vehiculo : vehiculos) {
 					%>
@@ -75,17 +80,9 @@
 						
 					</tr>
 					<% } %>
-				</table>
-			<div class="col-md-2"></div>
-				<BR>
-				
-				
-				
-			</div>	
-		</div>
-
-	</div>
-	
+    </tbody>
+  </table>  
+</div>
 
 	
 </body>

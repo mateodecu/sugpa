@@ -10,25 +10,29 @@
 </head>
 <body>
  <%@include file="header.jsp" %>
-	
+ 
+<div class="jumbotron text-center">	
 <h1>Vehiculos más de 60 días </h1>	
+</div>
 
-	<div class="row">
-		<div class="col-md-2 text-center">
-			<div class="contenedor-listaVehiculos">
-				<BR>
-				<table border="1">
-					<tr>
-						<th><div class="col-md-2 text-center">REGISTRO</div></th>
-						<th><div class="col-md-2 text-center">FECHA</div></th>
-						<th><div class="col-md-2 text-center">HORA</div></th>
-						<th><div class="col-md-2 text-center">DOMINIO</div></th>
-						<th><div class="col-md-2 text-center">MARCA</div></th>
-						<th><div class="col-md-2 text-center">MODELO</div></th>
-						<th><div class="col-md-2 text-center">MOTIVO</div></th>
-						<th><div class="col-md-2 text-center">Notificar</div></th>
-						<th><div class="col-md-2 text-center">PLAYA</div></th>
-					</tr>
+<div class="container">
+  <h2>Listado de vehiculos</h2>
+  <p>Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+		 <th>REGISTRO</th>
+		 <th>FECHA</th>
+		 <th>HORA</th>
+		 <th>DOMINIO</th>
+		 <th>MARCA</th>
+		 <th>MODELO</th>
+		 <th>MOTIVO</th>
+		 <th>PLAYA</th>
+		 <th>NOTIFICADO</th>        
+      </tr>
+    </thead>
+    <tbody>
 					<%
 						List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
 						for (Vehiculo vehiculo : vehiculos) {
@@ -46,7 +50,9 @@
 						
 					</tr>
 					<% } %>
-				</table>
+    </tbody>
+  </table>
+
 			<div class="col-md-2"></div><p> </p>
 			<div class="col-md-8 text-center">			
 			<form method="post" action="/www.playasdeacarreo.gob/actualizarListaSesenta"><input class="boton input-ingresar" type="submit" name="cargarNotificados" value="Cargar Notificados"/>

@@ -56,6 +56,18 @@ input{
 	
 	border: 1px solid;
     position: absolute;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-top: 23px;
+    margin-right: 200px;
+	background-color: snow;
+}
+
+.contenedor-egresar{
+	
+	border: 1px solid;
+    position: absolute;
     padding-left: 90px;
     padding-right: 90px;
     padding-bottom: 20px;

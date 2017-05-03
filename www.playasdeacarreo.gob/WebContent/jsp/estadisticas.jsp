@@ -53,12 +53,12 @@ $(document).ready(function(){
 </head>
 <body>
 
-
+<div class="jumbotron text-center">
 	<h1>Estadisticas</h1>
+</div>
 
-
-	<div class="row">
-		<div class="col-md-2 text-center">
+	<div class="row content">
+		<div class="col-sm-8 text-left">
 			<div class="contenedor-listaVehiculos">
 
 				<!-- 
@@ -74,6 +74,7 @@ $(document).ready(function(){
 			    </select>
 			    <p> </p>
 				<label for="motivo">Motivo: </label> 
+				<p> </p>
 				<select id="motivo"	name="motivo">
 					<option value="todos">TODOS</option>
 					<option value="doc">DOCUMENTACION</option>

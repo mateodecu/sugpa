@@ -14,10 +14,20 @@
 	
 
 
-
+<div class="jumbotron text-center">
 <h1> Resultado Busqueda:  </h1>
+</div>
 
-<h2><%=request.getAttribute("dominio")%></h2>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+		<h2><%=request.getAttribute("dominio")%></h2>
+    </div>
+
+  </div>
+</div>
+
 
 	
 	 <%@include file="footer.jsp" %>
