@@ -12,7 +12,7 @@ public class VehiculoABM {
 		List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
 		for (Vehiculo vehiculo : vehiculos) {
 			if(vehiculo.getDominio().compareTo(dominio)==0){
-				dominio="-->Registro:"+vehiculo.getRegistro()+" Dominio :"+vehiculo.getDominio()+" Marca :"+vehiculo.getMarca()+" Modelo :"+vehiculo.getModelo()+" Motivo :"+vehiculo.getMotivo()+" Playa :"+vehiculo.getPlaya();
+				dominio=vehiculo.getRegistro()+";"+vehiculo.getFecha()+";"+vehiculo.getHora()+";"+vehiculo.getDominio()+";"+vehiculo.getMarca()+";"+vehiculo.getModelo()+";"+vehiculo.getMotivo()+";"+vehiculo.getPlaya();
 			}
 			
 		}

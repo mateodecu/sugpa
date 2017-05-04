@@ -18,16 +18,41 @@
 <h1> Resultado Busqueda:  </h1>
 </div>
 
+<div class="container">      
+  <table class="table table-striped">
+    <thead>
+      <tr>
+		 <th>REGISTRO</th>
+		 <th>FECHA</th>
+		 <th>HORA</th>
+		 <th>DOMINIO</th>
+		 <th>MARCA</th>
+		 <th>MODELO</th>
+		 <th>MOTIVO</th>
+		 <th>PLAYA</th>     
+      </tr>
+    </thead>
+    <tbody>
+					<%String dominio= ""+request.getAttribute("dominio");
+					
+					String parsear[]=dominio.split(";");
+					 %>		 
+					<tr>
+						<td><%=parsear[0]%></td>
+						<td><%=parsear[1]%></td>
+						<td><%=parsear[2]%></td>
+						<td><%=parsear[3]%></td>
+						<td><%=parsear[4]%></td>
+						<td><%=parsear[5]%></td>
+						<td><%=parsear[6]%></td>
+						<td><%=parsear[7]%></td>	
+						
+					</tr>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-8 text-left"> 
-		<h2><%=request.getAttribute("dominio")%></h2>
-    </div>
+    </tbody>
+  </table>
 
-  </div>
 </div>
-
 
 	
 	 <%@include file="footer.jsp" %>

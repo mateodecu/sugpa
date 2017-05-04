@@ -21,12 +21,10 @@
 				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Buscar" value="Buscar Vehiculo"/></p>
 			</form>	
 					
-			<form method="post" action="/www.playasdeacarreo.gob/listarVehiculos">
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="listarVehiculos" value="Más de 60 días"/>
+			<form method="post" action="/www.playasdeacarreo.gob/listarVehiculosPlaya">
+				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="listarVehiculos" value="Listar Vehiculos"/>
 			</form>
-			<form method="post" action="/www.playasdeacarreo.gob/listarVehiculos">
-			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Listar Vehiculos" value="Fuera de plazo"/></p>
-			</form>	
+
 		</div>
 		</div>
 	</div>		

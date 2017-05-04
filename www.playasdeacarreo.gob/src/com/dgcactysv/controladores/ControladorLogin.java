@@ -33,17 +33,21 @@ public class ControladorLogin extends HttpServlet {
 				request.setAttribute("usuario","Pizarro Maximiliano");
 				request.getRequestDispatcher("/jsp/bienvenidoAgente.jsp").forward(request, response);	
 			}else{
-				if(usuario.compareTo("legales")==0){
+				if(usuario.compareTo("legalesa")==0){
 					request.setAttribute("usuario","Decurgez Mateo");
-					request.getRequestDispatcher("/jsp/bienvenidoLegales.jsp").forward(request, response);	
+					request.getRequestDispatcher("/jsp/bienvenidoLegalesAbandonados.jsp").forward(request, response);	
 				}else{
+					if(usuario.compareTo("legales")==0){
+						request.setAttribute("usuario","Walter");
+						request.getRequestDispatcher("/jsp/bienvenidoLegales.jsp").forward(request, response);	
+					}else{
 					if(usuario.compareTo("direccion")==0){
 						request.setAttribute("usuario","Pietrafesa Sergio");
 						request.getRequestDispatcher("/jsp/bienvenidoGerencia.jsp").forward(request, response);	
 					}
 				else{request.getRequestDispatcher("/jsp/errorlogin.jsp").forward(request, response);}		
 			}
-			
+				}
 			}
 	} catch (Exception e) {
 		request.getRequestDispatcher("/jsp/errorlogin.jsp").forward(request, response);
