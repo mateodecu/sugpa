@@ -29,12 +29,12 @@
 		 <th>MARCA</th>
 		 <th>MODELO</th>
 		 <th>MOTIVO</th>
-		 <th>PLAYA</th>     
+		 <th>PLAYA</th>
+		 <th>MODIFICADO POR</th>     
       </tr>
     </thead>
     <tbody>
 					<%String dominio= ""+request.getAttribute("dominio");
-					
 					String parsear[]=dominio.split(";");
 					 %>		 
 					<tr>
@@ -45,14 +45,21 @@
 						<td><%=parsear[4]%></td>
 						<td><%=parsear[5]%></td>
 						<td><%=parsear[6]%></td>
-						<td><%=parsear[7]%></td>	
+						<td><%=parsear[7]%></td>
+						<td><%=parsear[8]%></td>	
 						
 					</tr>
+										
 
     </tbody>
+    
   </table>
-
+    				<%if(parsear[0].equals(" ")==true){
+						String mensaje="No se encontro el vehiculo";%>
+					<h2><%=mensaje %></h2>
+					<%} %>
 </div>
+
 
 	
 	 <%@include file="footer.jsp" %>

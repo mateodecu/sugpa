@@ -9,7 +9,7 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- <%@include file="header.jsp" %>
+ <%@include file="headerIN.jsp" %>
 
 <div class="jumbotron text-center">	
 <h1>Listado de Vehiculos </h1>	
@@ -28,7 +28,8 @@
 		 <th>DOMINIO</th>
 		 <th>MARCA</th>
 		 <th>MODELO</th>
-		 <th>MOTIVO</th>        
+		 <th>MOTIVO</th>
+		 <th>MODIFICADO POR</th>        
       </tr>
     </thead>
     <tbody>
@@ -44,6 +45,7 @@
 						<td><%=vehiculo.getMarca()%></td>
 						<td><%=vehiculo.getModelo()%></td>
 						<td><%=vehiculo.getMotivo()%></td>
+						<td><%=vehiculo.getUsuario()%></td>
 						
 					</tr>
 					<% } %>

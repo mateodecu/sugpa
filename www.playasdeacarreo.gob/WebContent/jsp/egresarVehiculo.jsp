@@ -7,7 +7,19 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
-	<%@include file="header.jsp"%>
+	<%@include file="headerIN.jsp"%>
+<script>
+function myFunction() {
+    var txt;
+    if (confirm("Presione aceptar para confirmar el egreso") == true) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+	
 
 <div class="jumbotron text-center">
   <h1>Egresar vehiculo</h1>
@@ -20,17 +32,22 @@
       	<div class="contenedor-login">
 				<label for="registro">N°REGISTRO:</label> 
 				<input class="input-ingresar" name="registro" type="text" />
-				<label for="apellido">Apellido</label> 
+				<p></p>
+				<label for="tipo">Tipo:</label>
+				<p></p>
+				<select id="tipo" name="tipo">
+					<option value="titular">TITULAR</option>
+					<option value="ca">CONDUCTOR AUTORIZADO</option>
+				</select>
+				<p></p>
+				<label for="apellido">Apellido:</label> 
 				<input class="input-ingresar" name="apellido" type="text" />
 				<label for="nombre">Nombre:</label>
 				<input class="input-ingresar" name="nombre" type="text" />
 				<label for="dni">DNI:</label> 
 				<input class="input-ingresar" name="dni" type="text" />
-				<label for="tipo">Tipo</label>
-				 <select id="tipo" name="tipo">
-					<option value="titular">TITULAR</option>
-					<option value="ca">CONDUCTOR AUTORIZADO</option>
-				</select>
+				
+
 		</div>		
     </div>
     
@@ -54,9 +71,9 @@
       <h3>Confirmar egreso</h3>   
       <div class="contenedor-login">  
             <label for="inputdefault">Observaciones:</label>
-      <input class="form-control" id="inputdefault" type="text">   
+            <textarea name="observaciones" rows="5" cols="20"></textarea>
 				<p class="boton-margen-inferior">
-				<input class="boton input-ingresar" type="submit" name="cargar"	value="Cargar Egreso" />
+				<input onclick="myFunction()" class="boton input-ingresar" type="submit" name="cargar"	value="Cargar Egreso" />
       </div>
   	</div>
 

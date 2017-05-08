@@ -8,17 +8,21 @@ import java.util.List;
 
 public class VehiculoABM {
 	
+	int bandera=0;
+	
 	public String buscarVehiculo(String dominio){
 		List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
 		for (Vehiculo vehiculo : vehiculos) {
 			if(vehiculo.getDominio().compareTo(dominio)==0){
-				dominio=vehiculo.getRegistro()+";"+vehiculo.getFecha()+";"+vehiculo.getHora()+";"+vehiculo.getDominio()+";"+vehiculo.getMarca()+";"+vehiculo.getModelo()+";"+vehiculo.getMotivo()+";"+vehiculo.getPlaya();
+				dominio=vehiculo.getRegistro()+";"+vehiculo.getFecha()+";"+vehiculo.getHora()+";"+vehiculo.getDominio()+";"+vehiculo.getMarca()+";"+vehiculo.getModelo()+";"+vehiculo.getMotivo()+";"+vehiculo.getPlaya()+";"+vehiculo.getUsuario();
+				bandera=1;
 			}
 			
 		}
 		
-		if(dominio.compareTo("")==0){
-			dominio=" No se encontro el vehiculo";
+		if(bandera==0){
+			//dominio="No se encontro el vehiculo;;;;;;;;";
+			dominio=" ; ; ; ; ; ; ; ; ;";
 		}
 		return dominio;
 	}

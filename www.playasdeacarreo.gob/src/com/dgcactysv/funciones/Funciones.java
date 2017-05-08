@@ -471,7 +471,7 @@ public class Funciones {
 			documento.getDocumentElement().normalize();
 
 			NodeList nodeLista = documento.getElementsByTagName("vehiculo");
-			String[] tags = { "registro", "fecha", "hora","descripcion","dominio","marca","modelo","motivo","playa" };
+			String[] tags = { "registro", "fecha", "hora","descripcion","dominio","marca","modelo","motivo","playa","usuario" };
 			
 			for (int s = 0; s < nodeLista.getLength(); s++) {
 				Node nodo = nodeLista.item(s);
@@ -497,8 +497,9 @@ public class Funciones {
 					String 	modelo= valores[6];
 					String	motivo= valores[7];
 					String	playa= valores[8];
+					String	usuario= valores[9];
 					
-					Vehiculo v = new Vehiculo(registro,fecha,hora,descripcion,dominio,marca,modelo,motivo,playa);
+					Vehiculo v = new Vehiculo(registro,fecha,hora,descripcion,dominio,marca,modelo,motivo,playa,usuario);
 
 					vehiculos.add(v);
 				}

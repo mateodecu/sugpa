@@ -11,11 +11,12 @@ public class Vehiculo {
 	private String 	modelo;
 	private String	motivo;
 	private String 	playa;
+	private String usuario;
 	
 	public Vehiculo(){}
 	
 	public Vehiculo(String registro, String fecha, String hora, String descripcion, String dominio,
-			String marca, String modelo, String motivo, String playa) {
+			String marca, String modelo, String motivo, String playa,String usuario) {
 		super();
 		this.registro = registro;
 		this.fecha = fecha;
@@ -26,6 +27,7 @@ public class Vehiculo {
 		this.modelo = modelo;
 		this.motivo = motivo;
 		this.playa = playa;
+		this.usuario= usuario;
 	}
 
 	public String getRegistro() {
@@ -99,12 +101,22 @@ public class Vehiculo {
 	public void setPlaya(String playa) {
 		this.playa = playa;
 	}
+	
+	
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
 
 	@Override
 	public String toString() {
 		return "Vehiculo [registro=" + registro  + ", fecha=" + fecha + ", hora=" + hora
 				+ ", descripcion=" + descripcion + ", dominio=" + dominio + ", marca=" + marca + ", modelo=" + modelo
-				+ ", motivo=" + motivo +", playa=" + playa + "]";
+				+ ", motivo=" + motivo +", playa=" + playa +", usuario=" + usuario + "]";
 	}
 	
 	

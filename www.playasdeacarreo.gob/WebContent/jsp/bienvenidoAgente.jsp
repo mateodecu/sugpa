@@ -6,7 +6,7 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- <%@include file="header.jsp" %>
+ <%@include file="headerIN.jsp" %>
  <div class="jumbotron text-center">
 	<h1>Agente de Playa:  <%=request.getAttribute("usuario")%></h1>
 		

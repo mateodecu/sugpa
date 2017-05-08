@@ -5,13 +5,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
 <body>
- <%@include file="header.jsp" %>
+ <%@include file="headerIN.jsp" %>
  <div class="jumbotron text-center">
 	<h1>Ingresar Vehiculo: </h1>
 </div>
 
-	<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
+<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
 
 <div class="container">
   <div class="row">
@@ -21,7 +27,7 @@
 			      				
   				<label for="motivo">Tipo:</label>
   				<p> </p>
-			    <select class="input-ingresar" id="motivo" name="motivo">
+			    <select class="input-ingresar" id="tipo" name="motivo">
 			      <option value="-1" selected="">Selecciona</option>
 			      <option value="vehiculo">Vehiculo</option>
 			      <option value="motovehiculo">Motovehiculo</option>
