@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@include file="headerIN.jsp"%>
+<%@include file="header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -56,6 +56,16 @@ $(document).ready(function(){
 <div class="jumbotron text-center">
 	<h1>Estadisticas</h1>
 </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Volver</a></li>
+    </ul>
+  </div>
+</nav>
 
 	<div class="row content">
 		<div class="col-sm-8 text-left">
@@ -97,7 +107,7 @@ $(document).ready(function(){
 				
 				<p> </p>
 				
-				<img class="imagen-grafico" display="none" src="img/Autos.jpg">
+				<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="867" height="479">
 				
 				
 			</div>

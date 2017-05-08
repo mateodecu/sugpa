@@ -6,29 +6,27 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- <%@include file="headerIN.jsp" %>
+ <%@include file="header.jsp" %>
  <div class="jumbotron text-center">
 	<h1>Agente de Playa:  <%=request.getAttribute("usuario")%></h1>
+
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">INICIO</a></li>
+      <li><a href="/www.playasdeacarreo.gob/buscar">Buscar Vehiculo</a></li>
+      <li><a href="/www.playasdeacarreo.gob/cargar">Cargar Vehiculo</a></li>
+      <li><a href="/www.playasdeacarreo.gob/egreso">Egresar Vehiculo</a></li>
+    </ul>
+  </div>
+</nav>
 		
-	<h2>Que desea realizar?</h2>
-</div>		
-	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4 text-center">	
-		<div class="contenedor-login">
-			<form method="post" action="/www.playasdeacarreo.gob/buscar">
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Buscar" value="Buscar Vehiculo"/></p>
-			</form>	
-			
-			<form method="post" action="/www.playasdeacarreo.gob/cargar">
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Vehiculos"/>
-			</form>
-			<form method="post" action="/www.playasdeacarreo.gob/egreso">
-			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Egresar" value="Egresar Vehiculo"/></p>
-			</form>	
-		</div>
-		</div>
-	</div>		
+	
  <%@include file="footer.jsp" %>
 </body>
 </html>

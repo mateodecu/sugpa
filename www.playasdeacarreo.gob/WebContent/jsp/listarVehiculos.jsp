@@ -15,6 +15,17 @@
 <h1>Vehiculos más de 60 días </h1>	
 </div>
 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Volver</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
   <h2>Listado de vehiculos</h2>
   <p>Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</p>            

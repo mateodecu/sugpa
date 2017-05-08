@@ -7,7 +7,7 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
-	<%@include file="headerIN.jsp"%>
+	<%@include file="header.jsp"%>
 <script>
 function myFunction() {
     var txt;
@@ -24,6 +24,17 @@ function myFunction() {
 <div class="jumbotron text-center">
   <h1>Egresar vehiculo</h1>
 </div>
+ 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Volver</a></li>
+    </ul>
+  </div>
+</nav> 
   
 <div class="container">
   <div class="row">

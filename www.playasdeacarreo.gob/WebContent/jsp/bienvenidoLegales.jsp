@@ -6,28 +6,27 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- <%@include file="headerIN.jsp" %>
+ <%@include file="header.jsp" %>
   <div class="jumbotron text-center">
 	<h1>Departamento de Legales:  <%=request.getAttribute("usuario")%></h1>
 	
 	<h2>Que desea realizar?</h2>
   </div>		
-	
-	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4 text-center">	
-		<div class="contenedor-login">
-			<form method="post" action="/www.playasdeacarreo.gob/buscar">
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Buscar" value="Buscar Vehiculo"/></p>
-			</form>	
-					
-			<form method="post" action="/www.playasdeacarreo.gob/listarVehiculosPlaya">
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="listarVehiculos" value="Listar Vehiculos"/>
-			</form>
 
-		</div>
-		</div>
-	</div>		
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">INICIO</a></li>
+      <li><a href="/www.playasdeacarreo.gob/buscar">Buscar</a></li>
+      <li><a href="/www.playasdeacarreo.gob/listarVehiculosPlaya">Listado Playas</a></li>
+    </ul>
+  </div>
+</nav>
+
+	
  <%@include file="footer.jsp" %>
 </body>
 </html>

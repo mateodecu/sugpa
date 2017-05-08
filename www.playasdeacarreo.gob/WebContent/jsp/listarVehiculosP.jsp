@@ -15,6 +15,16 @@
 <h1>Listado de Vehiculos </h1>	
 </div>
 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Volver</a></li>
+    </ul>
+  </div>
+</nav>
 
 <div class="container">
   <h2>Playa rio cuarto</h2>

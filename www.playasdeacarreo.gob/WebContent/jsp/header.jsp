@@ -97,12 +97,11 @@ setTimeout("actualizaReloj()",1000)
  <div class="im-centered">	
 
 	<div class="row contenedor-titulo text-center">
-		<div class="col-md-4"><img class="imagen-logo" src="img/Logo.jpg"></div>
+		<div class="col-md-4"><img "img-rounded" alt="Cinque Terre" width="153" height="189" src="img/Logo.jpg"></div>
 		<div class="col-md-4"><h1 class="titulo">DGCACTYSV</h1></div>
 		<div class="col-md-8">
 			  
               <ul class="horizontal-menu__lista">
-                  <li class="horizontal-menu__item"><a href="inicio">INICIO</a></li>
                   <li class="horizontal-menu__item"><a href="inicio">INGRESAR</a></li>
                   <li class="horizontal-menu__item" id="Fecha_Reloj"><a href="Index"></a></li>
               </ul>
