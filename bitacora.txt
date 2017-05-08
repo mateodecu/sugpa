@@ -18,3 +18,16 @@ Decision: Crear usuario en github y repositorio compartido para el proyecto,
 --------------------------------------------------------------------------------------------------------
 **************************************************************************************
 --------------------------------------------------------------------------------------------------------
+Reunion: virtual
+Integrantes:
+	Mateo-
+	Maximiliano-Aprobado
+
+Fecha:08/05/2017
+Descripcion:Seleccion Modelo de Ciclo de Vida
+Decision: Crear un documento pdf fundamentando el porque la seleccion del modelo de ciclo de vida para
+	el proyecto. Se realizaran las maqueta del sistema utilizando jsp, css, boostrap, javascript.
+--------------------------------------------------------------------------------------------------------
+**************************************************************************************
+--------------------------------------------------------------------------------------------------------
+
