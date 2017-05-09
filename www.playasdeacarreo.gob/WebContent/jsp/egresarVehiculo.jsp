@@ -92,8 +92,6 @@ function myFunction() {
   	
 </div>
 
-
-
 	<%@include file="footer.jsp"%>
 </body>
 </html>

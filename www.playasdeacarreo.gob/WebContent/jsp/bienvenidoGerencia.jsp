@@ -1,4 +1,6 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+ <%@include file="header.jsp" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -6,7 +8,6 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- <%@include file="header.jsp" %>
  <div class="jumbotron text-center">
 	<h1>Direccion General:  <%=request.getAttribute("usuario")%></h1>
 </div>	
@@ -17,11 +18,12 @@
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">INICIO</a></li>
+      <li><a href="#">INICIO</a></li>
       <li><a href="/www.playasdeacarreo.gob/buscar">Buscar</a></li>
       <li><a href="/www.playasdeacarreo.gob/verEstadisticas">Ver estadisticas</a></li>
       <li><a href="/www.playasdeacarreo.gob/listarVehiculosPlaya">Listado Playas</a></li>
       <li><a href="/www.playasdeacarreo.gob/listarVehiculos">Más de 60 días</a></li>
+      <li><a href="/www.playasdeacarreo.gob/egreso">Egresar vehiculo</a></li>
     </ul>
   </div>
 </nav>
@@ -29,14 +31,17 @@
 
 
 <div class="container">
+  <h2>Estado Playas de Acarreo</h2>
+  <p>Graficos de ocupacion en tiempo real de las playas</p>    
+
   <div class="row">
       <table class="table table-striped">
     <thead>
       <tr>
-		 <th>Grafico 1</th>
-		 <th>Grafico 2</th>
-		 <th>Grafico 3</th>
-		 <th>Grafico 4</th> 
+		 <th></th>
+		 <th></th>
+		 <th></th>
+		 <th></th> 
       </tr>
     </thead>
     <tbody>

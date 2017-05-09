@@ -3,6 +3,7 @@
 <%@include file="header.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<title>Estadisticas</title>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="css/styles.css" rel="stylesheet" type="text/css">
@@ -48,6 +49,11 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+function printPage() {
+    window.print();
+}
+</script>
 
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
@@ -67,54 +73,53 @@ $(document).ready(function(){
   </div>
 </nav>
 
-	<div class="row content">
-		<div class="col-sm-8 text-left">
-			<div class="contenedor-listaVehiculos">
+<div class="container">
+  <h2>Graficador estadistico</h2>         
+  <table class="table table-striped">
+    <thead>
+      <tr>
+		 <th>TIPO</th>
+		 <th>MOTIVO</th>
+		 <th>FECHA DESDE</th>
+		 <th>FECHA HASTA</th>    
+      </tr>
+    </thead>
+    <tbody>
 
-				<!-- 
-			<img class="imagen-grafico" src="img/Motos.jpg"><p> </p>
-			<img class="imagen-grafico" src="img/Autos.jpg"><p> </p>
-			<img class="imagen-grafico" src="img/Torta.jpg"><p> </p>
- -->
- 			    <label for="tipo">Tipo: </label>
- 			    <p> </p>
-			    <select id="tipo" name="tipo">
-			      <option value="moto">VEHICULO</option>
-			      <option value="auto">MOTOVEHICULO</option>
-			    </select>
-			    <p> </p>
-				<label for="motivo">Motivo: </label> 
-				<p> </p>
-				<select id="motivo"	name="motivo">
-					<option value="todos">TODOS</option>
-					<option value="doc">DOCUMENTACION</option>
-					<option value="est">ESTACIONAMIENTO PROHIBIDO</option>
-					<option value="placas">PLACAS DE DOMINIO</option>
-					<option value="alcoholemia">ALCOHOLEMIA</option>
-					<option value="abandonado">ABANDONADO</option>
-					<option value="uber">UBER</option>
-				</select> 
-				<p> </p>
-				
-				<label for="texto-normal">Fecha desde: </label>
-				<input	id="datepicker_desde" /> 
-			
-				<label for="texto-normal">Fecha hasta: </label>
-				<input id="datepicker_hasta" />
-		
-				<button id="show">Mostrar Grafico</button>
-				<button id="hide">Ocultar Grafico</button>
-				
-				<p> </p>
-				
-				<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="867" height="479">
-				
-				
-			</div>
-		</div>
-
-	</div>
-
+					<tr>
+						<td>			    
+						<select id="tipo" name="tipo">
+					      <option value="moto">VEHICULO</option>
+					      <option value="auto">MOTOVEHICULO</option>
+					    </select></td>
+			    
+						<td>
+							<select id="motivo" name="motivo">
+									<option value="todos">TODOS</option>
+									<option value="doc">DOCUMENTACION</option>
+									<option value="est">ESTACIONAMIENTO PROHIBIDO</option>
+									<option value="placas">PLACAS DE DOMINIO</option>
+									<option value="alcoholemia">ALCOHOLEMIA</option>
+									<option value="abandonado">ABANDONADO</option>
+									<option value="uber">UBER</option>
+							</select>
+						</td>
+						<td><input	id="datepicker_desde" /></td>
+						<td><input id="datepicker_hasta" /></td>
+						
+					</tr>
+    </tbody>
+  </table>
+  
+  				
+<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="857" height="469">
+<p> </p>
+<div class="col-md-8">	
+<button id="show">Mostrar Grafico</button>
+<button id="hide">Ocultar Grafico</button>
+<p class="boton-margen-inferior"><input onclick="printPage()" class="boton input-ingresar" type="reset" name="imprimir" value="Imprimir Grafico"/></p>	
+</div>
+</div>				
 
 
 </body>

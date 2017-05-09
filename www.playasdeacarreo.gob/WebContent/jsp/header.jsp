@@ -6,8 +6,7 @@
 
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
@@ -88,16 +87,12 @@ setTimeout("actualizaReloj()",1000)
 } 
 </script>
 
-
-
-
-<title>iniciar sesion</title>
 </head>
 <body onload="actualizaReloj()">
  <div class="im-centered">	
 
 	<div class="row contenedor-titulo text-center">
-		<div class="col-md-4"><img "img-rounded" alt="Cinque Terre" width="153" height="189" src="img/Logo.jpg"></div>
+		<div class="col-md-4"><img alt="Cinque Terre" width="133" height="169" src="img/Logo.jpg"></div>
 		<div class="col-md-4"><h1 class="titulo">DGCACTYSV</h1></div>
 		<div class="col-md-8">
 			  

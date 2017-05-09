@@ -12,6 +12,19 @@
 
 
 <body>
+
+<script>
+function myFunction() {
+    var txt;
+    if (confirm("Presione aceptar para confirmar el ingreso") == true) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
  <%@include file="header.jsp" %>
  <div class="jumbotron text-center">
 	<h1>Ingresar Vehiculo: </h1>
@@ -122,6 +135,7 @@
 			      <option value="doc">DOCUMENTACION</option>
 			      <option value="est">EST.PROHIBIDO</option>
 			      <option value="placas">PLACAS DE DOMINIO</option>
+			      <option value="alcoholemia">ALCOHOLEMIA</option>
 			      <option value="abandonado">ABANDONADO</option>
 			      <option value="uber">UBER</option>
 			    </select>
@@ -151,8 +165,9 @@
       <h3>Confirmar ingreso</h3>   
       <div class="contenedor-login">  
             <label for="inputdefault">Observaciones:</label>
-				<input class="input-ingresar"  required name="chofer" type="text"/>	
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
+				<textarea name="observaciones" rows="5" cols="20"></textarea>
+				<p class="boton-margen-inferior">
+				<p class="boton-margen-inferior"><input onclick="myFunction()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
      			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="reset" name="borrar" value="Limpiar"/></p>
      </div>
   	</div>

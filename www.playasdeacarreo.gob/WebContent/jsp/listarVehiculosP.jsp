@@ -6,14 +6,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Playas de Acarreo DGCACTYSV:</title>
+<title>Listado Playas</title>
 </head>
 <body>
- <%@include file="headerIN.jsp" %>
+ <%@include file="header.jsp" %>
 
 <div class="jumbotron text-center">	
 <h1>Listado de Vehiculos </h1>	
 </div>
+
+<script>
+function printPage() {
+    window.print();
+}
+</script>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -96,6 +102,9 @@
   </table>  
 </div>
 
-	
+<div class="col-md-8 text-center">	
+<p class="boton-margen-inferior"><input onclick="printPage()" class="boton input-ingresar" type="reset" name="imprimir" value="Imprimir Listado"/></p>	
+</div>
+
 </body>
 </html>

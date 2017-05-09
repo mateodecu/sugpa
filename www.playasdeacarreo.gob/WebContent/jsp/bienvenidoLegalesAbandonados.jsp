@@ -18,7 +18,7 @@
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">INICIO</a></li>
+      <li><a href="#">INICIO</a></li>
       <li><a href="/www.playasdeacarreo.gob/buscar">Buscar</a></li>
       <li><a href="/www.playasdeacarreo.gob/listarVehiculosPlaya">Fuera de plazo</a></li>
       <li><a href="/www.playasdeacarreo.gob/listarVehiculos">Más de 60 días</a></li>

@@ -9,7 +9,7 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- <%@include file="headerIN.jsp" %>
+ <%@include file="header.jsp" %>
  
 <div class="jumbotron text-center">	
 <h1>Vehiculos más de 60 días </h1>	

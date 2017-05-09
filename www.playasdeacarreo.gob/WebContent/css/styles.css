@@ -42,7 +42,7 @@
     
 }
 
-input{
+.input{
 	width: 207px;
     height: 39px;
     color:black;
@@ -148,13 +148,10 @@ input{
 	    margin-left: 400px;
 }
 
-nav{
+.nav{
 	padding-top:15px;
 	background:rgb(252,248,116);;
 }
-
-
-
 
 
 .horizontal-menu {
