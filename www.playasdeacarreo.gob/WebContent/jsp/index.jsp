@@ -21,6 +21,18 @@
 
 </head>
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="inicio">SUGPA</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+    </ul>
+  </div>
+</nav>	
+
 
 <body>
  	<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
@@ -28,9 +40,16 @@
 		<div class="col-md-4"></div>
 		<div class="col-md-4 text-center">
 			<div class="contenedor-login">
-				<label for="texto-normal">Usuario:</label><input class="input-ingresar" required name="usuario" type="text"/>
-				<label for="boton-margen-inferior texto-normal">Contraseña:</label><input class="input-ingresar" name="clave" required type="password"/></p>
-				<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="ingresar" value="Ingresar"/></p>
+				<label for="texto-normal">Usuario:</label>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar" required name="usuario" type="text"/></p>
+				
+				<label for="boton-margen-inferior texto-normal">Contraseña:</label>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar" name="clave" required type="password"/></p>
+				
+				<p class="boton-margen-inferior">
+				<input class="boton input-ingresar" type="submit" name="ingresar" value="Ingresar"/></p>
 
 			</div>
 		</div>

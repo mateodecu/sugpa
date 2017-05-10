@@ -11,12 +11,7 @@
 </head>
 <body>
  
- <div class="jumbotron text-center">
-	<h1>Agente de Playa:  <%=request.getAttribute("usuario")%></h1>
-
-</div>
-
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
@@ -27,8 +22,14 @@
       <li><a href="/www.playasdeacarreo.gob/cargar">Ingresar Vehiculo</a></li>
       <li><a href="/www.playasdeacarreo.gob/egreso">Egresar Vehiculo</a></li>
     </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+    </ul>
   </div>
-</nav>
+</nav>	
+ 
+
 
 <div class="container">
   <h2>Playa rio cuarto</h2>

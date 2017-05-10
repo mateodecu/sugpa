@@ -1,26 +1,29 @@
 .titulo{
-	color: white;
+	color: black;
 	font-size:100px;
 }
 
+
 .contenedor-titulo{
-	padding-left: 61px;
+	padding-top: 10px;
+	padding-left: 40px;
 	margin-bottom:8px;
+	
 }
 
 .boton{
-    background-color: rgb(252,248,116);
+    background-color: black;
     border: none;
-    color: black; 
+    color: white; 
     padding: 10px 30px;
     font-size: 16px;
     
 }
 
 .boton:hover{
-    background-color: rgb(252,248,116));
+    background-color: #ebe601252248116;
     border: none;
-    color: black;
+    color: white;
     padding: 10px 30px;
     font-size: 16px;
 }
@@ -34,11 +37,14 @@
     width:167px;
 }
 
-.input-ingresar:focus {
+.input-ingresar {
     border: 3px solid #555;
     width: 207px;
     height: 39px;
-    padding: 2px 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
     
 }
 
@@ -47,6 +53,7 @@
     height: 39px;
     color:black;
 }
+
 
 .boton-margen-inferior{
 	margin-top:10px;
@@ -61,7 +68,7 @@
     padding-bottom: 20px;
     padding-top: 23px;
     margin-right: 200px;
-	background-color: snow;
+	background-color: rgb(252,248,116);
 }
 
 .contenedor-egresar{
@@ -113,7 +120,16 @@
     border-bottom: 1px solid slategrey;
     background-color: rgb(252,248,116);;
 }
-}
+
+
+.tron{
+      background-color: white;
+      color: black;
+      padding: 40px 20px 40px 70px;
+      text-align: center;
+      font-family: Coda Caption;
+      font-size: 49px;
+  }
 
 .imagen-logo{    
 	width: 172px;
@@ -148,10 +164,12 @@
 	    margin-left: 400px;
 }
 
-.nav{
+
+
+/*.nav{
 	padding-top:15px;
 	background:rgb(252,248,116);;
-}
+}*/
 
 
 .horizontal-menu {

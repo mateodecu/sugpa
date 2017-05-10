@@ -8,11 +8,16 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coda+Caption" />
+  
 
 <!--
 import="com.unla.datos.Hotel" //en principio poner de titulo la instancia del singleton
@@ -91,17 +96,8 @@ setTimeout("actualizaReloj()",1000)
 <body onload="actualizaReloj()">
  <div class="im-centered">	
 
-	<div class="row contenedor-titulo text-center">
-		<div class="col-md-4"><img alt="Cinque Terre" width="133" height="169" src="img/Logo.jpg"></div>
-		<div class="col-md-4"><h1 class="titulo">DGCACTYSV</h1></div>
-		<div class="col-md-8">
-			  
-              <ul class="horizontal-menu__lista">
-                  <li class="horizontal-menu__item"><a href="inicio">INGRESAR</a></li>
-                  <li class="horizontal-menu__item" id="Fecha_Reloj"><a href="Index"></a></li>
-              </ul>
-         		
-		</div>
+	<div class="row contenedor-titulo text-left">
+		<div class="col-sd-4"><img alt="Cinque Terre" width="454" height="83" src="img/Logo.png"><p class="reloj" id="Fecha_Reloj"></p></div>
 		
 	</div>
 	</div>

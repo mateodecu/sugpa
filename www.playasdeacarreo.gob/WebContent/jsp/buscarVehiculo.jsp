@@ -10,22 +10,24 @@
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
- 
- 
- <div class="jumbotron text-center">	
-<h1>Busqueda de vehiculos </h1>	
-</div>
 
-<nav class="navbar navbar-default">
+
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Volver</a></li>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
-</nav>
+</nav>	
+
+<div class="tron">	
+<h1>Busqueda de vehiculos </h1>	
+</div>
 
 	<form method="post" action="/www.playasdeacarreo.gob/mostrarVehiculo">
 	<div class="row">
@@ -33,16 +35,24 @@
 		<div class="col-md-4 text-center">
 			<div class="contenedor-login">
 			<label for="dominio">Por dominio:</label>
-			<input class="input-ingresar"  name="dominio" type="text"/>
+			<p class="boton-margen-inferior">
+			<input class="input-ingresar"  name="dominio" type="text"/></p>
+			
 			<p>o</p>
 			<label for="acta">Por acta de comprobacion:</label>
-			<input class="input-ingresar"  name="acta" type="text"/>	
+			<p class="boton-margen-inferior">
+			<input class="input-ingresar"  name="acta" type="text"/></p>	
+			
 			<p>o</p>
 			<label for="acta">Por boleta de citacion:</label>
-			<input class="input-ingresar"  name="boleta" type="text"/>
+			<p class="boton-margen-inferior">
+			<input class="input-ingresar"  name="boleta" type="text"/></p>
+			
 			<p>o</p>
 			<label for="acta">Por acta de constatacion:</label>
-			<input class="input-ingresar"  name="actaAlco" type="text"/>
+			<p class="boton-margen-inferior">
+			<input class="input-ingresar"  name="actaAlco" type="text"/></p>
+			
 			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="buscar" value="Buscar"/></p>
 			</div>	
 		</div>	

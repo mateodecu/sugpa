@@ -1,4 +1,5 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,8 +8,7 @@
 </head>
 
 <!-- jQuery library -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
 
 <body>
@@ -25,44 +25,49 @@ function myFunction() {
 }
 </script>
 
- <%@include file="header.jsp" %>
- <div class="jumbotron text-center">
-	<h1>Ingresar Vehiculo: </h1>
-</div>
+ 
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Volver</a></li>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>
 
+ <div class="tron">
+	<h1>Ingresar Vehiculo: </h1>
+</div>
+
+
 <form method="post" action="/www.playasdeacarreo.gob/bienvenido">
+
+<div class="contenedor-login">
 
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
       <h3>Datos del vehiculo</h3>
-      	<div class="contenedor-login">
 			      				
   				<label for="motivo">Tipo:</label>
-  				<p> </p>
+  				<p class="boton-margen-inferior">
 			    <select class="input-ingresar" id="tipo" name="motivo">
 			      <option value="-1" selected="">Selecciona</option>
 			      <option value="vehiculo">Vehiculo</option>
 			      <option value="motovehiculo">Motovehiculo</option>
-			    </select>
-				<p> </p>
+			    </select></p>
+			    
 				<label for="dominio">Dominio: </label>
-				<p> </p>
-				<input class="input-ingresar"  required name="dominio" type="text"/>
-				<p> </p>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="dominio" type="text"/></p>
+				
 				<label  for="marca">Marca:</label>
-				<p> </p>
+				<p class="boton-margen-inferior">
 					<select class="input-ingresar" id="marca" name="marca">
 					<option value="-1" selected="">Selecciona</option>				
 					<option value="38">ABARTH</option>
@@ -122,14 +127,14 @@ function myFunction() {
 					<option value="11">TOYOTA</option>
 					<option value="9">VOLVO</option>
 					<option value="9">Otros</option>
-					</select>	
-				<p> </p>				
+					</select></p>
+									
 				<label for="modelo">Modelo:</label>
-				<p> </p>
-				<input class="input-ingresar"  required name="modelo" type="text"/>	
-				<p> </p>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="modelo" type="text"/></p>
+			    
 			    <label for="motivo">Motivo:</label>
-			    <p> </p>
+			    <p class="boton-margen-inferior">
 			    <select class="input-ingresar" id="motivo" name="motivo">
 			      <option value="-1" selected="">Selecciona</option>
 			      <option value="doc">DOCUMENTACION</option>
@@ -138,40 +143,53 @@ function myFunction() {
 			      <option value="alcoholemia">ALCOHOLEMIA</option>
 			      <option value="abandonado">ABANDONADO</option>
 			      <option value="uber">UBER</option>
-			    </select>
-			    <p> </p>
-		</div>		
-    </div>
+			    </select></p>
+			    
+	</div>		
     
     <div class="col-sm-4">
       <h3>Datos de la infraccion</h3>
-      	<div class="contenedor-login">
+      	
 			    <label for="acta">Acta contravencional:</label>
-				<input class="input-ingresar"  required name="acta" type="text"/>	
+			    <p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="acta" type="text"/></p>
+				
 			    <label for="actac">Acta de comprobacion:</label>
-				<input class="input-ingresar"  required name="actac" type="text"/>	
+			    <p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="actac" type="text"/></p>
+					
 			    <label for="boleta">Boleta de citación:</label>
-				<input class="input-ingresar"  required name="boleta" type="text"/>
+			    <p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="boleta" type="text"/></p>
+				
 				<label for="agente">Agente Labrante: </label>
-				<input class="input-ingresar"  required name="agente" type="text"/>	
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="agente" type="text"/></p>
+				
 				<label for="infractor">Infractor/Contraventor:</label>
-				<input class="input-ingresar"  required name="infractor" type="text"/>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="infractor" type="text"/></p>
+				
 				<label for="chofer">Chofer de grua:</label>
-				<input class="input-ingresar"  required name="chofer" type="text"/>
-		</div>			
-    </div>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="chofer" type="text"/></p>
+	</div>			
+   
     
     <div class="col-sm-4">
-      <h3>Confirmar ingreso</h3>   
-      <div class="contenedor-login">  
+      <h3>Confirmar ingreso</h3>     
             <label for="inputdefault">Observaciones:</label>
-				<textarea name="observaciones" rows="5" cols="20"></textarea>
-				<p class="boton-margen-inferior">
-				<p class="boton-margen-inferior"><input onclick="myFunction()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
-     			<p class="boton-margen-inferior"><input class="boton input-ingresar" type="reset" name="borrar" value="Limpiar"/></p>
+			<p class="boton-margen-inferior">
+			<textarea name="observaciones" rows="5" cols="30"></textarea></p>
+			
+			<p class="boton-margen-inferior">
+			<input onclick="myFunction()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
+     		
+     		<p class="boton-margen-inferior">
+     		<input class="boton input-ingresar" type="reset" name="borrar" value="Limpiar"/></p>
      </div>
-  	</div>
-
+     
+	</div>
 </div>
   	
 </div>	

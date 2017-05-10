@@ -59,19 +59,23 @@ function printPage() {
 </head>
 <body>
 
-<div class="jumbotron text-center">
-	<h1>Estadisticas</h1>
-</div>
-<nav class="navbar navbar-default">
+
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Volver</a></li>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>
+
+<div class="tron">
+	<h1>Estadisticas</h1>
+</div>	
 
 <div class="container">
   <h2>Graficador estadistico</h2>         
@@ -87,14 +91,16 @@ function printPage() {
     <tbody>
 
 					<tr>
-						<td>			    
-						<select id="tipo" name="tipo">
+						<td>
+						<p class="boton-margen-inferior">			    
+						<select class="input-ingresar" id="tipo" name="tipo">
+						  <option value="-1" selected="">Selecciona</option>
 					      <option value="moto">VEHICULO</option>
 					      <option value="auto">MOTOVEHICULO</option>
-					    </select></td>
-			    
-						<td>
-							<select id="motivo" name="motivo">
+					    </select></p></td>
+						<td><p class="boton-margen-inferior">
+							<select class="input-ingresar" id="motivo" name="motivo">
+									<option value="-1" selected="">Selecciona</option>
 									<option value="todos">TODOS</option>
 									<option value="doc">DOCUMENTACION</option>
 									<option value="est">ESTACIONAMIENTO PROHIBIDO</option>
@@ -102,10 +108,10 @@ function printPage() {
 									<option value="alcoholemia">ALCOHOLEMIA</option>
 									<option value="abandonado">ABANDONADO</option>
 									<option value="uber">UBER</option>
-							</select>
+							</select></p>
 						</td>
-						<td><input	id="datepicker_desde" /></td>
-						<td><input id="datepicker_hasta" /></td>
+						<td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_desde" /></p></td>
+						<td><p class="boton-margen-inferior"><input class="input-ingresar" id="datepicker_hasta" /></p></td>
 						
 					</tr>
     </tbody>
