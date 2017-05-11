@@ -25,7 +25,9 @@ public class ControladorLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws
 	ServletException, IOException {
 		
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(true);
+		
+		
 		try {
 			String usuario= request.getParameter("usuario");
 			
@@ -38,7 +40,7 @@ public class ControladorLogin extends HttpServlet {
 					request.getRequestDispatcher("/jsp/bienvenidoLegalesAbandonados.jsp").forward(request, response);	
 				}else{
 					if(usuario.compareTo("legales")==0){
-						request.setAttribute("usuario","Walter");
+						request.setAttribute("usuario","Walter Miraglia");
 						request.getRequestDispatcher("/jsp/bienvenidoLegales.jsp").forward(request, response);	
 					}else{
 					if(usuario.compareTo("direccion")==0){
@@ -53,6 +55,6 @@ public class ControladorLogin extends HttpServlet {
 		request.getRequestDispatcher("/jsp/errorlogin.jsp").forward(request, response);
 		
 	}	
-
+		session.setAttribute("usuario", request.getAttribute("usuario"));
 	}
 }

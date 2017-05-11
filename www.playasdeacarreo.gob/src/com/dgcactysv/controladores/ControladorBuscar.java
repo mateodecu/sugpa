@@ -30,20 +30,8 @@ public class ControladorBuscar extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws
 	ServletException, IOException {
 		
-		HttpSession session = request.getSession();
-		response.setContentType("text/html;charset=UTF-8");
-
-		PrintWriter salida = response.getWriter();
-		salida.println("");
-		salida.println("<!DOCTYPE 4.01 Transitional//EN\">");
-		salida.println("<HTML>");
-		salida.println(" <HEAD>");
-		salida.println(" <TITLE>Playas de acarreo</TITLE>");
-		salida.println(" </HEAD>");
-		salida.println(" <BODY>");
-		salida.println("");
-		salida.println(" </BODY>");
-		salida.println("</HTML>");
+		HttpSession session= (HttpSession) request.getSession();
+		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 		
 		request.getRequestDispatcher("/jsp/buscarVehiculo.jsp").forward(request, response);	
 	

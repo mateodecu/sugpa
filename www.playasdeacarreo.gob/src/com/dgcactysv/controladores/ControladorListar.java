@@ -27,7 +27,8 @@ public class ControladorListar extends HttpServlet {
 	ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-				
+		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
+
 		request.getRequestDispatcher("/jsp/listarVehiculos.jsp").forward(request, response);	
 	
 

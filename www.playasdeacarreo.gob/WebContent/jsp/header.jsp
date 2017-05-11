@@ -16,10 +16,11 @@
 <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coda+Caption" />
-  
+
 
 <!--
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Coda+Caption" />
+  
 import="com.unla.datos.Hotel" //en principio poner de titulo la instancia del singleton
 Hotel hotel=Hotel.getInstanciaHotel();
 <title>hotel.getnombre();</title> -->

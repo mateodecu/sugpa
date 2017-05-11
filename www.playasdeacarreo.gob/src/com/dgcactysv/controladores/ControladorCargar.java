@@ -26,7 +26,7 @@ public class ControladorCargar extends HttpServlet {
 	ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		
+		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 		request.getRequestDispatcher("/jsp/ingresarVehiculo.jsp").forward(request, response);	
 
 	}

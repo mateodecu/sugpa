@@ -29,6 +29,7 @@ public class ControladorEstadistica extends HttpServlet {
 	ServletException, IOException {
 		
 		HttpSession session = request.getSession();		
+		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 
 		request.getRequestDispatcher("/jsp/estadisticas.jsp").forward(request, response);	
 	

@@ -22,6 +22,7 @@ public class ControladorInicio extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		request.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
 	}
 

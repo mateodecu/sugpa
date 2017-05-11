@@ -31,6 +31,8 @@ public class ControladorMostrar extends HttpServlet {
 	ServletException, IOException {
 		
 		HttpSession session = request.getSession();
+		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
+
 		response.setContentType("text/html;charset=UTF-8");
 		VehiculoABM v= new VehiculoABM();
 		String dominio=request.getParameter("dominio");
