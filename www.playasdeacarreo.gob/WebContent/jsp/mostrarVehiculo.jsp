@@ -8,6 +8,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Playas de Acarreo DGCACTYSV:</title>
+
+<script>
+	$(document).ready(function(){
+	    $("#verDoc").click(function(){
+	        $("object").hide();
+	    });
+	    $("#verDoc").click(function(){
+	        $("object").show();
+	    });
+	});
+
+</script>
+
 </head>
 <body>
 
@@ -64,6 +77,55 @@
     </tbody>
     
   </table>
+  
+      				<%if(request.getAttribute("usuario").equals("Walter Miraglia")==true && parsear[0].equals(" ")==false ){
+						%>
+					<p class="boton-margen-inferior">
+					<input class="boton input-ingresar" type="submit" name="verDoc" value="Ver Documentacion"/></p>
+					<p class="boton-margen-inferior">
+					<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
+							
+					  <table class="table table-striped">
+					    <thead>
+					      <tr>
+							 <th>DNI</th>
+							 <th>LICENCIA</th>
+							 <th>CEDULA</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+										<tr>
+											<td><object width="400" height="400" data="img/dni.pdf"></object></td>
+											<td><object width="400" height="400" data="img/licencia.pdf"></object></td>
+											<td><object width="400" height="400" data="img/cedula.pdf"></object></td>
+										</tr>
+					    </tbody>
+					  </table>
+					  
+					  	<table class="table table-striped">
+					    <thead>
+					      <tr>
+							 <th>SEGURO</th>
+							 <th>DGAI</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+										<tr>
+											<td><object width="400" height="400" data="img/seguro.pdf"></object></td>
+											<td><object width="400" height="400" data="img/dgai.pdf"></object></td>
+										</tr>
+					    </tbody>
+					  </table>
+					  
+					  
+					
+					<%} %>
+					
+					<%if(request.getAttribute("usuario").equals("Decurgez Mateo")==true && parsear[0].equals(" ")==false){%>
+						<p class="boton-margen-inferior">
+						<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
+					<%} %>
+					
     				<%if(parsear[0].equals(" ")==true){
 						String mensaje="No se encontro el vehiculo";%>
 					<h2><%=mensaje %></h2>
