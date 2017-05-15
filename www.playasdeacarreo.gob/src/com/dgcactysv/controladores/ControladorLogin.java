@@ -40,7 +40,7 @@ public class ControladorLogin extends HttpServlet {
 					request.getRequestDispatcher("/jsp/bienvenidoLegalesAbandonados.jsp").forward(request, response);	
 				}else{
 					if(usuario.compareTo("legales")==0){
-						request.setAttribute("usuario","Walter Miraglia");
+						request.setAttribute("usuario","Miraglia Walter");
 						request.getRequestDispatcher("/jsp/bienvenidoLegales.jsp").forward(request, response);	
 					}else{
 					if(usuario.compareTo("direccion")==0){

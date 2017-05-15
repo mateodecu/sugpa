@@ -71,6 +71,18 @@
 	background-color: rgb(252,248,116);
 }
 
+.contenedor-buscar{
+	
+	border: 1px solid;
+    position: absolute;
+    padding-left: 80px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+    padding-top: 23px;
+    margin-right: 200px;
+	background-color: rgb(252,248,116);
+}
+
 .contenedor-egresar{
 	
 	border: 1px solid;
@@ -127,10 +139,14 @@
       color: black;
       padding: 40px 20px 40px 70px;
       text-align: center;
-      font-family: Coda Caption;
+      font-family:Helvetica;
       font-size: 49px;
   }
-
+  
+.btn{
+	  background-color: black;
+      color: white;
+}
 .imagen-logo{    
 	width: 172px;
     height: 203px;

@@ -29,10 +29,12 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
-
+    <ul class="nav navbar-nav">
+      <li><a href="inicio">Inicio</a></li>
+    </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>	
@@ -57,34 +59,34 @@
       </tr>
     </thead>
     <tbody>
-					<%String dominio= ""+request.getAttribute("dominio");
-					String parsear[]=dominio.split(";");
+	 			<%Vehiculo vehiculo= new Vehiculo();
+	 			vehiculo= (Vehiculo) request.getAttribute("vehiculo");
 					 %>		 
 					<tr>
-						<td><%=parsear[0]%></td>
-						<td><%=parsear[1]%></td>
-						<td><%=parsear[2]%></td>
-						<td><%=parsear[3]%></td>
-						<td><%=parsear[4]%></td>
-						<td><%=parsear[5]%></td>
-						<td><%=parsear[6]%></td>
-						<td><%=parsear[7]%></td>
-						<td><%=parsear[8]%></td>	
-						
+						<td><%=vehiculo.getRegistro()%></td>
+						<td><%=vehiculo.getFecha()%></td>
+						<td><%=vehiculo.getHora()%></td>
+						<td><%=vehiculo.getDominio()%></td>
+						<td><%=vehiculo.getMarca()%></td>
+						<td><%=vehiculo.getModelo()%></td>
+						<td><%=vehiculo.getMotivo()%></td>
+						<td><%=vehiculo.getPlaya()%></td>
+						<td><%=vehiculo.getUsuario()%></td>
 					</tr>
 										
-
+	
     </tbody>
     
   </table>
   
-      				<%if(request.getAttribute("usuario").equals("Walter Miraglia")==true && parsear[0].equals(" ")==false ){
+      				<%if(request.getAttribute("usuario").equals("Miraglia Walter")==true && vehiculo.getRegistro().equals("null")==false ){
 						%>
+					<div class="col-md-2 text-center">
 					<p class="boton-margen-inferior">
 					<input class="boton input-ingresar" type="submit" name="verDoc" value="Ver Documentacion"/></p>
 					<p class="boton-margen-inferior">
 					<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
-							
+					</div>		
 					  <table class="table table-striped">
 					    <thead>
 					      <tr>
@@ -121,12 +123,26 @@
 					
 					<%} %>
 					
-					<%if(request.getAttribute("usuario").equals("Decurgez Mateo")==true && parsear[0].equals(" ")==false){%>
+					<%if(request.getAttribute("usuario").equals("Decurgez Mateo")==true && vehiculo.getRegistro().equals("null")==false){%>
 						<p class="boton-margen-inferior">
 						<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
 					<%} %>
+
+					<%if(request.getAttribute("usuario").equals("Pizarro Maximiliano")==true && vehiculo.getRegistro().equals("null")==false){%>
+					<form action="egreso">
+						<p class="boton-margen-inferior">
+						<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
+					</form>	
+					<%} %>
 					
-    				<%if(parsear[0].equals(" ")==true){
+					<%if(request.getAttribute("usuario").equals("Pietrafesa Sergio")==true && vehiculo.getRegistro().equals("null")==false){%>
+					<form action="egreso">
+						<p class="boton-margen-inferior">
+						<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
+					</form>	
+					<%} %>
+					
+    				<%if(vehiculo.getRegistro().equals("null")==true){
 						String mensaje="No se encontro el vehiculo";%>
 					<h2><%=mensaje %></h2>
 					<%} %>

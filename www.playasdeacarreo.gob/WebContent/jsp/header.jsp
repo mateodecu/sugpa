@@ -99,8 +99,10 @@ setTimeout("actualizaReloj()",1000)
 
 	<div class="row contenedor-titulo text-left">
 		<div class="col-sd-4"><img alt="Cinque Terre" width="454" height="83" src="img/Logo.png"><p class="reloj" id="Fecha_Reloj"></p></div>
-		
+	
 	</div>
+	
+	
 	</div>
 
 </body>

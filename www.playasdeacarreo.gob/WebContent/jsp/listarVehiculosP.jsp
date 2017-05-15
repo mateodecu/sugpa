@@ -25,10 +25,13 @@ function printPage() {
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
-
+    <ul class="nav navbar-nav">
+      <li><a href="inicio">Inicio</a></li>
+    </ul>
+    
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>	
@@ -107,8 +110,12 @@ function printPage() {
   </table>  
 </div>
 
-<div class="col-md-8 text-center">	
-<p class="boton-margen-inferior"><input onclick="printPage()" class="boton input-ingresar" type="reset" name="imprimir" value="Imprimir Listado"/></p>	
+<div class="col-md-8 text-center">
+<p class="boton-margen-inferior">
+    <a onclick="printPage()" class="btn">
+      <span class="glyphicon glyphicon-print"></span> Imprimir Listado 
+    </a>
+</p>
 </div>
 
 </body>

@@ -2,6 +2,8 @@ package com.dgcactysv.controladores;
 
 import com.dgcactysv.negocio.*;
 import com.dgcactysv.datos.*;
+import com.dgcactysv.modelo.Vehiculo;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -35,12 +37,14 @@ public class ControladorMostrar extends HttpServlet {
 
 		response.setContentType("text/html;charset=UTF-8");
 		VehiculoABM v= new VehiculoABM();
+		
 		String dominio=request.getParameter("dominio");
+
+		Vehiculo vehiculo=new Vehiculo();
 		
-		dominio=v.buscarVehiculo(dominio);
+		vehiculo=v.buscarVehiculo(dominio);
 		
-		request.setAttribute("dominio", dominio);
-		
+		request.setAttribute("vehiculo", vehiculo);
 
 		request.getRequestDispatcher("/jsp/mostrarVehiculo.jsp").forward(request, response);	
 	

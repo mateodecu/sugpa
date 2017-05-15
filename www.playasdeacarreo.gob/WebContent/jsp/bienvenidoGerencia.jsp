@@ -16,15 +16,14 @@
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#">INICIO</a></li>
-      <li><a href="/www.playasdeacarreo.gob/buscar">Buscar</a></li>
-      <li><a href="/www.playasdeacarreo.gob/verEstadisticas">Ver estadisticas</a></li>
-      <li><a href="/www.playasdeacarreo.gob/listarVehiculosPlaya">Listado Playas</a></li>
-      <li><a href="/www.playasdeacarreo.gob/listarVehiculos">Más de 60 días</a></li>
-      <li><a href="/www.playasdeacarreo.gob/egreso">Egresar vehiculo</a></li>   </ul>
+      <li><a href="buscar">Buscar</a></li>
+      <li><a href="verEstadisticas">Ver estadisticas</a></li>
+      <li><a href="listarVehiculosPlaya">Listado Playas</a></li>
+      <li><a href="listarVehiculos">Más de 60 días</a></li>
+      <li><a href="egreso">Egresar vehiculo</a></li>   </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>	

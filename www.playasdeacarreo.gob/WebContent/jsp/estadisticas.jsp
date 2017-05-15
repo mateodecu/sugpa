@@ -41,10 +41,10 @@
 <script>
 $(document).ready(function(){
     $("#hide").click(function(){
-        $("img").hide();
+        $("#div1").hide();
     });
     $("#show").click(function(){
-        $("img").show();
+        $("#div1").show();
     });
 });
 </script>
@@ -65,10 +65,12 @@ function printPage() {
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
-
+    <ul class="nav navbar-nav">
+      <li><a href="inicio">Inicio</a></li>
+    </ul> 
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>
@@ -77,6 +79,7 @@ function printPage() {
 	<h1>Estadisticas</h1>
 </div>	
 
+<div class="contenedor-buscar">
 <div class="container">
   <h2>Graficador estadistico</h2>         
   <table class="table table-striped">
@@ -116,17 +119,23 @@ function printPage() {
 					</tr>
     </tbody>
   </table>
-  
-  				
-<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="857" height="469">
+</div>  
+ 
+<div id="div1">				
+<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="957" height="569"></div>
 <p> </p>
-<div class="col-md-8">	
+<div class="col-md-8">
+	
 <button id="show">Mostrar Grafico</button>
 <button id="hide">Ocultar Grafico</button>
-<p class="boton-margen-inferior"><input onclick="printPage()" class="boton input-ingresar" type="reset" name="imprimir" value="Imprimir Grafico"/></p>	
+</div>			
+<div class="col-md-16 text-center">
+<p class="boton-margen-inferior">
+    <a onclick="printPage()" class="btn">
+      <span class="glyphicon glyphicon-print"></span> Imprimir Grafico 
+    </a>
+</p>
 </div>
-</div>				
-
 
 </body>
 </html>

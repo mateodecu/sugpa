@@ -51,6 +51,7 @@
       <servlet-name>ControladorEstadistica</servlet-name>
     	<servlet-class>com.dgcactysv.controladores.ControladorEstadistica</servlet-class>
   </servlet>
+
   
  <servlet-mapping>	 
     <servlet-name>ControladorLogin</servlet-name>
@@ -92,4 +93,6 @@
     <servlet-name>ControladorEstadistica</servlet-name>
     <url-pattern>/verEstadisticas</url-pattern>
   </servlet-mapping>
+  
+  
 </web-app>
