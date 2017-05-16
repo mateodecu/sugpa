@@ -32,9 +32,7 @@
 
 <div class="container">
   <h2>Playa rio cuarto</h2>
-  <p>Contabilizacion : 100 vehiculos</p> 
-  <p>Contabilizacion vehiculos: 60 vehiculos</p>
-  <p>Contabilizacion motovehiculos: 40 motovehiculos</p> 
+   
   <p>Lista de vehiculos en playa:</p>           
   <table class="table table-striped">
     <thead>
@@ -66,6 +64,35 @@
 					<% } %>
     </tbody>
   </table>		
+  
+   <table class="table table-striped">
+    <h2>Contabilizacion</h2> 
+    <thead>
+      <tr>
+		 <th>TIPO</th>
+		 <th>VEHICULOS</th>
+		 <th>MOTOVEHICULOS</th>
+		 <th>TOTAL</th>		 
+      </tr>
+    </thead>
+    <tbody>
+					<tr>
+						<td>CANTIDAD</td>
+						<td>60</td>
+						<td>40</td>
+						<td>100</td>
+					</tr>
+    </tbody>
+  </table>
+  
+  
+  <div class="col-md-8 text-center">
+<p class="boton-margen-inferior">
+    <a onclick="printPage()" class="btn">
+      <span class="glyphicon glyphicon-print"></span> Imprimir Listado 
+    </a>
+</p>
+</div>
 	
  <%@include file="footer.jsp" %>
 </body>

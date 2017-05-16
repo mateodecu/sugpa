@@ -16,7 +16,7 @@
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="buscar">Buscar</a></li>
+      <li><a href="buscar">Buscar Vehiculo</a></li>
       <li><a href="verEstadisticas">Ver estadisticas</a></li>
       <li><a href="listarVehiculosPlaya">Listado Playas</a></li>
       <li><a href="listarVehiculos">Más de 60 días</a></li>

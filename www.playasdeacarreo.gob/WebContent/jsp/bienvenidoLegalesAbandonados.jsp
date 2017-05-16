@@ -18,7 +18,7 @@
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="buscar">Buscar</a></li>
+      <li><a href="buscar">Buscar Vehiculo</a></li>
       <li><a href="listarVehiculosPlaya">Fuera de plazo</a></li>
       <li><a href="listarVehiculos">Más de 60 días</a></li>
     </ul>  
@@ -29,13 +29,9 @@
   </div>
 </nav>
 
-
-  <h2>Contabilizacion</h2>
-  
-  <p>Vehiculos fuera de plazo: 60 vehiculos</p>
-  <p>Vehiculos de más 60 días : 100 vehiculos</p> 
-
 <div class="container">
+
+
   <h2>Playa rio cuarto</h2>
   <p>Esta tabla representa los vehiculos en playa:</p>            
   <table class="table table-striped">
@@ -102,12 +98,29 @@
 					</tr>
 					<% } %>
     </tbody>
-  </table>  
+  </table> 
+  
+<table class="table table-striped">
+    <h2>Estado listados</h2> 
+    <thead>
+      <tr>
+		 <th>MOTIVO</th>
+		 <th>FUERA DE PLAZO</th>
+		 <th>MAS DE 60 DÍAS</th> 
+      </tr>
+    </thead>
+    <tbody>
+					<tr>
+						<td>CONTABILIZACION</td>
+						<td>60</td>
+						<td>40</td>
+						
+					</tr>
+    </tbody>
+  </table>
+  
+   
 </div>
-
-
-
-
 
 	
 

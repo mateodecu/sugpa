@@ -31,6 +31,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="inicio">Inicio</a></li>
+      <li><a href="buscar">Volver a buscar</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
@@ -81,12 +82,23 @@
   
       				<%if(request.getAttribute("usuario").equals("Miraglia Walter")==true && vehiculo.getRegistro().equals("null")==false ){
 						%>
-					<div class="col-md-2 text-center">
-					<p class="boton-margen-inferior">
-					<input class="boton input-ingresar" type="submit" name="verDoc" value="Ver Documentacion"/></p>
-					<p class="boton-margen-inferior">
-					<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
-					</div>		
+							<table class="table table-striped">
+							    <thead>
+							      <tr>
+									 <th></th>
+									 <th></th>					    
+							      </tr>
+							    </thead>
+							    <tbody>
+												<tr>
+													<td>
+													<input class="boton input-ingresar" type="submit" name="verDoc" value="Ver Documentacion"/></td>													
+													<td><form action="editarRegistro">
+													<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/>	
+													</form></td>					
+												</tr>
+							    </tbody>
+							  </table>	
 					  <table class="table table-striped">
 					    <thead>
 					      <tr>

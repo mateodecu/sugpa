@@ -13,7 +13,7 @@
 		<div class="col-md-4"></div>	
 		<div class="col-md-4"></div>
 		<div class="col-md-4"></div>
-		<!-- <div class="copyright">Copyright @ 2017</div> -->			
+		<div class="copyright">Copyright @ 2017</div> 	
 	</div> 
 	
 

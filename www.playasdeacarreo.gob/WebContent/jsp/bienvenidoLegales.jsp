@@ -18,7 +18,7 @@
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="buscar">Buscar</a></li>
+      <li><a href="buscar">Buscar Vehiculo</a></li>
       <li><a href="listarVehiculosPlaya">Listado Playas</a></li>
     </ul>  
     <ul class="nav navbar-nav navbar-right">

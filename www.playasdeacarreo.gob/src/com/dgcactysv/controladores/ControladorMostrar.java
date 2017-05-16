@@ -36,6 +36,7 @@ public class ControladorMostrar extends HttpServlet {
 		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 
 		response.setContentType("text/html;charset=UTF-8");
+		
 		VehiculoABM v= new VehiculoABM();
 		
 		String dominio=request.getParameter("dominio");
@@ -45,6 +46,8 @@ public class ControladorMostrar extends HttpServlet {
 		vehiculo=v.buscarVehiculo(dominio);
 		
 		request.setAttribute("vehiculo", vehiculo);
+		
+		session.setAttribute("vehiculo", vehiculo);
 
 		request.getRequestDispatcher("/jsp/mostrarVehiculo.jsp").forward(request, response);	
 	

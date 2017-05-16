@@ -27,8 +27,8 @@
       <a class="navbar-brand" href="inicioo">SUGPA</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicioo"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
+      <li><a href="#"></a></li>
     </ul>
   </div>
 </nav>	
@@ -42,7 +42,7 @@
 			<div class="contenedor-login">
 				<label for="texto-normal">Usuario:</label>
 				<p class="boton-margen-inferior">
-				<input class="input-ingresar" required name="usuario" type="text"/></p>
+				<input class="input-ingresar" autocomplete="off" required name="usuario" type="text"/></p>
 				
 				<label for="boton-margen-inferior texto-normal">Contraseña:</label>
 				<p class="boton-margen-inferior">
