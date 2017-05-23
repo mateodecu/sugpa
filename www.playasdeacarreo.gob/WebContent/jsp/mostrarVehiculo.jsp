@@ -102,9 +102,9 @@
 					  <table class="table table-striped">
 					    <thead>
 					      <tr>
-							 <th>DNI</th>
-							 <th>LICENCIA</th>
-							 <th>CEDULA</th>
+							 <th><a href="img/dni.pdf" download>DNI</a></th>
+							 <th><a href="img/licencia.pdf" download>LICENCIA</a></th>
+							 <th><a href="img/cedula.pdf" download>CEDULA</a></th>
 					      </tr>
 					    </thead>
 					    <tbody>
@@ -119,8 +119,8 @@
 					  	<table class="table table-striped">
 					    <thead>
 					      <tr>
-							 <th>SEGURO</th>
-							 <th>DGAI</th>
+							 <th><a href="img/seguro.pdf" download>SEGURO</a></th>
+							 <th><a href="img/dgai.pdf" download>DGAI</a></th>
 					      </tr>
 					    </thead>
 					    <tbody>
