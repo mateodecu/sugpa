@@ -85,14 +85,11 @@
 							<table class="table table-striped">
 							    <thead>
 							      <tr>
-									 <th></th>
-									 <th></th>					    
+									 <th></th>			    
 							      </tr>
 							    </thead>
 							    <tbody>
-												<tr>
-													<td>
-													<input class="boton input-ingresar" type="submit" name="verDoc" value="Ver Documentacion"/></td>													
+												<tr>												
 													<td><form action="editarRegistro">
 													<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/>	
 													</form></td>					
@@ -102,16 +99,16 @@
 					  <table class="table table-striped">
 					    <thead>
 					      <tr>
-							 <th><a href="img/dni.pdf" download>DNI</a></th>
-							 <th><a href="img/licencia.pdf" download>LICENCIA</a></th>
-							 <th><a href="img/cedula.pdf" download>CEDULA</a></th>
+							 <th><a href="img/dni.pdf" download title="Descargar documento">DNI</a></th>
+							 <th><a href="img/licencia.pdf" download title="Descargar documento">LICENCIA</a></th>
+							 <th><a href="img/cedula.pdf" download title="Descargar documento">CEDULA</a></th>
 					      </tr>
 					    </thead>
 					    <tbody>
 										<tr>
-											<td><object width="400" height="400" data="img/dni.pdf"></object></td>
-											<td><object width="400" height="400" data="img/licencia.pdf"></object></td>
-											<td><object width="400" height="400" data="img/cedula.pdf"></object></td>
+											<td><object width="300" height="400" data="img/dni.pdf"></object></td>
+											<td><object width="300" height="400" data="img/licencia.pdf"></object></td>
+											<td><object width="300" height="400" data="img/cedula.pdf"></object></td>
 										</tr>
 					    </tbody>
 					  </table>
@@ -119,14 +116,14 @@
 					  	<table class="table table-striped">
 					    <thead>
 					      <tr>
-							 <th><a href="img/seguro.pdf" download>SEGURO</a></th>
-							 <th><a href="img/dgai.pdf" download>DGAI</a></th>
+							 <th><a href="img/seguro.pdf" download title="Descargar documento">SEGURO</a></th>
+							 <th><a href="img/dgai.pdf" download title="Descargar documento">DGAI</a></th>
 					      </tr>
 					    </thead>
 					    <tbody>
 										<tr>
-											<td><object width="400" height="400" data="img/seguro.pdf"></object></td>
-											<td><object width="400" height="400" data="img/dgai.pdf"></object></td>
+											<td><object width="300" height="400" data="img/seguro.pdf"></object></td>
+											<td><object width="300" height="400" data="img/dgai.pdf"></object></td>
 										</tr>
 					    </tbody>
 					  </table>

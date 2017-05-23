@@ -66,6 +66,7 @@ function myFunction() {
 					<option value="-1" selected="">Selecciona</option>
 					<option value="titular">TITULAR</option>
 					<option value="ca">CONDUCTOR AUTORIZADO</option>
+					<option value="policia">FUERZA DE SEGURIDAD</option>
 				</select></p>
 				
 				<label for="apellido">Apellido:</label> 
@@ -79,7 +80,6 @@ function myFunction() {
 				<label for="dni">DNI:</label> 
 				<p class="boton-margen-inferior">
 				<input class="input-ingresar" required name="dni" type="text" /></p>
-				
 	
     </div>
     

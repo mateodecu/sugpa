@@ -146,8 +146,14 @@ function myFunction() {
 			      <option value="alcoholemia">ALCOHOLEMIA</option>
 			      <option value="abandonado">ABANDONADO</option>
 			      <option value="uber">UBER</option>
+			      <option value="uber">ESTUPEFACIENTES</option>
 			    </select></p>
-			    
+				<label for="chofer">N°Chasis:</label>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="chasis" type="text"/></p>
+				<label for="chofer">N°Motor:</label>
+				<p class="boton-margen-inferior">
+				<input class="input-ingresar"  required name="motor" type="text"/></p>							    
 	</div>		
     
     <div class="col-sm-4">
@@ -176,6 +182,7 @@ function myFunction() {
 				<label for="chofer">Chofer de grua:</label>
 				<p class="boton-margen-inferior">
 				<input class="input-ingresar"  required name="chofer" type="text"/></p>
+				
 	</div>			
    
     
@@ -188,8 +195,8 @@ function myFunction() {
 			<p class="boton-margen-inferior">
 			<input onclick="myFunction()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
      		
-     		<p class="boton-margen-inferior">
-     		<input class="boton input-ingresar" type="reset" name="borrar" value="Limpiar"/></p>
+     <!-- 		<p class="boton-margen-inferior">
+     		<input class="boton input-ingresar" type="reset" name="borrar" value="Limpiar"/></p> -->
      </div>
      
 	</div>

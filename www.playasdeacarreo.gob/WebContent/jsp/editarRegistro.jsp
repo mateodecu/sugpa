@@ -54,17 +54,22 @@
 						<td><%=vehiculo.getRegistro()%></td>
 						<td><%=vehiculo.getFecha()%></td>
 						<td><%=vehiculo.getHora()%></td>
-						<td><%=vehiculo.getDominio()%></td>
-						<td><%=vehiculo.getMarca()%></td>
-						<td><%=vehiculo.getModelo()%></td>
-						<td><%=vehiculo.getMotivo()%></td>
-						<td><%=vehiculo.getPlaya()%></td>
+						<td><input type="text" name="dominio" value="<%=vehiculo.getDominio()%>"/></td>
+						<td><input type="text" name="marca" value="<%=vehiculo.getMarca()%>"/></td>
+						<td><input type="text" name="modelo" value="<%=vehiculo.getModelo()%>"/></td>
+						<td><input type="text" name="motivo" value="<%=vehiculo.getMotivo()%>"/></td>
+						<td><input type="text" name="motivo" value="<%=vehiculo.getPlaya()%>"/></td>
+						<!-- 1531480324 -->
 					</tr>
-										
 	
     </tbody>
-    
-  </table>
+  </table>            
+  			<label for="inputdefault">Observaciones:</label>
+			<p class="boton-margen-inferior">
+  			<textarea name="observaciones" rows="4" cols="180"></textarea></p>
+  			
+  			<p class="boton-margen-inferior">
+			<input onclick="myFunction()" class="boton input-ingresar" type="submit" name="Guardar" value="Guardar Cambios"/></p>
   </div>
 
 	

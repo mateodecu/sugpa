@@ -23,7 +23,7 @@ public class ControladorInicio extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session= (HttpSession) request.getSession();
+		HttpSession session= (HttpSession) request.getSession(true);
 		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 		String usuario=(String) session.getAttribute("usuario");
 		
