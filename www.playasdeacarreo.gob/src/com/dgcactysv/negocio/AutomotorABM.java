@@ -1,11 +1,15 @@
 package com.dgcactysv.negocio;
 
 import com.dgcactysv.dao.AutomotorDao;
-import com.dgcactysv.modelo.Automotor;;
+import com.dgcactysv.modelo.Automotor;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class AutomotorABM {
 	
-	AutomotorDao daoA=new AutomotorDao();
+	private AutomotorDao daoA=new AutomotorDao();
 	
 	public Automotor traerAutomotor(String dominio) throws Exception {
 

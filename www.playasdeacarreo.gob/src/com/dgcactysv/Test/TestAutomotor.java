@@ -1,12 +1,14 @@
 package com.dgcactysv.Test;
 
-import com.dgcactysv.negocio.AdmSUGPA;
+import com.dgcactysv.negocio.AutomotorABM;
+import com.dgcactysv.negocio.Facade;
 
 public class TestAutomotor {
 
 	public static void main(String[] args) {
-	
-		AdmSUGPA adm= new AdmSUGPA();
+		
+		Facade facade=new Facade();
+		AutomotorABM adm= facade.getAutomotorABM();
 
 		try {
 			System.out.println( adm.traerAutomotor("LLL444").toString());

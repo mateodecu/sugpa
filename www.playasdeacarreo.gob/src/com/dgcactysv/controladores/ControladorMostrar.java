@@ -2,7 +2,11 @@ package com.dgcactysv.controladores;
 
 import com.dgcactysv.negocio.*;
 import com.dgcactysv.datos.*;
+
 import com.dgcactysv.modelo.Vehiculo;
+import com.dgcactysv.negocio.Facade;
+import com.dgcactysv.negocio.AutomotorABM;
+import com.dgcactysv.modelo.Automotor;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -37,7 +41,7 @@ public class ControladorMostrar extends HttpServlet {
 
 		response.setContentType("text/html;charset=UTF-8");
 		
-		VehiculoABM v= new VehiculoABM();
+		VehiculoABM v= new VehiculoABM(); //busca de la xml
 		
 		String dominio=request.getParameter("dominio");
 
@@ -45,12 +49,26 @@ public class ControladorMostrar extends HttpServlet {
 		
 		vehiculo=v.buscarVehiculo(dominio);
 		
+		try {
+		Facade facade= new Facade(); //busca de la bd bdvtv
+		AutomotorABM s=facade.getAutomotorABM();  
+		Automotor automotor=new Automotor();
+		automotor=s.traerAutomotor(dominio);
+		request.setAttribute("automotor", automotor);
+		
 		request.setAttribute("vehiculo", vehiculo);
 		
 		session.setAttribute("vehiculo", vehiculo);
 
 		request.getRequestDispatcher("/jsp/mostrarVehiculo.jsp").forward(request, response);	
 	
+
+		} catch (Exception e) {
+			request.getRequestDispatcher("/jsp/errorlogin.jsp").forward(request, response);
+		}
+		
+		
+
 
 	}
 }

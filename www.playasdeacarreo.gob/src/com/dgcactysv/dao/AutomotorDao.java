@@ -8,6 +8,7 @@ import com.dgcactysv.modelo.Automotor;
 
 public class AutomotorDao {
 	
+	
 	private static Session session;
 
 	private Transaction tx;

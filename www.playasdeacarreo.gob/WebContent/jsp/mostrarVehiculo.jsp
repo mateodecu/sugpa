@@ -1,5 +1,6 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
 <%@page import="com.dgcactysv.modelo.Vehiculo" %>
+<%@page import="com.dgcactysv.modelo.Automotor" %>
 <%@page import="java.util.List"%>
 <%@include file="header.jsp" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
@@ -62,6 +63,9 @@
     <tbody>
 	 			<%Vehiculo vehiculo= new Vehiculo();
 	 			vehiculo= (Vehiculo) request.getAttribute("vehiculo");
+	 			
+	 			Automotor automotor=new Automotor();
+	 			automotor=(Automotor) request.getAttribute("automotor");
 					 %>		 
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
@@ -74,8 +78,15 @@
 						<td><%=vehiculo.getPlaya()%></td>
 						<td><%=vehiculo.getUsuario()%></td>
 					</tr>
-										
-	
+					
+					<tr>
+						<td><%=automotor.getIdAutomotor()%></td>
+						<td>24/05/17</td>
+						<td>12:29</td>
+						<td><%=automotor.getDominio()%></td>
+						<td><%=automotor.getMarca()%></td>					
+						<td><%=automotor.getModelo()%></td>
+					</tr>	
     </tbody>
     
   </table>
