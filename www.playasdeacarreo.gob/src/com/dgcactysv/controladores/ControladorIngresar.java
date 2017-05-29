@@ -22,13 +22,14 @@ public class ControladorIngresar extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+		doPost(request, response);
+		
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		request.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
 	}
 
 }

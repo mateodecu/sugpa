@@ -59,7 +59,7 @@ public class ControladorMostrar extends HttpServlet {
 		
 		//copio el directorio donde voy a guardar la imagen y la escribo
 		String filePath = session.getServletContext().getRealPath("img/");
-        FileOutputStream fos = new FileOutputStream(filePath+"cedula.pdf");
+        FileOutputStream fos = new FileOutputStream(filePath+"cedulaa.pdf");
         fos.write(automotor.getCedula());
         fos.close();
 		
@@ -73,7 +73,7 @@ public class ControladorMostrar extends HttpServlet {
 	
 
 		} catch (Exception e) {
-			request.getRequestDispatcher("/jsp/errorlogin.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsp/errorBusqueda.jsp").forward(request, response);
 		}
 		
 		

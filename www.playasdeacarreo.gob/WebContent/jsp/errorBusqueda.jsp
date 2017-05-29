@@ -12,15 +12,23 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="inicio">SUGPA</a>
     </div>
+    <ul class="nav navbar-nav">
+      <li><a href="inicio">Inicio</a></li>
+      <li><a href="buscar">Volver a buscar</a></li>
+    </ul>  
+    
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="inicioo"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>	
-
- <div class="tron">
-	<h1>ERROR AL AUTENTICAR </h1>
+	
+<div class="tron">
+	<h1>No se encontro el vehiculo</h1>
 </div>
+	
+	
 	<%@include file="footer.jsp" %>
 </body>
 </html>

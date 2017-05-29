@@ -15,6 +15,8 @@ public class TestAutomotor {
 			System.out.println( adm.traerAutomotor("LLL444").toString());
 			
 		//int ultimoId= adm.agregar("SUM819", "504", "PEUGEOT");
+			
+		//	https://sqlizer.io/#/
 
 			
 		} catch (Exception e) {
