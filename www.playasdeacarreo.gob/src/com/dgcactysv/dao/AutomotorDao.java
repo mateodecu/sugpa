@@ -1,5 +1,8 @@
 package com.dgcactysv.dao;
 
+import java.io.File;
+import java.io.FileInputStream;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -56,5 +59,38 @@ public class AutomotorDao {
 				}
 		return objeto;
 		}
+	
+	public int agregar(Automotor objeto) {
+		int id = 0;
+		
+		try {
+			iniciaOperacion();
+			
+	        //save image into database
+	    	File file = new File("D:\\cedula.pdf");
+	        byte[] bFile = new byte[(int) file.length()];
+
+	        try {
+		     FileInputStream fileInputStream = new FileInputStream(file);
+		     //convert file into array of bytes
+		     fileInputStream.read(bFile);
+		     fileInputStream.close();
+	        } catch (Exception e) {
+		     e.printStackTrace();
+	        }
+
+			objeto.setCedula(bFile);
+			id = Integer.parseInt(session.save(objeto).toString());
+			tx.commit();
+		} catch (HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		} finally {
+			session.close();
+		}
+		return id;
+
+	}
+	
 
 }

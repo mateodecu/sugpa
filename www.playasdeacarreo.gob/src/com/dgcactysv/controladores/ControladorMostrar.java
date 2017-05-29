@@ -8,6 +8,7 @@ import com.dgcactysv.negocio.Facade;
 import com.dgcactysv.negocio.AutomotorABM;
 import com.dgcactysv.modelo.Automotor;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -56,9 +57,17 @@ public class ControladorMostrar extends HttpServlet {
 		automotor=s.traerAutomotor(dominio);
 		request.setAttribute("automotor", automotor);
 		
+		//copio el directorio donde voy a guardar la imagen y la escribo
+		String filePath = session.getServletContext().getRealPath("img/");
+        FileOutputStream fos = new FileOutputStream(filePath+"cedula.pdf");
+        fos.write(automotor.getCedula());
+        fos.close();
+		
 		request.setAttribute("vehiculo", vehiculo);
 		
 		session.setAttribute("vehiculo", vehiculo);
+		
+
 
 		request.getRequestDispatcher("/jsp/mostrarVehiculo.jsp").forward(request, response);	
 	

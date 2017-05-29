@@ -3,6 +3,8 @@ package com.dgcactysv.negocio;
 import com.dgcactysv.dao.AutomotorDao;
 import com.dgcactysv.modelo.Automotor;
 
+import java.io.File;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -30,6 +32,14 @@ public class AutomotorABM {
 		}
 		return a;
 	}
-
+	
+	public int agregar(String dominio, String modelo,  String marca)  { 
+		
+		Automotor a = new Automotor(dominio,modelo,marca);
+		
+		return daoA.agregar(a);
+		
+	}
+	
 
 }

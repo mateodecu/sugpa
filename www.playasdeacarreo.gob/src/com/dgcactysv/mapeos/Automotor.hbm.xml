@@ -9,6 +9,7 @@
 <property column="dominio" name="dominio" type="string"/>
 <property column="modelo" name="modelo" type="string"/>
 <property column="marca" name="marca" type="string"/>
+<property name="cedula" type="binary"><column name="cedula" not-null="true" /></property>
 
 </class>
 </hibernate-mapping>

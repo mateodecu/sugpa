@@ -86,6 +86,8 @@
 						<td><%=automotor.getDominio()%></td>
 						<td><%=automotor.getMarca()%></td>					
 						<td><%=automotor.getModelo()%></td>
+						<!-- <td><img width="300" height="400" src="imageServlet?="<%=automotor.getCedula()%>"><%=automotor.getCedula()%></img></td>
+					--> <th><a href="img/cedula.pdf" download title="Descargar documento">CEDULA</a></th>
 					</tr>	
     </tbody>
     

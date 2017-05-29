@@ -1,10 +1,14 @@
 package com.dgcactysv.modelo;
 
+import java.io.File;
+
+
 public class Automotor {
 	private int idAutomotor;
 	private String dominio;
 	private String modelo;
 	private String marca;
+	private byte[] cedula;
 	
 	public Automotor(){};
 
@@ -49,10 +53,18 @@ public class Automotor {
 
 
 
+	public byte[] getCedula() {
+		return cedula;
+	}
+
+	public void setCedula(byte[] cedula) {
+		this.cedula = cedula;
+	}
+
 	@Override
 	public String toString() {
 		return "Automotor [idAutomotor=" + idAutomotor + ", dominio=" + dominio + ", modelo=" + modelo + ", marca="
-				+ marca + "]";
+				+ marca +", cedula="+ cedula + "]";
 	}
 	
 	
