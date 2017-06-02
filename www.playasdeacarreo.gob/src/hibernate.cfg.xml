@@ -4,7 +4,8 @@
 <hibernate-configuration>
 <session-factory>
 <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-<property name="connection.url">jdbc:mysql://localhost/bdvtv</property>
+<!--<property name="connection.url">jdbc:mysql://localhost/bdvtv</property> -->
+ <property name="connection.url">jdbc:mysql://localhost/bdrio</property> 
 <property name="connection.username">root</property>
 <property name="connection.password">root</property>
 <property name="connection.pool_size">1</property>
@@ -12,8 +13,12 @@
 <property name="show_sql">false</property> <!-- en true muestra hql en consola-->
 <!--Mapeo Entidades -->
 
-
+<!--
 <mapping resource="com/dgcactysv/mapeos/Automotor.hbm.xml"/>
-
+ -->
+  
+<mapping resource="com/dgcactysv/mapeos/Registro.hbm.xml"/>
+ 
+ 
 </session-factory>
 </hibernate-configuration>

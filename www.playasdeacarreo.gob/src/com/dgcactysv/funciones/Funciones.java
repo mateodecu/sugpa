@@ -114,6 +114,10 @@ public class Funciones {
 	}
 
 	public static String traerFechaCorta4(Calendar fecha) {
+		
+		if (fecha==null){
+			fecha= new GregorianCalendar();
+		}
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/YYYY");
 		return dateFormat.format(fecha.getTime());
 	}

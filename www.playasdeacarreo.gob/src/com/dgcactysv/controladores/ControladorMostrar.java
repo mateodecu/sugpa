@@ -7,6 +7,7 @@ import com.dgcactysv.modelo.Vehiculo;
 import com.dgcactysv.negocio.Facade;
 import com.dgcactysv.negocio.AutomotorABM;
 import com.dgcactysv.modelo.Automotor;
+import com.dgcactysv.modelo.Registro;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -41,17 +42,31 @@ public class ControladorMostrar extends HttpServlet {
 		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 
 		response.setContentType("text/html;charset=UTF-8");
+		String dominio=request.getParameter("dominio");		
 		
-		VehiculoABM v= new VehiculoABM(); //busca de la xml
 		
-		String dominio=request.getParameter("dominio");
+		Facade facade= new Facade(); 
+		RegistroABM r=facade.getRegistroABM();
+		Registro vehiculo=new Registro();
+		try {
+			vehiculo=r.traerRegistro(dominio);
+	        request.setAttribute("vehiculo", vehiculo);
+			session.setAttribute("vehiculo", vehiculo);
+			request.getRequestDispatcher("/jsp/mostrarVehiculo.jsp").forward(request, response);	
 
-		Vehiculo vehiculo=new Vehiculo();
+		} catch (Exception e1) {
+			request.getRequestDispatcher("/jsp/errorBusqueda.jsp").forward(request, response);
+		}
 		
+		
+
+/*
+		VehiculoABM v= new VehiculoABM(); //busca de la xml
+		Vehiculo vehiculo=new Vehiculo();
 		vehiculo=v.buscarVehiculo(dominio);
 		
 		try {
-		Facade facade= new Facade(); //busca de la bd bdvtv
+		//busca de la bd bdvtv
 		AutomotorABM s=facade.getAutomotorABM();  
 		Automotor automotor=new Automotor();
 		automotor=s.traerAutomotor(dominio);
@@ -63,12 +78,8 @@ public class ControladorMostrar extends HttpServlet {
         fos.write(automotor.getCedula());
         fos.close();
 		
-		request.setAttribute("vehiculo", vehiculo);
-		
+        request.setAttribute("vehiculo", vehiculo);
 		session.setAttribute("vehiculo", vehiculo);
-		
-
-
 		request.getRequestDispatcher("/jsp/mostrarVehiculo.jsp").forward(request, response);	
 	
 
@@ -76,7 +87,7 @@ public class ControladorMostrar extends HttpServlet {
 			request.getRequestDispatcher("/jsp/errorBusqueda.jsp").forward(request, response);
 		}
 		
-		
+*/		
 
 
 	}

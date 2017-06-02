@@ -2,7 +2,7 @@ package com.dgcactysv.controladores;
 
 import com.dgcactysv.negocio.*;
 import com.dgcactysv.datos.*;
-import com.dgcactysv.modelo.Vehiculo;
+import com.dgcactysv.modelo.Registro;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,7 +35,7 @@ public class ControladorEditarRegistro extends HttpServlet {
 		HttpSession session= (HttpSession) request.getSession();
 		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 		
-		request.setAttribute("vehiculo", (Vehiculo) session.getAttribute("vehiculo"));
+		request.setAttribute("vehiculo", (Registro) session.getAttribute("vehiculo"));
 		
 /*		
 		Vehiculo vehiculo = (Vehiculo) request.getAttribute("vehiculo");

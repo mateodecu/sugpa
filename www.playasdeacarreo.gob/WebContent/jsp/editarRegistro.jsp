@@ -1,5 +1,5 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
-<%@page import="com.dgcactysv.modelo.Vehiculo" %>
+<%@page import="com.dgcactysv.modelo.Registro" %>
 <%@page import="java.util.List"%>
 <%@include file="header.jsp" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
@@ -43,22 +43,22 @@
 		 <th>MARCA</th>
 		 <th>MODELO</th>
 		 <th>MOTIVO</th>
-		 <th>PLAYA</th> 
+		 <th>DESCRIPCION</th> 
       </tr>
     </thead>
     <tbody>
-	 			<%Vehiculo vehiculo= new Vehiculo();
-	 			vehiculo= (Vehiculo) request.getAttribute("vehiculo");
+	 			<%Registro vehiculo= new Registro();
+	 			vehiculo= (Registro) request.getAttribute("vehiculo");
 					 %>		 
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=vehiculo.getFecha()%></td>
-						<td><%=vehiculo.getHora()%></td>
+						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaEgr())%></td>
+						<td><%=vehiculo.getHoraIng()%></td>
 						<td><input type="text" name="dominio" value="<%=vehiculo.getDominio()%>"/></td>
 						<td><input type="text" name="marca" value="<%=vehiculo.getMarca()%>"/></td>
 						<td><input type="text" name="modelo" value="<%=vehiculo.getModelo()%>"/></td>
 						<td><input type="text" name="motivo" value="<%=vehiculo.getMotivo()%>"/></td>
-						<td><input type="text" name="motivo" value="<%=vehiculo.getPlaya()%>"/></td>
+						<td><input type="text" name="descripcion" value="<%=vehiculo.getDescripcion()%>"/></td>
 						<!-- 1531480324 -->
 					</tr>
 	

@@ -23,18 +23,35 @@
 	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script
+ <script
 	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	
 
+
 <script>
-	$(document).ready(function() {
-		$("#datepicker_desde").datepicker();
-	});
-</script>
-<script>
-	$(document).ready(function() {
-		$("#datepicker_hasta").datepicker();
+ $.datepicker.regional['es'] = {
+ closeText: 'Cerrar',
+ prevText: '< Ant',
+ nextText: 'Sig >',
+ currentText: 'Hoy',
+ monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+ monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+ dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+ dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+ dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+ weekHeader: 'Sm',
+ dateFormat: 'dd/mm/yy',
+ firstDay: 1,
+ isRTL: false,
+ showMonthAfterYear: false,
+ yearSuffix: ''
+ };
+ $.datepicker.setDefaults($.datepicker.regional['es']);
+$(function () {
+$("#datepicker_desde").datepicker();
+});
+$(function () {
+	$("#datepicker_hasta").datepicker();
 	});
 </script>
 
@@ -113,13 +130,15 @@ function printPage() {
 									<option value="uber">UBER</option>
 							</select></p>
 						</td>
-						<td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_desde" /></p></td>
-						<td><p class="boton-margen-inferior"><input class="input-ingresar" id="datepicker_hasta" /></p></td>
+
+					 <td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_desde" /></p></td>
+					<td><p class="boton-margen-inferior"><input class="input-ingresar" id="datepicker_hasta" /></p></td>
 						
 					</tr>
     </tbody>
   </table>
 </div>  
+
  
 <div id="div1">				
 <img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="957" height="569"></div>

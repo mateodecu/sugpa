@@ -1,5 +1,7 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
-<%@page import="com.dgcactysv.modelo.Vehiculo" %>
+<%@page import="com.dgcactysv.modelo.Registro" %>
+<%@page import="com.dgcactysv.negocio.Facade" %>
+<%@page import="com.dgcactysv.negocio.RegistroABM" %>
 <%@page import="java.util.List"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@include file="header.jsp" %>
@@ -9,8 +11,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
+
 <body>
- 
+
+<script>
+function printPage() {
+    window.print();
+}
+</script>
+
+<script>
+$(document).ready(function(){
+    $('#mydata').DataTable();
+});		
+</script>
+    
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -34,7 +49,7 @@
   <h2>Playa rio cuarto</h2>
    
   <p>Lista de vehiculos en playa:</p>           
-  <table class="table table-striped">
+  <table class="table table-striped table-bordered table-hover" id="mydata">
     <thead>
       <tr>
 		 <th>REGISTRO</th>
@@ -44,22 +59,29 @@
 		 <th>MARCA</th>
 		 <th>MODELO</th>
 		 <th>MOTIVO</th>
+		 <th>DESCRIPCION</th>
+		 <th>ACTA DE COMPROBACION</th>
       </tr>
     </thead>
+    
+
     <tbody>
 					<%
-						List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
-						for (Vehiculo vehiculo : vehiculos) {
+						Facade facade= new Facade();
+						RegistroABM facede= facade.getRegistroABM();
+						List<Registro> vehiculos = facede.traerEnPlaya();
+						for (Registro vehiculo : vehiculos) {
 					%>
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=vehiculo.getFecha()%></td>
-						<td><%=vehiculo.getHora()%></td>
+						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaEgr())%></td>
+						<td><%=vehiculo.getHoraIng()%></td>
 						<td><%=vehiculo.getDominio()%></td>
 						<td><%=vehiculo.getMarca()%></td>
 						<td><%=vehiculo.getModelo()%></td>
 						<td><%=vehiculo.getMotivo()%></td>
-						
+						<td><%=vehiculo.getDescripcion()%></td>
+						<td><%=vehiculo.getActaDeComprobacion()%></td>			
 					</tr>
 					<% } %>
     </tbody>
@@ -92,6 +114,7 @@
       <span class="glyphicon glyphicon-print"></span> Imprimir Listado 
     </a>
 </p>
+</div>
 </div>
 	
  <%@include file="footer.jsp" %>

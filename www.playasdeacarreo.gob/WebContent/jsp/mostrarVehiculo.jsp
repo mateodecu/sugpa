@@ -1,6 +1,7 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
 <%@page import="com.dgcactysv.modelo.Vehiculo" %>
-<%@page import="com.dgcactysv.modelo.Automotor" %>
+<%@page import="com.dgcactysv.modelo.Registro" %>
+<%@page import="com.dgcactysv.funciones.Funciones" %>
 <%@page import="java.util.List"%>
 <%@include file="header.jsp" %>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
@@ -56,39 +57,31 @@
 		 <th>MARCA</th>
 		 <th>MODELO</th>
 		 <th>MOTIVO</th>
-		 <th>PLAYA</th>
-		 <th>MODIFICADO POR</th>     
+		 <th>DESCRIPCION</th>
+		 <th>ACTA DE COMPROBACION</th>
       </tr>
     </thead>
     <tbody>
-	 			<%Vehiculo vehiculo= new Vehiculo();
-	 			vehiculo= (Vehiculo) request.getAttribute("vehiculo");
+	 			<%Registro vehiculo= new Registro();
+	 			vehiculo= (Registro) request.getAttribute("vehiculo");
 	 			
-	 			Automotor automotor=new Automotor();
-	 			automotor=(Automotor) request.getAttribute("automotor");
+	 			//Automotor automotor=new Automotor();
+	 			//automotor=(Automotor) request.getAttribute("automotor");
+	 			
 					 %>		 
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=vehiculo.getFecha()%></td>
-						<td><%=vehiculo.getHora()%></td>
+						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaEgr())%></td>
+						<td><%=vehiculo.getHoraIng()%></td>
 						<td><%=vehiculo.getDominio()%></td>
 						<td><%=vehiculo.getMarca()%></td>
 						<td><%=vehiculo.getModelo()%></td>
 						<td><%=vehiculo.getMotivo()%></td>
-						<td><%=vehiculo.getPlaya()%></td>
-						<td><%=vehiculo.getUsuario()%></td>
+						<td><%=vehiculo.getDescripcion()%></td>
+						<td><%=vehiculo.getActaDeComprobacion()%></td>	
 					</tr>
 					
-					<tr>
-						<td><%=automotor.getIdAutomotor()%></td>
-						<td>24/05/17</td>
-						<td>12:29</td>
-						<td><%=automotor.getDominio()%></td>
-						<td><%=automotor.getMarca()%></td>					
-						<td><%=automotor.getModelo()%></td>
-						<!-- <td><img width="300" height="400" src="imageServlet?="<%=automotor.getCedula()%>"><%=automotor.getCedula()%></img></td>
-					--> <th><a href="img/cedulaa.pdf" download title="Descargar documento">CEDULA</a></th>
-					</tr>	
+
     </tbody>
     
   </table>
