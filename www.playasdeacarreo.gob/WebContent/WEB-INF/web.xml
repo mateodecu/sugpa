@@ -67,11 +67,11 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ControladorInicio</servlet-name>
-    <url-pattern>/inicio</url-pattern>
+    <url-pattern>/inicioo</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ControladorIngresar</servlet-name>
-    <url-pattern>/inicioo</url-pattern>
+    <url-pattern>/inicio</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ControladorCargar</servlet-name>

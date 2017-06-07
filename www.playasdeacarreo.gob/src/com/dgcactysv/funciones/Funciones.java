@@ -138,6 +138,19 @@ public class Funciones {
 
 		return hora;
 	}
+	
+	public static String traerHora2(GregorianCalendar f)
+
+	{
+	
+		String hora = "";
+
+		hora = "" + f.get(Calendar.HOUR_OF_DAY) + ":"
+				+ dosCeros(String.valueOf(f.get(Calendar.MINUTE))) + ":"
+				+ dosCeros(String.valueOf(f.get(Calendar.SECOND))) + " ";
+
+		return hora;
+	}
 
 	public static String dosCeros(String s) {
 		if (s.compareTo("0") == 0) {

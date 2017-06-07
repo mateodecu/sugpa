@@ -24,7 +24,7 @@
     </ul>  
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>

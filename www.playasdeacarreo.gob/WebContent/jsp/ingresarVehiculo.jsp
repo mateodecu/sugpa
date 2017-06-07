@@ -33,12 +33,12 @@ function myFunction() {
       <a class="navbar-brand" href="#">SUGPA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="inicio">Inicio</a></li>
+      <li><a href="inicioo">Inicio</a></li>
     </ul>    
 
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>
@@ -48,7 +48,7 @@ function myFunction() {
 </div>
 
 
-<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
+<form method="post" action="inicioo">
 
 <div class="contenedor-login">
 

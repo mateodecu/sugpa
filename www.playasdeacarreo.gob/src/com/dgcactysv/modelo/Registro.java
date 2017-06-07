@@ -39,7 +39,6 @@ public class Registro {
 			String agenteDePlaya, String gruaChofer, String inventario, String nChasisNmotor,
 			GregorianCalendar fechaEgr, String horaEgr, String personaQretiro, String entregaAgente, String notas,
 			String controlDeLegales, String trasladoAcompactacion) {
-		super();
 		this.registro = registro;
 		this.fechaIng = fechaIng;
 		this.horaIng = horaIng;

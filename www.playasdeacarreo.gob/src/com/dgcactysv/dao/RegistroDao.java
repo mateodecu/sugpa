@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.util.List;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -43,7 +44,8 @@ public class RegistroDao {
 				}
 		return objeto;
 		}
-	
+
+//Listar Vehiculos
 	
 	@SuppressWarnings("unchecked")
 
@@ -81,5 +83,61 @@ public class RegistroDao {
 		}
 		return lista;
 	}
+	
+//contabliziacion	
+	public int Contablilizacion() throws HibernateException {
+		int conta;
+		try {
+			iniciaOperacion();
+			Query query= session.createQuery( "select count(*) from Registro where fecha_egr is null" );
+			conta=((Number) query.uniqueResult()).intValue();
+		} finally {
+			session.close();
+		}
+		
+		return conta;	
+	}
+	
+	public int ContablilizacionAutos() throws HibernateException {
+		int conta;
+		try {
+			iniciaOperacion();
+			Query query= session.createQuery( "select count(*) from Registro where fecha_egr is null AND descripcion=:AUTO").setParameter("AUTO", "AUTO");
+			conta=((Number) query.uniqueResult()).intValue();
+		} finally {
+			session.close();
+		}	
+		return conta;	
+	}
+	
+	public int ContablilizacionMotos() throws HibernateException {
+		int conta;
+		try {
+			iniciaOperacion();
+			Query query= session.createQuery( "select count(*) from Registro where fecha_egr is null AND descripcion=:MOTO").setParameter("MOTO", "MOTO");
+			conta=((Number) query.uniqueResult()).intValue();
+		} finally {
+			session.close();
+		}	
+		return conta;	
+	}
+	
+//Agregar registro
+	
+	public void agregar(Registro objeto) {
+		try {
+			iniciaOperacion();
+			session.save(objeto);
+			tx.commit();
+		} catch (HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		} finally {
+			session.close();
+		}
+
+	}
+	
+	
 
 }

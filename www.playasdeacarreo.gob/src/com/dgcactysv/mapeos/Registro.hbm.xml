@@ -4,7 +4,6 @@
 <hibernate-mapping>
 <class name="com.dgcactysv.modelo.Registro" table="vehiculos">
 <id column="REGISTRO" name="registro">
-<generator class="identity"/>
 </id>
 <property column="FECHA_ING" name="fechaIng" type="calendar"/>
 <property column="HORA_ING" name="horaIng" type="string"/>

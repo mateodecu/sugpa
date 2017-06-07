@@ -1,5 +1,7 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
-<%@page import="com.dgcactysv.modelo.Vehiculo" %>
+<%@page import="com.dgcactysv.modelo.Registro" %>
+<%@page import="com.dgcactysv.negocio.Facade" %>
+<%@page import="com.dgcactysv.negocio.RegistroABM" %>
 <%@page import="java.util.List"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
  <%@include file="header.jsp" %>
@@ -11,6 +13,11 @@
 </head>
 <body>
 
+<script>
+$(document).ready(function(){
+    $('#mydata').DataTable();
+});		
+</script>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -23,15 +30,16 @@
     </ul>  
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%=request.getAttribute("usuario")%></a></li>
-      <li><a href="inicioo"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
   <h2>Playa rio cuarto</h2>
-  <p>Esta tabla representa los vehiculos en playa:</p>            
-  <table class="table table-striped">
+   
+  <p>Lista de vehiculos en playa:</p>           
+  <table class="table table-striped table-bordered table-hover" id="mydata">
     <thead>
       <tr>
 		 <th>REGISTRO</th>
@@ -41,62 +49,33 @@
 		 <th>MARCA</th>
 		 <th>MODELO</th>
 		 <th>MOTIVO</th>
-		 <th>MODIFICADO POR</th>        
+		 <th>DESCRIPCION</th>
+		 <th>ACTA DE COMPROBACION</th>
       </tr>
     </thead>
+    
+
     <tbody>
 					<%
-						List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
-						for (Vehiculo vehiculo : vehiculos) {
+						Facade facade= new Facade();
+						RegistroABM facede= facade.getRegistroABM();
+						List<Registro> vehiculos = facede.traerListaRegistro();
+						for (Registro vehiculo : vehiculos) {
 					%>
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=vehiculo.getFecha()%></td>
-						<td><%=vehiculo.getHora()%></td>
+						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaEgr())%></td>
+						<td><%=vehiculo.getHoraIng()%></td>
 						<td><%=vehiculo.getDominio()%></td>
 						<td><%=vehiculo.getMarca()%></td>
 						<td><%=vehiculo.getModelo()%></td>
 						<td><%=vehiculo.getMotivo()%></td>
-						<td><%=vehiculo.getUsuario()%></td>
-						
+						<td><%=vehiculo.getDescripcion()%></td>
+						<td><%=vehiculo.getActaDeComprobacion()%></td>			
 					</tr>
 					<% } %>
     </tbody>
-  </table>
-  
-  <h2>Playa Sarmiento</h2>
-  <p>Esta tabla representa los vehiculos en playa:</p> 
-  
-  <table class="table table-striped">
-    <thead>
-      <tr>
-		 <th>REGISTRO</th>
-		 <th>FECHA</th>
-		 <th>HORA</th>
-		 <th>DOMINIO</th>
-		 <th>MARCA</th>
-		 <th>MODELO</th>
-		 <th>MOTIVO</th>        
-      </tr>
-    </thead>
-    <tbody>
-					<%
-						for (Vehiculo vehiculo : vehiculos) {
-					%>
-					<tr>
-						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=vehiculo.getFecha()%></td>
-						<td><%=vehiculo.getHora()%></td>
-						<td><%=vehiculo.getDominio()%></td>
-						<td><%=vehiculo.getMarca()%></td>
-						<td><%=vehiculo.getModelo()%></td>
-						<td><%=vehiculo.getMotivo()%></td>
-						
-					</tr>
-					<% } %>
-    </tbody>
-  </table>  
-</div>
+  </table>	
 
 
 	

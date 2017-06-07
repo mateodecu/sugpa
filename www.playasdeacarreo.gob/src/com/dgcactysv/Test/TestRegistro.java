@@ -14,8 +14,10 @@ public class TestRegistro {
 	RegistroABM adm= facade.getRegistroABM();
 
 	try {
-		System.out.println( adm.traerRegistro("SUM819").toString());
-
+		System.out.println( adm.traerRegistro("981ASD").toString());
+		System.out.println("Contablilizacion "+ adm.Contablilizacion());
+		System.out.println("Contablizacion " + adm.ContablilizacionAutos());
+		System.out.println("Contablizacion " + adm.ContablilizacionMotos());
 		
 	} catch (Exception e) {
 		e.printStackTrace();
@@ -41,7 +43,7 @@ public class TestRegistro {
 		e.printStackTrace();
 	}*/
 
-/*Registros en playa*/
+/*Registros en playa
 	try {
 		List<Registro> inspecciones = adm.traerEgresos();
 		for(Registro i:inspecciones){
@@ -51,6 +53,7 @@ public class TestRegistro {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}	
+*/
 	
 	
 }

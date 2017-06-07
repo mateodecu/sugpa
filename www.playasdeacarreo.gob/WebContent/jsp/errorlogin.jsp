@@ -13,7 +13,7 @@
       <a class="navbar-brand" href="inicio">SUGPA</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="inicioo"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
     </ul>
   </div>
 </nav>	

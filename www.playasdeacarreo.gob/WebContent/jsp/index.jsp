@@ -14,12 +14,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  
+
 
 <title>Playa de Acarreo D.G.C.A.T.y.S.V.</title>
 
-
 </head>
+
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -56,8 +57,13 @@
 		<div class="col-md-4"></div>		
 	</div>
 	</form>
+	
+	
 
 
+     
+
+	
  <%@include file="footer.jsp" %>
 
 </body>

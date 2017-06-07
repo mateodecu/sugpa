@@ -24,6 +24,9 @@
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"></script>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript">
 
