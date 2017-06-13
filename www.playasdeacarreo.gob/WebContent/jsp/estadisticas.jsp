@@ -96,8 +96,9 @@ function printPage() {
 	<h1>Estadisticas</h1>
 </div>	
 
-<div class="contenedor-buscar">
 <div class="container">
+<div class="contenedor-estadisticas">
+
   <h2>Graficador estadistico</h2>         
   <table class="table table-striped">
     <thead>
@@ -137,17 +138,19 @@ function printPage() {
 					</tr>
     </tbody>
   </table>
-</div>  
-
- 
-<div id="div1">				
+  
+  <div id="div1">				
 <img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="957" height="569"></div>
 <p> </p>
 <div class="col-md-8">
 	
 <button id="show">Mostrar Grafico</button>
 <button id="hide">Ocultar Grafico</button>
-</div>			
+</div>	
+  
+</div> 
+</div>
+		
 <div class="col-md-16 text-center">
 <p class="boton-margen-inferior">
     <a onclick="printPage()" class="btn">
@@ -156,5 +159,7 @@ function printPage() {
 </p>
 </div>
 
+<%@include file="footer.jsp" %>
 </body>
+ 
 </html>

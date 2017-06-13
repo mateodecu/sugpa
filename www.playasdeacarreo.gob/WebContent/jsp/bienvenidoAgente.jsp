@@ -1,8 +1,6 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
 <%@page import="com.dgcactysv.modelo.Registro" %>
-<%@page import="com.dgcactysv.negocio.Facade" %>
-<%@page import="com.dgcactysv.negocio.RegistroABM" %>
-<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -70,9 +68,8 @@ $(document).ready(function(){
 
     <tbody>
 					<%
-						Facade facade= new Facade();
-						RegistroABM facede= facade.getRegistroABM();
-						List<Registro> vehiculos = facede.traerEnPlaya();
+					ArrayList<Registro> vehiculos= (ArrayList<Registro>) request.getAttribute("lstRegistros");
+					
 						for (Registro vehiculo : vehiculos) {
 					%>
 					<tr>
@@ -83,7 +80,7 @@ $(document).ready(function(){
 						<td><%=vehiculo.getMotivo()%></td>
 						<td><%=vehiculo.getDescripcion()%></td>
 						<td><%=vehiculo.getActaDeComprobacion()%></td>	
-						<td><img id="lupa" style="cursor: pointer;" src="img/detail.png" data-toggle="modal" data-target="#mostrarDetalle"/><%String dominio=vehiculo.getDominio();%></td>		
+						<td><img id="lupa" style="cursor: pointer;" src="img/detail.png" data-toggle="modal" data-target="#mostrarDetalle"/></td>		
 					</tr>
 					<% } %>
     </tbody>
@@ -102,16 +99,14 @@ $(document).ready(function(){
     <tbody>
 					<tr>
 						<td>CANTIDAD</td>
-						<td><%=facede.ContablilizacionAutos()%></td>
-						<td><%=facede.ContablilizacionMotos()%></td>
-						<td><%=facede.Contablilizacion() %></td>
+						<td><%=request.getAttribute("contabilizacionAutos")%></td>
+						<td><%=request.getAttribute("contabilizacionMotos") %></td>
+						<td><%=request.getAttribute("contabilizacion")%></td>
 					</tr>
     </tbody>
   </table>
   
-  <!-- Modal -->
- <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
+<!-- Modal -->
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mostrarDetalle">
   <div class="modal-dialog modal-lg">
   
@@ -132,10 +127,6 @@ $(document).ready(function(){
 					 <th>ACTA CONTRAVENCIONAL</th>
 					 <th>BOLETA DE CITACION</th>
 					 <th>AGENTE LABRANTE</th>
-					 <th>CHOFER DE GRUA</th>
-					 <th>ACTA DE COMPROBACION</th>
-					 <th>CHOFER DE GRUA</th>
-					 <th>ACTA DE COMPROBACION</th>
 			      </tr>
 			    </thead>
 			    
@@ -143,15 +134,35 @@ $(document).ready(function(){
 			    <tbody>
 			
 								<tr>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
-									<td>asdasda</td>
+									<td>12/01/2017</td>
+									<td>12:00</td>
+									<td>123455</td>
+									<td>Z0001244</td>
+									<td>GALIAN MATIAS</td>
+							</tr>
+			    </tbody>
+			  </table>
+			  
+			  	<table class="table table-striped table-bordered table-hover" >
+			    <thead>
+			      <tr>
+					 <th>LEVANTADO EN</th>
+					 <th>CHOFER DE GRUA</th>
+					 <th>AGENTE DE PLAYA</th>
+					 <th>NUMERO DE MOTOR</th>
+					 <th>NUMERO DE CHASIS</th>
+			      </tr>
+			    </thead>
+			    
+			
+			    <tbody>
+			
+								<tr>
+									<td>AV 9 DE JULIO 100</td>
+									<td>FUENTES</td>
+									<td>PIZARRO</td>
+									<td>14235235235</td>
+									<td>12343423E</td>
 							</tr>
 			    </tbody>
 			  </table>
@@ -175,6 +186,7 @@ $(document).ready(function(){
 </div>
 </div>
 	
- <%@include file="footer.jsp" %>
+ 
 </body>
+<%@include file="footer.jsp" %>
 </html>

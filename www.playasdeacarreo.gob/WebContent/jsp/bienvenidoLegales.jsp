@@ -1,8 +1,6 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
 <%@page import="com.dgcactysv.modelo.Registro" %>
-<%@page import="com.dgcactysv.negocio.Facade" %>
-<%@page import="com.dgcactysv.negocio.RegistroABM" %>
-<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
  <%@include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -57,10 +55,9 @@ $(document).ready(function(){
 
     <tbody>
 					<%
-						Facade facade= new Facade();
-						RegistroABM facede= facade.getRegistroABM();
-						List<Registro> vehiculos = facede.traerListaRegistro();
-						for (Registro vehiculo : vehiculos) {
+					ArrayList<Registro> vehiculos= (ArrayList<Registro>) request.getAttribute("lstRegistros");
+					
+					for (Registro vehiculo : vehiculos) {
 					%>
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
@@ -75,10 +72,11 @@ $(document).ready(function(){
 					</tr>
 					<% } %>
     </tbody>
-  </table>	
+  </table>
+  
+</div>  	
 
-
-	
- <%@include file="footer.jsp" %>
 </body>
+
+ <%@include file="footer.jsp" %>
 </html>

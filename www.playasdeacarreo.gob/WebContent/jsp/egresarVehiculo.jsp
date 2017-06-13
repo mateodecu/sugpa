@@ -49,11 +49,10 @@ function myFunction() {
 
 <form method="post" action="/www.playasdeacarreo.gob/bienvenido">
 
-<div class="contenedor-login">
-  
 <div class="container">
+<div class="contenedor-ingresar">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-lg-4">
       <h3>Datos del egreso</h3>
       	
 				<label for="registro">N°REGISTRO:</label> 
@@ -83,7 +82,7 @@ function myFunction() {
 	
     </div>
     
-    <div class="col-sm-4">
+    <div class="col-lg-4">
       <h3>Documentacion presentada</h3>
 				<label for="dniDoc">Copia DNI: </label> 
 				<p class="boton-margen-inferior">
@@ -107,7 +106,7 @@ function myFunction() {
 						
     </div>
     
-    <div class="col-sm-4">
+    <div class="col-lg-3">
       <h3>Confirmar egreso</h3>   
             <label for="inputdefault">Observaciones:</label>
 			<p class="boton-margen-inferior">

@@ -4,18 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+
 </head>
 <body>
 <!--  -->
-	 <div class="row footer">	
-		<div class="col-md-4"></div>
-		<div class="col-md-4"></div>	
-		<div class="col-md-4"></div>
-		<div class="col-md-4"></div>
-		<div class="copyright">Copyright @ 2017</div> 	
-	</div> 
-	
+
+<div class="footer">
+        <div class="containers">
+            <h1>
+                <a href="#">
+                    2017 - Gobierno de la Ciudad de Buenos Aires
+                </a>  
+            </h1>
+        </div>
+    </div>
 
 </body>
 </html>

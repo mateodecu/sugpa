@@ -97,13 +97,9 @@ setTimeout("actualizaReloj()",1000)
 
 </head>
 <body onload="actualizaReloj()">
- <div class="im-centered">	
+ <div class="contenedor-titulo">	
 
-	<div class="row contenedor-titulo text-left">
 		<div class="col-sd-4"><img alt="Cinque Terre" width="454" height="83" src="img/Logo.png"><p class="reloj" id="Fecha_Reloj"></p></div>
-	
-	</div>
-	
 	
 	</div>
 

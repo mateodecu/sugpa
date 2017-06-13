@@ -1,345 +1,376 @@
-.titulo{
+.titulo {
 	color: black;
-	font-size:100px;
+	font-size: 100px;
 }
 
-
-.contenedor-titulo{
-	padding-top: 10px;
-	padding-left: 40px;
-	margin-bottom:8px;
-	
+.contenedor-titulo {
+	border-bottom: 2px solid slategrey;
+	background-color: rgb(252, 248, 116);
+	padding-top: 9px;
+	padding-left: 16px;
+	margin-bottom: -6px;
 }
 
-.boton{
-    background-color: black;
-    border: none;
-    color: white; 
-    padding: 10px 30px;
-    font-size: 16px;
-    
+.boton {
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 10px 30px;
+	font-size: 16px;
 }
 
-.boton:hover{
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 10px 30px;
-    font-size: 16px;
+.boton:hover {
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 10px 30px;
+	font-size: 16px;
 }
 
-.boton-registrar{
-    background-color: rgb(95, 63, 61);
-    border: none;
-    color: black;
-    padding: 10px 30px;
-    font-size: 16px;
-    width:167px;
+.boton-registrar {
+	background-color: rgb(95, 63, 61);
+	border: none;
+	color: black;
+	padding: 10px 30px;
+	font-size: 16px;
+	width: 167px;
 }
 
 .input-ingresar {
-    border: 3px solid #555;
-    width: 207px;
-    height: 39px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    
-}
-
-.input{
+	border: 3px solid #555;
 	width: 207px;
-    height: 39px;
-    color:black;
+	height: 39px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 5px;
 }
 
-
-.boton-margen-inferior{
-	margin-top:10px;
+.input {
+	width: 207px;
+	height: 39px;
+	color: black;
 }
 
-.contenedor-login{
-	
+.boton-margen-inferior {
+	margin-top: 10px;
+}
+
+.contenedor-login {
+	border: 6px solid;
+	position: absolute;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 20px;
+	padding-top: 23px;
+	background-color: rgb(252, 248, 116);
+}
+
+.contenedor-buscar {
 	border: 1px solid;
-    position: absolute;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 20px;
-    padding-top: 23px;
-    margin-right: 200px;
-	background-color: rgb(252,248,116);
+	position: absolute;
+	padding-left: 80px;
+	padding-right: 150px;
+	padding-bottom: 20px;
+	padding-top: 23px;
+	margin-right: 200px;
+	background-color: rgb(252, 248, 116);
 }
 
-.contenedor-buscar{
-	
+.contenedor-egresar {
 	border: 1px solid;
-    position: absolute;
-    padding-left: 80px;
-    padding-right: 150px;
-    padding-bottom: 20px;
-    padding-top: 23px;
-    margin-right: 200px;
-	background-color: rgb(252,248,116);
-}
-
-.contenedor-egresar{
-	
-	border: 1px solid;
-    position: absolute;
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-bottom: 20px;
-    padding-top: 23px;
-    margin-right: 200px;
+	position: absolute;
+	padding-left: 90px;
+	padding-right: 90px;
+	padding-bottom: 20px;
+	padding-top: 23px;
+	margin-right: 200px;
 	background-color: snow;
 }
 
-.contenedor-listaVehiculos{
-	
-	border: 1px solid;
-    position: absolute;
-    padding-left: 200px;
-    padding-right: 200px;
+.contenedor-ingresar {
+    border: 6px solid;
+    padding-left: 66px;
+    padding-right: 6px;
     padding-bottom: 20px;
-    padding-top: 23px;
-    margin-right: 100px;
-    margin-left: 50px;
+    padding-top: 14px;
+    background-color: rgb(252, 248, 116);
+}
+
+.contenedor-estadisticas {
+    border: 6px solid;
+    padding-left: 66px;
+    padding-right: 6px;
+    padding-bottom: 41px;
+    padding-top: 14px;
+    background-color: rgb(252, 248, 116);
+}
+
+.contenedor-listaVehiculos {
+	border: 1px solid;
+	position: absolute;
+	padding-left: 200px;
+	padding-right: 200px;
+	padding-bottom: 20px;
+	padding-top: 23px;
+	margin-right: 100px;
+	margin-left: 50px;
 	background-color: snow;
 }
 
-.registrate{
-	
-	    margin-top: 354px;
+.registrate {
+	margin-top: 354px;
 }
-
 
 .link-registrate:link, .link-registrate:visited {
-    background-color: rgb(95, 63, 61);
-    color: black;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+	background-color: rgb(95, 63, 61);
+	color: black;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
 }
 
-.contenedor-link-registrate{
-	    padding-left: 50px;
-}
-
-.contenedor-titulo{
-	
-    border-bottom: 1px solid slategrey;
-    background-color: rgb(252,248,116);;
+.contenedor-link-registrate {
+	padding-left: 50px;
 }
 
 
-.tron{
-      background-color: white;
-      color: black;
-      padding: 40px 20px 40px 70px;
-      text-align: center;
-      font-family:Helvetica;
-      font-size: 49px;
-  }
-  
-.btn{
-	  background-color: black;
-      color: white;
+
+.tron {
+	background-color: white;
+	color: #090505;
+	padding: 30px 10px 30px 0px;
+	text-align: center;
+	font-size-adjust: 1;
+	font-style: unset;
+	font-variant-caps: petite-caps;
 }
-.imagen-logo{    
+
+.btn {
+	background-color: black;
+	color: white;
+}
+
+.imagen-logo {
 	width: 172px;
-    height: 203px;
-    float:left;
+	height: 203px;
+	float: left;
 }
 
-.imagen-grafico:hover{    
+.imagen-grafico:hover {
 	width: 352x;
-    height: 563px;
-    float:center;
-    display:none;
+	height: 563px;
+	float: center;
+	display: none;
 }
-.imagen-ofertas{    
+
+.imagen-ofertas {
 	width: 600px;
-    height: 400px;
-    float:left;
+	height: 400px;
+	float: left;
 }
-.imagen-logo:hover{    
+
+.imagen-logo:hover {
 	width: 172px;
-    height: 203px;
-    float:center;
-    opacity:0.4;
+	height: 203px;
+	float: center;
+	opacity: 0.4;
 }
 
-.footer{
-	    margin-top: 500px;
-	    
+.containers {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.copyright{
-	    margin-left: 400px;
+.footer {
+    background-color: #2A2426;
+    margin-top: 400px;
+    position: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }
 
+.footer div a {
+    text-decoration: none;
+    color: #D0D2D3;
+    text-align: center;
+    display: block;
+    font-size: 11px;
+}
 
+.copyright {
+	margin-left: 400px;
+}
 
 /*.nav{
 	padding-top:15px;
 	background:rgb(252,248,116);;
 }*/
-
-
 .horizontal-menu {
-  box-sizing: border-box; }
-  .horizontal-menu__lista {
-    padding: 0;
-    margin: 1px 0px; }
-  .horizontal-menu__item {
-    display: inline;
-    margin-right: 40px; }
-    .horizontal-menu__item a {
-      color: black; }
-    .horizontal-menu__item a:hover {
-      border-bottom: 1px solid #ffffff; }
-      
-      
-.contenedor-registro{
-	width:207px;
-	margin:auto;
+	box-sizing: border-box;
+}
+
+.horizontal-menu__lista {
+	padding: 0;
+	margin: 1px 0px;
+}
+
+.horizontal-menu__item {
+	display: inline;
+	margin-right: 40px;
+}
+
+.horizontal-menu__item a {
+	color: black;
+}
+
+.horizontal-menu__item a:hover {
+	border-bottom: 1px solid #ffffff;
+}
+
+.contenedor-registro {
+	width: 207px;
+	margin: auto;
 }
 
 .footer-pagina {
-    clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: 20em;
+	clear: both;
+	position: relative;
+	z-index: 10;
+	height: 3em;
+	margin-top: 20em;
 }
 
-
-.input-registro{
-	
-	margin-top:19px;
+.input-registro {
+	margin-top: 19px;
 }
 
-
-.texto-normal{
-	
-	font-size:large;
+.texto-normal {
+	font-size: large;
 }
 
-.oferta{
-	
-	margin-top:50px;
+.oferta {
+	margin-top: 50px;
 }
-
-
-
 
 .input-select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 .input-sumitt {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .input[type=submit]:hover {
-    background-color: #45a049;
+	background-color: #45a049;
 }
 
 .div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
 }
-
 
 /**************** calendar ************************/
-
 .yui3-button {
-    margin:10px 0px 10px 0px;
-    color: #fff;
-    background-color: #3476b7;
+	margin: 10px 0px 10px 0px;
+	color: #fff;
+	background-color: #3476b7;
 }
 
 .yui3-skin-mine .yui3-calendar-header-label {
-    text-align: center;
+	text-align: center;
 }
+
 .yui3-skin-mine .yui3-calendar-header-label {
-    margin: 0;
-    font-size: 1em;
-    font-weight: bold;
+	margin: 0;
+	font-size: 1em;
+	font-weight: bold;
 }
+
 .yui3-calendar-header-label {
-    width: 100%;
+	width: 100%;
 }
 /***************************************************************+*/
-
 .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
 }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
-    visibility: hidden;
+	visibility: hidden;
 	width: 600px;
-    height: 400px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -300px;
-    padding-left: 80px;
-    padding-right: 80px; 
-    padding-top: 23px;   
+	height: 400px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -300px;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-top: 23px;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s
 }
 
 /* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+@
+-webkit-keyframes fadeIn {
+	from {opacity: 0;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
+to {
+	opacity: 1;
+}
+
+}
+@
+keyframes fadeIn {
+	from {opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
 }

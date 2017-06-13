@@ -36,6 +36,7 @@
 
 
 <body>
+<div class="container">
  	<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
 	<div class="row">	
 		<div class="col-md-4"></div>
@@ -57,14 +58,9 @@
 		<div class="col-md-4"></div>		
 	</div>
 	</form>
-	
-	
+</div>
 
+</body>    
+<%@include file="footer.jsp" %>	
 
-     
-
-	
- <%@include file="footer.jsp" %>
-
-</body>
 </html>
