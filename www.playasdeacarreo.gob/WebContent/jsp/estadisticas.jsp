@@ -6,18 +6,7 @@
 <title>Estadisticas</title>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet"
 	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -53,9 +42,6 @@ $("#datepicker_desde").datepicker();
 $(function () {
 	$("#datepicker_hasta").datepicker();
 	});
-</script>
-
-<script>
 $(document).ready(function(){
     $("#hide").click(function(){
         $("#div1").hide();
@@ -63,14 +49,9 @@ $(document).ready(function(){
     $("#show").click(function(){
         $("#div1").show();
     });
-});
+});	
 </script>
 
-<script>
-function printPage() {
-    window.print();
-}
-</script>
 
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>

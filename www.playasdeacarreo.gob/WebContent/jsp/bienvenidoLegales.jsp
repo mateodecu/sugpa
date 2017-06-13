@@ -11,11 +11,6 @@
 </head>
 <body>
 
-<script>
-$(document).ready(function(){
-    $('#mydata').DataTable();
-});		
-</script>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">

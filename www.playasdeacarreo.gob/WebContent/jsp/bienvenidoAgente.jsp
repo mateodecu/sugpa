@@ -7,7 +7,7 @@
 <html>
 <head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -15,19 +15,7 @@
 </head>
 
 <body>
-
-<script>
-function printPage() {
-    window.print();
-}
-</script>
-
-<script>
-$(document).ready(function(){
-    $('#mydata').DataTable();
-});		
-</script>
-    
+ 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">

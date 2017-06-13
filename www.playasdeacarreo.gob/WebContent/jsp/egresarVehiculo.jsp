@@ -14,17 +14,6 @@
 </head>
 <body>
 	
-<script>
-function myFunction() {
-    var txt;
-    if (confirm("Presione aceptar para confirmar el egreso") == true) {
-        txt = "You pressed OK!";
-    } else {
-        txt = "You pressed Cancel!";
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -113,7 +102,7 @@ function myFunction() {
             <textarea name="observaciones" rows="4" cols="30"></textarea></p>
  
 			<p class="boton-margen-inferior">
-			<input onclick="myFunction()" class="boton input-ingresar" type="submit" name="cargar"	value="Cargar Egreso" /></p>
+			<input onclick="mensajeConfirma()" class="boton input-ingresar" type="submit" name="cargar"	value="Cargar Egreso" /></p>
       </div>
 
 </div>

@@ -1,17 +1,18 @@
 <%@page import="com.dgcactysv.funciones.Funciones"%>
-<%@page import="com.dgcactysv.modelo.Vehiculo" %>
-<%@page import="java.util.List"%>
+<%@page import="com.dgcactysv.modelo.Registro" %>
+<%@page import="java.util.ArrayList"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
  
-
  
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -35,7 +36,7 @@
 <div class="container">
   <h2>Listado de vehiculos</h2>
   <p>Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</p>            
-  <table class="table table-striped">
+  <table class="table-striped table-bordered table-hover" id="mydata">
     <thead>
       <tr>
 		 <th>REGISTRO</th>
@@ -51,18 +52,18 @@
     </thead>
     <tbody>
 					<%
-						List<Vehiculo> vehiculos = Funciones.getLstVehiculos();
-						for (Vehiculo vehiculo : vehiculos) {
+					ArrayList<Registro> vehiculos = (ArrayList<Registro>) request.getAttribute("lstRegistros");
+						for (Registro vehiculo : vehiculos) {
 					%>
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=vehiculo.getFecha()%></td>
-						<td><%=vehiculo.getHora()%></td>
+						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaIng())%></td>
+						<td><%=vehiculo.getHoraIng()%></td>
 						<td><%=vehiculo.getDominio()%></td>
 						<td><%=vehiculo.getMarca()%></td>
 						<td><%=vehiculo.getModelo()%></td>
 						<td><%=vehiculo.getMotivo()%></td>
-						<td><%=vehiculo.getPlaya()%></td>						
+						<td>Rio_cuarto</td>						
 						<td><input type="checkbox"></td>
 						
 					</tr>

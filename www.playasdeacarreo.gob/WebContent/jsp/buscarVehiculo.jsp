@@ -15,16 +15,16 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-<script>
-	$(document).ready(function() {
-		$("#datepicker_fecha").datepicker();
-	});
-</script>
 
 <title>Playas de Acarreo DGCACTYSV:</title>
 </head>
 <body>
 
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#datepicker_fecha").datepicker();
+});
+</script>
 
 
 <nav class="navbar navbar-inverse">

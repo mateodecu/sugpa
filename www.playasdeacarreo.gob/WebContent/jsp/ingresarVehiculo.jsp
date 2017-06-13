@@ -16,17 +16,6 @@
 
 <body>
 
-<script>
-function myFunction() {
-    var txt;
-    if (confirm("Presione aceptar para confirmar el ingreso") == true) {
-        txt = "You pressed OK!";
-    } else {
-        txt = "You pressed Cancel!";
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
 
   <script>
   $( function() {
@@ -181,12 +170,17 @@ function visibility(select) {
     
     <div class="col-lg-3">
       <h3>Confirmar ingreso</h3>     
+      
+      		<label for="dniDoc">Copia Inventario: </label> 
+			<p class="boton-margen-inferior">
+			<input type="file" required name="inventario" /></p>
+			
             <label for="inputdefault">Observaciones:</label>
 			<p class="boton-margen-inferior">
 			<textarea name="observaciones" rows="5" cols="30"></textarea></p>
 			
 			<p class="boton-margen-inferior">
-			<input onclick="myFunction()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
+			<input onclick="mensajeConfirmaI()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
      		
      </div>
      </div>
