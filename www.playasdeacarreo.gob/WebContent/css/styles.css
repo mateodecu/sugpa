@@ -57,12 +57,12 @@
 }
 
 .contenedor-login {
-	border: 6px solid;
+	border: 4px solid;
 	position: absolute;
 	padding-left: 100px;
 	padding-right: 100px;
-	padding-bottom: 20px;
-	padding-top: 23px;
+	padding-bottom: 31px;
+	padding-top: 19px;
 	background-color: rgb(252, 248, 116);
 }
 
@@ -195,11 +195,11 @@ tr.details td.details-control {
 
 .footer {
     background-color: #2A2426;
-    margin-top: 400px;
+    margin-top: 468px;
     position: center;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 50px;
 }
 
 .footer div a {
@@ -381,4 +381,37 @@ keyframes fadeIn {
 to {
 	opacity: 1;
 }
+}
+
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+}
+
+.profile-img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
 }

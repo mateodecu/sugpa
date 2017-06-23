@@ -42,129 +42,140 @@
   </div>
 </nav>	
 
-<div class="tron">
-<h1> Resultado Busqueda:  </h1>
+<div class="container">
+  <h2>Resultado de busqueda:</h2> <br>
+  <div class="panel-group">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Realizar una accion</div>
+      <div class="panel-body">
+       
+						  <table class="table table-striped">
+						    <thead>
+						      <tr>
+								 <th>REGISTRO</th>
+								 <th>FECHA</th>
+								 <th>HORA</th>
+								 <th>DOMINIO</th>
+								 <th>MARCA</th>
+								 <th>MODELO</th>
+								 <th>MOTIVO</th>
+								 <th>DESCRIPCION</th>
+								 <th>ACTA DE COMPROBACION</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+							 			<%Registro vehiculo= new Registro();
+							 			vehiculo= (Registro) request.getAttribute("vehiculo");
+							 			
+							 			//Automotor automotor=new Automotor();
+							 			//automotor=(Automotor) request.getAttribute("automotor");
+							 			
+											 %>		 
+											<tr>
+												<td><%=vehiculo.getRegistro()%></td>
+												<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaEgr())%></td>
+												<td><%=vehiculo.getHoraIng()%></td>
+												<td><%=vehiculo.getDominio()%></td>
+												<td><%=vehiculo.getMarca()%></td>
+												<td><%=vehiculo.getModelo()%></td>
+												<td><%=vehiculo.getMotivo()%></td>
+												<td><%=vehiculo.getDescripcion()%></td>
+												<td><%=vehiculo.getActaDeComprobacion()%></td>	
+											</tr>
+											
+						
+						    </tbody>
+						    
+						  </table>
+						  
+						      				<%if(request.getAttribute("usuario").equals("Miraglia Walter")==true && vehiculo.getRegistro().equals("null")==false ){
+												%>
+													<table class="table table-striped">
+													    <thead>
+													      <tr>
+															 <th></th>			    
+													      </tr>
+													    </thead>
+													    <tbody>
+																		<tr>												
+																			<td><form action="editarRegistro">
+																			<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/>	
+																			</form></td>					
+																		</tr>
+													    </tbody>
+													  </table>	
+											  <table class="table table-striped">
+											    <thead>
+											      <tr>
+													 <th><a href="img/dni.pdf" download title="Descargar documento">DNI</a></th>
+													 <th><a href="img/licencia.pdf" download title="Descargar documento">LICENCIA</a></th>
+													 <th><a href="img/cedula.pdf" download title="Descargar documento">CEDULA</a></th>
+											      </tr>
+											    </thead>
+											    <tbody>
+																<tr>
+																	<td><object width="300" height="400" data="img/dni.pdf"></object></td>
+																	<td><object width="300" height="400" data="img/licencia.pdf"></object></td>
+																	<td><object width="300" height="400" data="img/cedula.pdf"></object></td>
+																</tr>
+											    </tbody>
+											  </table>
+											  
+											  	<table class="table table-striped">
+											    <thead>
+											      <tr>
+													 <th><a href="img/seguro.pdf" download title="Descargar documento">SEGURO</a></th>
+													 <th><a href="img/dgai.pdf" download title="Descargar documento">DGAI</a></th>
+											      </tr>
+											    </thead>
+											    <tbody>
+																<tr>
+																	<td><object width="300" height="400" data="img/seguro.pdf"></object></td>
+																	<td><object width="300" height="400" data="img/dgai.pdf"></object></td>
+																</tr>
+											    </tbody>
+											  </table>
+											  
+											  
+											
+											<%} %>
+											
+											<%if(request.getAttribute("usuario").equals("Decurgez Mateo")==true && vehiculo.getRegistro().equals("null")==false){%>
+												<div class="col-md-16 text-center">
+												<p class="boton-margen-inferior">
+												<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
+												</div>
+											<%} %>
+						
+											<%if(request.getAttribute("usuario").equals("Pizarro Maximiliano")==true && vehiculo.getRegistro().equals("null")==false){%>
+											<form action="egreso">
+											<div class="col-md-16 text-center">
+												<p class="boton-margen-inferior">
+												<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
+											</div>
+											</form>	
+											<%} %>
+											
+											<%if(request.getAttribute("usuario").equals("Pietrafesa Sergio")==true && vehiculo.getRegistro().equals("null")==false){%>
+											<form action="egreso">
+											<div class="col-md-16 text-center">
+												<p class="boton-margen-inferior">
+												<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
+											</div>
+											</form>	
+											<%} %>
+											
+						    				<%if(vehiculo.getRegistro().equals("null")==true){
+												String mensaje="No se encontro el vehiculo";%>
+											<h2><%=mensaje %></h2>
+											<%} %>
+						</div>
+
 </div>
-
-<div class="container">      
-  <table class="table table-striped">
-    <thead>
-      <tr>
-		 <th>REGISTRO</th>
-		 <th>FECHA</th>
-		 <th>HORA</th>
-		 <th>DOMINIO</th>
-		 <th>MARCA</th>
-		 <th>MODELO</th>
-		 <th>MOTIVO</th>
-		 <th>DESCRIPCION</th>
-		 <th>ACTA DE COMPROBACION</th>
-      </tr>
-    </thead>
-    <tbody>
-	 			<%Registro vehiculo= new Registro();
-	 			vehiculo= (Registro) request.getAttribute("vehiculo");
-	 			
-	 			//Automotor automotor=new Automotor();
-	 			//automotor=(Automotor) request.getAttribute("automotor");
-	 			
-					 %>		 
-					<tr>
-						<td><%=vehiculo.getRegistro()%></td>
-						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaEgr())%></td>
-						<td><%=vehiculo.getHoraIng()%></td>
-						<td><%=vehiculo.getDominio()%></td>
-						<td><%=vehiculo.getMarca()%></td>
-						<td><%=vehiculo.getModelo()%></td>
-						<td><%=vehiculo.getMotivo()%></td>
-						<td><%=vehiculo.getDescripcion()%></td>
-						<td><%=vehiculo.getActaDeComprobacion()%></td>	
-					</tr>
-					
-
-    </tbody>
-    
-  </table>
-  
-      				<%if(request.getAttribute("usuario").equals("Miraglia Walter")==true && vehiculo.getRegistro().equals("null")==false ){
-						%>
-							<table class="table table-striped">
-							    <thead>
-							      <tr>
-									 <th></th>			    
-							      </tr>
-							    </thead>
-							    <tbody>
-												<tr>												
-													<td><form action="editarRegistro">
-													<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/>	
-													</form></td>					
-												</tr>
-							    </tbody>
-							  </table>	
-					  <table class="table table-striped">
-					    <thead>
-					      <tr>
-							 <th><a href="img/dni.pdf" download title="Descargar documento">DNI</a></th>
-							 <th><a href="img/licencia.pdf" download title="Descargar documento">LICENCIA</a></th>
-							 <th><a href="img/cedula.pdf" download title="Descargar documento">CEDULA</a></th>
-					      </tr>
-					    </thead>
-					    <tbody>
-										<tr>
-											<td><object width="300" height="400" data="img/dni.pdf"></object></td>
-											<td><object width="300" height="400" data="img/licencia.pdf"></object></td>
-											<td><object width="300" height="400" data="img/cedula.pdf"></object></td>
-										</tr>
-					    </tbody>
-					  </table>
-					  
-					  	<table class="table table-striped">
-					    <thead>
-					      <tr>
-							 <th><a href="img/seguro.pdf" download title="Descargar documento">SEGURO</a></th>
-							 <th><a href="img/dgai.pdf" download title="Descargar documento">DGAI</a></th>
-					      </tr>
-					    </thead>
-					    <tbody>
-										<tr>
-											<td><object width="300" height="400" data="img/seguro.pdf"></object></td>
-											<td><object width="300" height="400" data="img/dgai.pdf"></object></td>
-										</tr>
-					    </tbody>
-					  </table>
-					  
-					  
-					
-					<%} %>
-					
-					<%if(request.getAttribute("usuario").equals("Decurgez Mateo")==true && vehiculo.getRegistro().equals("null")==false){%>
-						<p class="boton-margen-inferior">
-						<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/></p>	
-					<%} %>
-
-					<%if(request.getAttribute("usuario").equals("Pizarro Maximiliano")==true && vehiculo.getRegistro().equals("null")==false){%>
-					<form action="egreso">
-						<p class="boton-margen-inferior">
-						<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
-					</form>	
-					<%} %>
-					
-					<%if(request.getAttribute("usuario").equals("Pietrafesa Sergio")==true && vehiculo.getRegistro().equals("null")==false){%>
-					<form action="egreso">
-						<p class="boton-margen-inferior">
-						<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
-					</form>	
-					<%} %>
-					
-    				<%if(vehiculo.getRegistro().equals("null")==true){
-						String mensaje="No se encontro el vehiculo";%>
-					<h2><%=mensaje %></h2>
-					<%} %>
 </div>
-
-
+</div>
 	
-	 <%@include file="footer.jsp" %>
+<%@include file="footer.jsp" %>
 </body>
 </html>

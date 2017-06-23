@@ -16,7 +16,7 @@
       <a class="navbar-brand" href="inicioo">SUGPA</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="inicioo"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
+      <li><a href="inicio"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
       <li><a href="#"></a></li>
     </ul>
   </div>
@@ -24,28 +24,54 @@
 
 
 <body>
-<div class="container">
- 	<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
-	<div class="row">	
-		<div class="col-md-4"></div>
-		<div class="col-md-4 text-center">
-			<div class="contenedor-login">
-				<label for="texto-normal">Usuario:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar" autocomplete="off" required name="usuario" type="text"/></p>
-				
-				<label for="boton-margen-inferior texto-normal">Contraseña:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar" name="clave" required type="password"/></p>
-				
-				<p class="boton-margen-inferior">
-				<input class="boton input-ingresar" type="submit" name="ingresar" value="Ingresar"/></p>
 
+    <div class="container" style="margin-top:40px">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong> Login</strong>
+					</div>
+					<div class="panel-body">
+						<form role="form" method="post" action="/www.playasdeacarreo.gob/bienvenido">
+							<fieldset>
+								<div class="row">
+									<div class="center-block">
+										<img class="profile-img"
+											src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-10  col-md-offset-1 ">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-user"></i>
+												</span> 
+												<input class="form-control" autocomplete="off" placeholder="Email" name="usuario" type="text" autofocus>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-lock"></i>
+												</span>
+												<input class="form-control" autocomplete="off" placeholder="Clave" name="clave" type="password" value="">
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-lg btn-primary btn-block" value="Ingresar">
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+                </div>
 			</div>
-		</div>	
+		</div>
 	</div>
-	</form>
-</div>
+
 </body>    
 <%@include file="footer.jsp" %>	
 </html>

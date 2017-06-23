@@ -34,7 +34,7 @@ public class ControladorInicio extends HttpServlet {
 		
 		Facade facade= new Facade();
 		RegistroABM facede= facade.getRegistroABM();
-		List<Registro> vehiculos = facede.traerEnPlaya();
+		List<Registro> vehiculos = facede.traerListaRegistro();
 		
 		request.setAttribute("lstRegistros", vehiculos);
 		request.setAttribute("contabilizacion", facede.Contablilizacion());

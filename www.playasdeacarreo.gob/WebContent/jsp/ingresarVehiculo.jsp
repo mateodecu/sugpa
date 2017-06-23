@@ -8,11 +8,9 @@
 </head>
 
 <!-- jQuery library -->
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+ <script src="js/jquery-1.12.4.js"></script>
+<script src="js/jquery-ui.js"></script>
 
 <body>
 
@@ -84,110 +82,126 @@ function visibility(select) {
   </div>
 </nav>
 
- <div class="tron">
-	<h1>Ingresar Vehiculo: </h1>
-</div>
 
 
 <div class="container">
-<div class="contenedor-ingresar">
-<form method="post" action="inicioo">
-  <div class="row">
-    <div class="col-lg-4">
-      <h3>Datos del vehiculo</h3>
-			      				
-  				<label for="motivo">Tipo:</label>
-  				<p class="boton-margen-inferior">
-			    <select class="input-ingresar" id="tipo" onchange="visibility(this)">
-			      <option value="0" selected="">Selecciona</option>
-			      <option value="1">Vehiculo</option>
-			      <option value="2">Motovehiculo</option>
-			    </select></p>
-			    
-				<label for="dominio">Dominio: </label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="dominio" type="text"/></p>
-				
-				<label  for="marca">Marca:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="marca" type="text" id="marcaO"/></p>
-				<input class="input-ingresar"  required name="marca" type="text" id="marca" style="display:none;"/></p>
-				<input class="input-ingresar"  required name="marca" type="text" id="marcaM" style="display:none;"/></p>
-				
-				<label for="modelo">Modelo:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="modelo" type="text"/></p>
-			    
-			    <label for="motivo">Motivo:</label>
-			    <p class="boton-margen-inferior">
-			    <select class="input-ingresar" id="motivo" name="motivo">
-			      <option value="-1" selected="">Selecciona</option>
-			      <option value="doc">DOCUMENTACION</option>
-			      <option value="est">EST.PROHIBIDO</option>
-			      <option value="placas">PLACAS DE DOMINIO</option>
-			      <option value="alcoholemia">ALCOHOLEMIA</option>
-			      <option value="abandonado">ABANDONADO</option>
-			      <option value="uber">UBER</option>
-			      <option value="uber">ESTUPEFACIENTES</option>
-			    </select></p>
-				<label for="chofer">N°Chasis:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="chasis" type="text"/></p>
-				<label for="chofer">N°Motor:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="motor" type="text"/></p>							    
-	</div>		
+  <h2>Ingresar vehiculo:</h2> <br>
+  <div class="panel-group">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Complete los datos del ingreso</div>
+      <div class="panel-body">
     
-    <div class="col-lg-4">
-      <h3>Datos de la infraccion</h3>
-      	
-			    <label for="acta">Acta contravencional:</label>
-			    <p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="acta" type="text"/></p>
-				
-			    <label for="actac">Acta de comprobacion:</label>
-			    <p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="actac" type="text"/></p>
-					
-			    <label for="boleta">Boleta de citación:</label>
-			    <p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="boleta" type="text"/></p>
-				
-				<label for="agente">Agente Labrante: </label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="agente" type="text"/></p>
-				
-				<label for="infractor">Infractor/Contraventor:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="infractor" type="text"/></p>
-				
-				<label for="chofer">Chofer de grua:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar"  required name="chofer" type="text"/></p>
-				
-	</div>			
-   
-    
-    <div class="col-lg-3">
-      <h3>Confirmar ingreso</h3>     
-      
-      		<label for="dniDoc">Copia Inventario: </label> 
-			<p class="boton-margen-inferior">
-			<input type="file" required name="inventario" /></p>
-			
-            <label for="inputdefault">Observaciones:</label>
-			<p class="boton-margen-inferior">
-			<textarea name="observaciones" rows="5" cols="30"></textarea></p>
-			
-			<p class="boton-margen-inferior">
-			<input onclick="mensajeConfirmaI()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
-     		
-     </div>
-     </div>
-     </form>
-	</div>
+
+						<form method="post" action="inicioo">
+						  <div class="row">
+						    <div class="col-lg-4">
+						          <div class="panel panel-primary">
+     								 <div class="panel-heading">Datos del vehiculo</div>
+      								 <div class="panel-body">
+									      				
+						  				<label for="motivo">Tipo:</label>
+						  				<p class="boton-margen-inferior">
+									    <select class="input-ingresar" id="tipo" onchange="visibility(this)">
+									      <option value="0" selected="">Selecciona</option>
+									      <option value="1">Vehiculo</option>
+									      <option value="2">Motovehiculo</option>
+									    </select></p>
+									    
+										<label for="dominio">Dominio: </label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="dominio" type="text"/></p>
+										
+										<label  for="marca">Marca:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="marca" type="text" id="marcaO"/></p>
+										<input class="input-ingresar"  required name="marca" type="text" id="marca" style="display:none;"/></p>
+										<input class="input-ingresar"  required name="marca" type="text" id="marcaM" style="display:none;"/></p>
+										
+										<label for="modelo">Modelo:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="modelo" type="text"/></p>
+									    
+									    <label for="motivo">Motivo:</label>
+									    <p class="boton-margen-inferior">
+									    <select class="input-ingresar" id="motivo" name="motivo">
+									      <option value="-1" selected="">Selecciona</option>
+									      <option value="doc">DOCUMENTACION</option>
+									      <option value="est">EST.PROHIBIDO</option>
+									      <option value="placas">PLACAS DE DOMINIO</option>
+									      <option value="alcoholemia">ALCOHOLEMIA</option>
+									      <option value="abandonado">ABANDONADO</option>
+									      <option value="uber">UBER</option>
+									      <option value="uber">ESTUPEFACIENTES</option>
+									    </select></p>
+										<label for="chofer">N°Chasis:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="chasis" type="text"/></p>
+										<label for="chofer">N°Motor:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="motor" type="text"/></p>							    
+							</div>		
+						    </div>
+						    </div>
+						    <div class="col-lg-4">
+						          <div class="panel panel-primary">
+     								 <div class="panel-heading">Datos de la infraccion</div>
+      								 <div class="panel-body">
+      								       	
+									    <label for="acta">Acta contravencional:</label>
+									    <p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="acta" type="text"/></p>
+										
+									    <label for="actac">Acta de comprobacion:</label>
+									    <p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="actac" type="text"/></p>
+											
+									    <label for="boleta">Boleta de citación:</label>
+									    <p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="boleta" type="text"/></p>
+										
+										<label for="agente">Agente Labrante: </label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="agente" type="text"/></p>
+										
+										<label for="infractor">Infractor/Contraventor:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="infractor" type="text"/></p>
+										
+										<label for="chofer">Chofer de grua:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="chofer" type="text"/></p>
+										
+							</div>			
+						   </div>
+						   </div>
+						    
+						    <div class="col-lg-4">
+						      		<div class="panel panel-primary" >
+     								 <div class="panel-heading">Confirmar ingreso</div>
+      								 <div class="panel-body">   
+						      
+						      		<label for="dniDoc">Copia Inventario: </label> 
+									<p class="boton-margen-inferior">
+									<input type="file" required name="inventario" /></p>
+									
+						            <label for="inputdefault">Observaciones:</label>
+									<p class="boton-margen-inferior">
+									<textarea name="observaciones" rows="5" cols="30"></textarea></p>
+									
+									<p class="boton-margen-inferior">
+									<input onclick="mensajeConfirmaI()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
+						     		
+						     </div>
+						     </div>
+						     </div>
+						     </div>
+				    </form>
+						     
+				</div>
+		</div>		
 </div>
-  
+</div>
 </body>
 
 <%@include file="footer.jsp" %>

@@ -128,6 +128,10 @@ $(document).ready(function(){
 	 
 } );
 
+$(document).ready(function(){	  
+	 var tabla2 = $('#mydata2').DataTable(); 
+	 
+} );
 
 
 /*Calendario*/

@@ -73,71 +73,72 @@ $(document).ready(function(){
   </div>
 </nav>
 
-<div class="tron">
-	<h1>Estadisticas</h1>
-</div>	
-
 <div class="container">
-<div class="contenedor-estadisticas">
+  <h2>Estadisticas:</h2> <br>
+  <div class="panel-group">
 
-  <h2>Graficador estadistico</h2>         
-  <table class="table table-striped">
-    <thead>
-      <tr>
-		 <th>TIPO</th>
-		 <th>MOTIVO</th>
-		 <th>FECHA DESDE</th>
-		 <th>FECHA HASTA</th>    
-      </tr>
-    </thead>
-    <tbody>
-
-					<tr>
-						<td>
-						<p class="boton-margen-inferior">			    
-						<select class="input-ingresar" id="tipo" name="tipo">
-						  <option value="-1" selected="">Selecciona</option>
-					      <option value="moto">VEHICULO</option>
-					      <option value="auto">MOTOVEHICULO</option>
-					    </select></p></td>
-						<td><p class="boton-margen-inferior">
-							<select class="input-ingresar" id="motivo" name="motivo">
-									<option value="-1" selected="">Selecciona</option>
-									<option value="todos">TODOS</option>
-									<option value="doc">DOCUMENTACION</option>
-									<option value="est">ESTACIONAMIENTO PROHIBIDO</option>
-									<option value="placas">PLACAS DE DOMINIO</option>
-									<option value="alcoholemia">ALCOHOLEMIA</option>
-									<option value="abandonado">ABANDONADO</option>
-									<option value="uber">UBER</option>
-							</select></p>
-						</td>
-
-					 <td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_desde" /></p></td>
-					<td><p class="boton-margen-inferior"><input class="input-ingresar" id="datepicker_hasta" /></p></td>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Realizar una accion</div>
+      <div class="panel-body"> 
+				  <table class="table table-striped">
+				    <thead>
+				      <tr>
+						 <th>TIPO</th>
+						 <th>MOTIVO</th>
+						 <th>FECHA DESDE</th>
+						 <th>FECHA HASTA</th>    
+				      </tr>
+				    </thead>
+				    <tbody>
+				
+									<tr>
+										<td>
+										<p class="boton-margen-inferior">			    
+										<select class="input-ingresar" id="tipo" name="tipo">
+										  <option value="-1" selected="">Selecciona</option>
+									      <option value="moto">VEHICULO</option>
+									      <option value="auto">MOTOVEHICULO</option>
+									    </select></p></td>
+										<td><p class="boton-margen-inferior">
+											<select class="input-ingresar" id="motivo" name="motivo">
+													<option value="-1" selected="">Selecciona</option>
+													<option value="todos">TODOS</option>
+													<option value="doc">DOCUMENTACION</option>
+													<option value="est">ESTACIONAMIENTO PROHIBIDO</option>
+													<option value="placas">PLACAS DE DOMINIO</option>
+													<option value="alcoholemia">ALCOHOLEMIA</option>
+													<option value="abandonado">ABANDONADO</option>
+													<option value="uber">UBER</option>
+											</select></p>
+										</td>
+				
+									 <td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_desde" /></p></td>
+									<td><p class="boton-margen-inferior"><input class="input-ingresar" id="datepicker_hasta" /></p></td>
+										
+									</tr>
+				    </tbody>
+				  </table>
+				  
+				  <div id="div1" style="display:none;">				
+				<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="957" height="569"></div>
+				<p> </p>
+				<div class="col-md-8">
+					
+				<button id="show">Mostrar Grafico</button>
+				<button id="hide">Ocultar Grafico</button>
+				</div>	
+				  
+				</div> 
+				</div>
 						
-					</tr>
-    </tbody>
-  </table>
-  
-  <div id="div1">				
-<img  src="img/Autos.jpg" class="img-rounded" alt="Cinque Terre" width="957" height="569"></div>
-<p> </p>
-<div class="col-md-8">
-	
-<button id="show">Mostrar Grafico</button>
-<button id="hide">Ocultar Grafico</button>
-</div>	
-  
-</div> 
+				<div class="col-md-16 text-center">
+				<p class="boton-margen-inferior">
+				    <a onclick="printPage()" class="btn">
+				      <span class="glyphicon glyphicon-print"></span> Imprimir Grafico 
+				    </a>
+				</p>
+				</div>
 </div>
-		
-<div class="col-md-16 text-center">
-<p class="boton-margen-inferior">
-    <a onclick="printPage()" class="btn">
-      <span class="glyphicon glyphicon-print"></span> Imprimir Grafico 
-    </a>
-</p>
 </div>
 
 <%@include file="footer.jsp" %>

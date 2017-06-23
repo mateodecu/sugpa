@@ -12,6 +12,11 @@
 <script src="css/jquery.dataTables.min.css"></script>
 
 <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+<!-- jQuery autocomplete -->
+
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>

@@ -43,53 +43,58 @@ $(document).ready(function() {
   </div>
 </nav>	
 
-<div class="tron">	
-<h1>Busqueda de vehiculos </h1>	
-</div>
 
 <form method="post" action="mostrarVehiculo">
 
-<div class="contenedor-buscar">
+<div class="container">
+  <h2>Busqueda de vehiculos:</h2> <br>
+  <div class="panel-group">
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-		 <th>DOMINIO:</th>
-		 <th>ACTA DE COMPROBACION:</th>
-		 <th>BOLETA DE CITACION:</th>
-		 <th>ACTA DE CONSTATACION:</th> 
-		 <th>FECHA DE INGRESO:</th> 
-		    
-      </tr>
-    </thead>
-    <tbody>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Complete los datos de busqueda</div>
+      <div class="panel-body">
 
-					<tr>
-						<td>
-						<p class="boton-margen-inferior">
-						<input class="input-ingresar"  name="dominio" type="text"/></p></td>
-						
-						<td><p class="boton-margen-inferior">
-						<input class="input-ingresar"  name="acta" type="text"/></p>	
-						</td>
-
-						<td><p class="boton-margen-inferior">
-						<input class="input-ingresar"  name="boleta" type="text"/></p>
-						</td>
-						
-						<td><p class="boton-margen-inferior">
-						<input class="input-ingresar"  name="actaAlco" type="text"/></p>
-						</td>
-						
-						<td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_fecha" /></p></td>
-						
-					</tr>
-    </tbody>
-  </table>
-  		<div class="col-md-16 text-center">	<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="buscar" value="Buscar"/></p>
+				  <table class="table table-striped">
+				    <thead>
+				      <tr>
+						 <th>DOMINIO:</th>
+						 <th>ACTA DE COMPROBACION:</th>
+						 <th>BOLETA DE CITACION:</th>
+						 <th>ACTA DE CONSTATACION:</th> 
+						 <th>FECHA DE INGRESO:</th> 
+						    
+				      </tr>
+				    </thead>
+				    <tbody>
+				
+									<tr>
+										<td>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  name="dominio" type="text"/></p></td>
+										
+										<td><p class="boton-margen-inferior">
+										<input class="input-ingresar"  name="acta" type="text"/></p>	
+										</td>
+				
+										<td><p class="boton-margen-inferior">
+										<input class="input-ingresar"  name="boleta" type="text"/></p>
+										</td>
+										
+										<td><p class="boton-margen-inferior">
+										<input class="input-ingresar"  name="actaAlco" type="text"/></p>
+										</td>
+										
+										<td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_fecha" /></p></td>
+										
+									</tr>
+				    </tbody>
+				  </table>
+				  		<div class="col-md-16 text-center">	<p class="boton-margen-inferior"><input class="boton input-ingresar" type="submit" name="buscar" value="Buscar"/></p>
+						</div>
 		</div>
-
-</div>
+		</div>
+	</div>	
+</div>	
 </form>
 
 	

@@ -34,30 +34,43 @@
 </nav>	
  
 
-
 <div class="container">
-  <h2>Playa rio cuarto</h2>
-   
-  <p>Lista de vehiculos en playa:</p>   
-  <table class="table table-striped table-bordered table-hover table-responsive" id="mydata">    
-    <thead>
-      <tr>
-      	 <th></th>
-		 <th>REGISTRO</th>
-		 <th>DOMINIO</th>
-		 <th>MARCA</th>
-		 <th>MODELO</th>
-		 <th>MOTIVO</th>
-		 <th>DESCRIPCION</th>
-		 <th>ACTA C</th>
-		 <th>ACTA Z</th>
-		 <th>ACTA CONTRAVENCIONAL</th>
-      </tr>
-    </thead>
+  <h2>Playa rio cuarto</h2> <br>
+  <div class="panel-group">
 
-  </table>		
+    <div class="panel panel-primary">
+      <div class="panel-heading">Lista de vehiculos en playa</div>
+      <div class="panel-body">
+			
+			  <table class="table table-striped table-bordered table-hover table-responsive" id="mydata">    
+			    <thead>
+			      <tr>
+			      	 <th></th>
+					 <th>REGISTRO</th>
+					 <th>DOMINIO</th>
+					 <th>MARCA</th>
+					 <th>MODELO</th>
+					 <th>MOTIVO</th>
+					 <th>DESCRIPCION</th>
+					 <th>ACTA C</th>
+					 <th>ACTA Z</th>
+					 <th>ACTA CONTRAVENCIONAL</th>
+			      </tr>
+			    </thead>
+			
+			  </table>		
   
-
+		 <div class="col-md-8 text-center">
+		<p class="boton-margen-inferior">
+		    <a onclick="printPage()" class="btn">
+		      <span class="glyphicon glyphicon-print"></span> Imprimir Listado 
+		    </a>
+		</p>
+		</div>
+		</div>
+	</div>
+</div>
+</div>		
   
 <!-- Modal -->
 <div id="mostrarDetalle" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
@@ -132,15 +145,38 @@
 
 
 
-  <div class="col-md-8 text-center">
-<p class="boton-margen-inferior">
-    <a onclick="printPage()" class="btn">
-      <span class="glyphicon glyphicon-print"></span> Imprimir Listado 
-    </a>
-</p>
-</div>
-</div>
+<div class="container">
+  <h2>Contabilizacion</h2> <br>
+  <div class="panel-group">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Contabilizacion de vehiculos en playa</div>
+      <div class="panel-body">
 	
+			<table class="table table-striped">
+			    <thead>
+			      <tr>
+					 <th>TIPO</th>
+					 <th>VEHICULOS</th>
+					 <th>MOTOVEHICULOS</th>
+					 <th>TOTAL</th>		 
+			      </tr>
+			    </thead>
+			    <tbody>
+								<tr>
+									<td>CANTIDAD</td>
+									<td><%=request.getAttribute("contabilizacionAutos")%></td>
+									<td><%=request.getAttribute("contabilizacionMotos") %></td>
+									<td><%=request.getAttribute("contabilizacion")%></td>
+								</tr>
+			    </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</div>			
+ 
+ 
  
 </body>
 <%@include file="footer.jsp" %>

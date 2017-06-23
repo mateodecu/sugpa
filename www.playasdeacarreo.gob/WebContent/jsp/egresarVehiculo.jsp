@@ -31,85 +31,102 @@
   </div>
 </nav>	
 
-<div class="tron">
-  <h1>Egresar vehiculo</h1>
-</div>
  
 
 <form method="post" action="/www.playasdeacarreo.gob/bienvenido">
 
 <div class="container">
-<div class="contenedor-ingresar">
-  <div class="row">
-    <div class="col-lg-4">
-      <h3>Datos del egreso</h3>
-      	
-				<label for="registro">N°REGISTRO:</label> 
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar" required name="registro" type="text"/></p>
-				
-				<label for="tipo">Tipo:</label>
-				<p class="boton-margen-inferior">
-				<select class="input-ingresar" id="tipo"  name="tipo">
-					<option value="-1" selected="">Selecciona</option>
-					<option value="titular">TITULAR</option>
-					<option value="ca">CONDUCTOR AUTORIZADO</option>
-					<option value="policia">FUERZA DE SEGURIDAD</option>
-				</select></p>
-				
-				<label for="apellido">Apellido:</label> 
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar" required name="apellido" type="text" /></p>
-				
-				<label for="nombre">Nombre:</label>
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar" required name="nombre" type="text" /></p>
-				
-				<label for="dni">DNI:</label> 
-				<p class="boton-margen-inferior">
-				<input class="input-ingresar" required name="dni" type="text" /></p>
-	
-    </div>
-    
-    <div class="col-lg-4">
-      <h3>Documentacion presentada</h3>
-				<label for="dniDoc">Copia DNI: </label> 
-				<p class="boton-margen-inferior">
-				<input type="file" required name="dniDoc" /></p>
-				 
-				<label for="licencia">Copia Licencia: </label> 
-				<p class="boton-margen-inferior">
-				<input type="file" required name="licencia" /></p>
-				
-				<label for="cedula">Copia Cedula: </label> 
-				<p class="boton-margen-inferior">				
-				<input type="file" required name="cedula" /></p>
-				 
-				<label for="seguro">Copia Seguro: </label> 
-				<p class="boton-margen-inferior">
-				<input type="file" required name="seguro" /></p>
-				 
-				<label for="comunicado">Copia DGAI: </label> 
-				<p class="boton-margen-inferior">
-				<input type="file" required name="comunicado" /></p>
-						
-    </div>
-    
-    <div class="col-lg-3">
-      <h3>Confirmar egreso</h3>   
-            <label for="inputdefault">Observaciones:</label>
-			<p class="boton-margen-inferior">
-            <textarea name="observaciones" rows="4" cols="30"></textarea></p>
- 
-			<p class="boton-margen-inferior">
-			<input onclick="mensajeConfirma()" class="boton input-ingresar" type="submit" name="cargar"	value="Cargar Egreso" /></p>
-      </div>
+  <h2>Egresar vehiculo:</h2> <br>
+  <div class="panel-group">
 
-</div>
-  	
-</div>
-
-</div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Complete los datos del egreso</div>
+      <div class="panel-body">
+								  <div class="row">
+								    <div class="col-lg-4">
+								          <div class="panel panel-primary">
+		     								 <div class="panel-heading">Datos de la persona</div>
+		      								 <div class="panel-body">
+										      	
+												<label for="registro">N°REGISTRO:</label> 
+												<p class="boton-margen-inferior">
+												<input class="input-ingresar" required name="registro" type="text"/></p>
+												
+												<label for="tipo">Tipo:</label>
+												<p class="boton-margen-inferior">
+												<select class="input-ingresar" id="tipo"  name="tipo">
+													<option value="-1" selected="">Selecciona</option>
+													<option value="titular">TITULAR</option>
+													<option value="ca">CONDUCTOR AUTORIZADO</option>
+													<option value="policia">FUERZA DE SEGURIDAD</option>
+												</select></p>
+												
+												<label for="apellido">Apellido:</label> 
+												<p class="boton-margen-inferior">
+												<input class="input-ingresar" required name="apellido" type="text" /></p>
+												
+												<label for="nombre">Nombre:</label>
+												<p class="boton-margen-inferior">
+												<input class="input-ingresar" required name="nombre" type="text" /></p>
+												
+												<label for="dni">DNI:</label> 
+												<p class="boton-margen-inferior">
+												<input class="input-ingresar" required name="dni" type="text" /></p>
+									
+								    </div>
+								    </div>
+								    </div>
+								    
+								    <div class="col-lg-4">
+								          <div class="panel panel-primary">
+		     								 <div class="panel-heading">Documentacion presentada</div>
+		      								 <div class="panel-body">
+												<label for="dniDoc">Copia DNI: </label> 
+												<p class="boton-margen-inferior">
+												<input type="file" required name="dniDoc" /></p>
+												 
+												<label for="licencia">Copia Licencia: </label> 
+												<p class="boton-margen-inferior">
+												<input type="file" required name="licencia" /></p>
+												
+												<label for="cedula">Copia Cedula: </label> 
+												<p class="boton-margen-inferior">				
+												<input type="file" required name="cedula" /></p>
+												 
+												<label for="seguro">Copia Seguro: </label> 
+												<p class="boton-margen-inferior">
+												<input type="file" required name="seguro" /></p>
+												 
+												<label for="comunicado">Copia DGAI: </label> 
+												<p class="boton-margen-inferior">
+												<input type="file" required name="comunicado" /></p>
+														
+								    </div>
+								    </div>
+								    </div>
+								    
+								    <div class="col-lg-3">
+								          <div class="panel panel-primary">
+		     								 <div class="panel-heading">Confirmar egreso</div>
+		      								 <div class="panel-body">
+								            <label for="inputdefault">Observaciones:</label>
+											<p class="boton-margen-inferior">
+								            <textarea name="observaciones" rows="4" cols="30"></textarea></p>
+								 
+											<p class="boton-margen-inferior">
+											<input onclick="mensajeConfirma()" class="boton input-ingresar" type="submit" name="cargar"	value="Cargar Egreso" /></p>
+								      </div>
+								      </div>
+								      </div>
+								      
+								
+								</div>
+								  	
+				</div>
+								
+			</div>
+		</div>	
+</div>		
 </form>
 
 	<%@include file="footer.jsp"%>

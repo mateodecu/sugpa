@@ -32,7 +32,7 @@
   <h2>Playa rio cuarto</h2>
    
   <p>Lista de vehiculos en playa:</p>           
-  <table class="table table-striped table-bordered table-hover" id="mydata">
+  <table class="table table-striped table-bordered table-hover" id="mydata2">
     <thead>
       <tr>
 		 <th>REGISTRO</th>

@@ -36,7 +36,7 @@
 <div class="container">
   <h2>Listado de vehiculos</h2>
   <p>Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</p>            
-  <table class="table-striped table-bordered table-hover" id="mydata">
+  <table class="table table-striped table-bordered table-hover table-responsive" id="mydata2">
     <thead>
       <tr>
 		 <th>REGISTRO</th>

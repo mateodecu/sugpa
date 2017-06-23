@@ -24,9 +24,24 @@
   </div>
 </nav>	
 	
-<div class="tron">
-	<h1>No se encontro el vehiculo</h1>
-</div>
+<div class="container">
+  <h2>Resultado de busqueda:</h2> <br>
+  <div class="panel-group">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Realizar una accion</div>
+      <div class="panel-body">
+      <h2>No se encontraron resultados</h2>
+		<form action="buscar">
+				<div class="col-md-16 text-center">
+				<p class="boton-margen-inferior">
+				<input class="boton input-ingresar" type="submit" name="buscar" value="Volver a Buscar"/></p>	
+				</div>  
+		</form>		    
+      </div>
+      </div>
+  </div>
+</div>      
 	
 	
 	<%@include file="footer.jsp" %>
