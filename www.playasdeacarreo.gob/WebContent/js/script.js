@@ -1,3 +1,5 @@
+
+
 /* Fecha y Hora By Chivi */ 
 	/* COMIENZA EL SCRIPT DEL RELOJ */ 
 function actualizaReloj(){  
@@ -19,7 +21,7 @@ if (Segundos<=9)
 Segundos = "0" + Segundos 
 	/* TERMINA EL SCRIPT DEL RELOJ */
 	/* COMIENZA EL SCRIPT DE LA FECHA */ 
-var Dia = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", 
+var Dia = new Array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", 
 "Domingo"); 
 var Mes = new 
 Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
@@ -46,10 +48,86 @@ setTimeout("actualizaReloj()",1000)
 function printPage() {
     window.print();
 }
+
+
 /*Generar tabla dinamica*/
+function format ( d ) {
+	var fecha = new Date();
+	var dia = d.fechaIng.dayOfMonth;
+	var mes = d.fechaIng.month;
+	var anio = d.fechaIng.year;
+	
+	if (dia<=9) 
+		dia = "0" + dia 
+	if (mes<=9) 
+		mes = "0" + mes
+		
+		
+    return 'Levantando en : '+d.levantadoEn+'<br>'+'Fecha de ingreso: '+dia+'/'+mes+'/'+anio+' Hora:'+d.horaIng+'<br>'+'Agente labrante: '+d.agenteLabrante+'<br>'+'Infractor/contraventor: '+d.infractor+'<br>'+'Agente de Playa: '+d.agenteDePlaya+'<br>'+'Chofer de grua: '+d.gruaChofer+'<br>';
+}
+
 $(document).ready(function(){
-    $('#mydata').DataTable();
-});
+
+	  
+	 var table = $('#mydata').DataTable({
+	        "processing": true,
+		    "sAjaxSource":"jsp/data.jsp",
+	        "columns": [{
+			                "class":          "details-control",
+			                "orderable":      false,
+			                "data":           null,
+			                "defaultContent": ""
+			            },
+	                    { "data": "registro" },
+	                    { "data": "dominio" },
+	                    { "data": "marca" },
+	                    { "data": "modelo" },
+	                    { "data": "motivo" },
+	                    { "data": "descripcion" },
+	                    { "data": "actaDeComprobacion" },
+	                    { "data": "boletaDeCitacion" },	                    
+	                    { "data": "actaContravencional" }
+	                    ],
+	      "order": [[1, 'asc']]
+		  }
+			 );
+	
+	
+	    // Array to track the ids of the details displayed rows
+	    var detailRows = [];
+	 
+	    $('#mydata tbody').on( 'click', 'tr td.details-control', function () {
+	        var tr = $(this).closest('tr');
+	        var row = table.row( tr );
+	        var idx = $.inArray( tr.attr('id'), detailRows );
+	 
+	        if ( row.child.isShown() ) {
+	            tr.removeClass( 'details' );
+	            row.child.hide();
+	 
+	            // Remove from the 'open' array
+	            detailRows.splice( idx, 1 );
+	        }
+	        else {
+	            tr.addClass( 'details' );
+	            row.child( format( row.data() ) ).show();
+	 
+	            // Add to the 'open' array
+	            if ( idx === -1 ) {
+	                detailRows.push( tr.attr('id') );
+	            }
+	        }
+	    } );
+	    
+	    // On each draw, loop over the `detailRows` array and show any child rows
+	    table.on( 'draw', function () {
+	        $.each( detailRows, function ( i, id ) {
+	            $('#'+id+' td.details-control').trigger( 'click' );
+	        } );
+	    } );	    
+	 
+} );
+
 
 
 /*Calendario*/

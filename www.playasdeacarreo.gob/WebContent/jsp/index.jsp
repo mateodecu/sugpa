@@ -42,13 +42,10 @@
 				<input class="boton input-ingresar" type="submit" name="ingresar" value="Ingresar"/></p>
 
 			</div>
-		</div>
-		<div class="col-md-4"></div>		
+		</div>	
 	</div>
 	</form>
 </div>
-
 </body>    
 <%@include file="footer.jsp" %>	
-
 </html>

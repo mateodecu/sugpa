@@ -147,6 +147,14 @@
 	font-variant-caps: petite-caps;
 }
 
+td.details-control {
+    background: url('https://datatables.net/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.details td.details-control {
+    background: url('https://datatables.net/examples/resources/details_close.png') no-repeat center center;
+}
+
 .btn {
 	background-color: black;
 	color: white;
@@ -191,7 +199,7 @@
     position: center;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 100px;
 }
 
 .footer div a {

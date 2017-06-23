@@ -2,6 +2,7 @@ package com.dgcactysv.negocio;
 
 import com.dgcactysv.dao.RegistroDao;
 import com.dgcactysv.modelo.Registro;
+import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.GregorianCalendar;
@@ -33,6 +34,14 @@ public class RegistroABM {
 	public List<Registro> traerEnPlaya(){
 		
 		return daoA.traerEnPlaya();
+		}
+	
+	public String traerEnPlayaJson(){
+		
+		Gson gson = new Gson();
+		String jsonNames = gson.toJson(daoA.traerEnPlaya());
+		
+		return jsonNames;
 		}
 	
 	public List<Registro> traerEgresos(){
