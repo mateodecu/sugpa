@@ -36,6 +36,7 @@
 <div class="container">
   <h2>Listado de vehiculos</h2>
   <p>Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</p>            
+ 
   <table class="table table-striped table-bordered table-hover table-responsive" id="mydata2">
     <thead>
       <tr>
@@ -81,7 +82,30 @@
 
 	</div>
 	
+	
 
+
+	<form action="EmailSendingServlet" method="post">
+		<table border="0" width="35%" align="center">
+			<caption><h2>Enviar listado por mail</h2></caption>
+			<tr>
+				<td width="50%">Direccion de Email </td>
+				<td><input type="text" name="recipient" size="50"/></td>
+			</tr>
+			<tr>
+				<td>Motivo </td>
+				<td><input type="text" name="subject" size="50" value="Listado más de 60 dias"/></td>
+			</tr>
+			<tr>
+				<td> </td>
+				<td> <textarea rows="300" cols="100" name="content">REGISTRO FECHA HORA DOMINIO MARCA MODELO<%	for (Registro vehiculo : vehiculos) {%>       <%=vehiculo.getRegistro()+" "+Funciones.traerFechaCorta4(vehiculo.getFechaIng())+" "+vehiculo.getHoraIng()+" "+vehiculo.getDominio()+" "+vehiculo.getMarca()+" "+vehiculo.getModelo()%>         <%} %></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="Enviar"/></td>
+			</tr>
+		</table>
+	</form>	
+	
 	
 </body>
 </html>

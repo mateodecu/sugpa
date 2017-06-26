@@ -21,8 +21,6 @@ import javax.servlet.http.HttpSession;
 
 
 
-
-
 public class ControladorMostrar extends HttpServlet {
 	//Hotel hotel=Hotel.getInstanciaHotel();		
 	private static final long serialVersionUID = 1L;

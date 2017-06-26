@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="D:/playa/sugpa/www.playasdeacarreo.gob/WebContent/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="D:/playa/sugpa/www.playasdeacarreo.gob/WebContent/WEB-INF/lib/mysql-connector-java-5.1.18-bin.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mail_1.4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
