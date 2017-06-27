@@ -29,14 +29,14 @@
   </div>
 </nav>	
 
-<div class="tron">	
-<h1>Vehiculos más de 60 días </h1>	
-</div>
-
 <div class="container">
-  <h2>Listado de vehiculos</h2>
-  <p>Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</p>            
- 
+  <h2>Listado de vehiculos</h2> <br>
+  <div class="panel-group">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Esta tabla representa los vehiculos en playa que superaron los 60 días de estadia.</div>
+      <div class="panel-body">
+
   <table class="table table-striped table-bordered table-hover table-responsive" id="mydata2">
     <thead>
       <tr>
@@ -78,34 +78,43 @@
 			</form>	</div>
 				<BR>
 			</div>	
+</div>
+</div>
+</div>
+	
+<div class="container">
+  <div class="panel-group">
+				<div class="row">
+				 <div class="col-lg-8">
+	    <div class="panel panel-primary">
+	      <div class="panel-heading">Enviar listado por mail</div>
+	      <div class="panel-body">
+	
+				<form action="EmailSendingServlet" method="post">
+
+						<label for="para">Para :</label>
+						<p class="boton-margen-inferior">
+						<input type="text" name="recipient" size="50"/></p>
+					
+						<label for="para">Asunto :</label>
+						<p class="boton-margen-inferior">
+						<input type="text" name="subject" size="50" value="Listado más de 60 dias"/></p>
+					
+						<label for="para">Cuerpo :</label>
+						<p class="boton-margen-inferior">
+						<textarea rows="15" cols="100" name="content"></textarea></p>
+					
+						<p class="boton-margen-inferior">
+						<input class="boton input-ingresar" type="submit" value="Enviar"/>
+						</p>	
+				
+				</form>	
+			</div>
 		</div>
-
-	</div>
-	
-	
-
-
-	<form action="EmailSendingServlet" method="post">
-		<table border="0" width="35%" align="center">
-			<caption><h2>Enviar listado por mail</h2></caption>
-			<tr>
-				<td width="50%">Direccion de Email </td>
-				<td><input type="text" name="recipient" size="50"/></td>
-			</tr>
-			<tr>
-				<td>Motivo </td>
-				<td><input type="text" name="subject" size="50" value="Listado más de 60 dias"/></td>
-			</tr>
-			<tr>
-				<td> </td>
-				<td> <textarea rows="300" cols="100" name="content">REGISTRO FECHA HORA DOMINIO MARCA MODELO<%	for (Registro vehiculo : vehiculos) {%>       <%=vehiculo.getRegistro()+" "+Funciones.traerFechaCorta4(vehiculo.getFechaIng())+" "+vehiculo.getHoraIng()+" "+vehiculo.getDominio()+" "+vehiculo.getMarca()+" "+vehiculo.getModelo()%>         <%} %></textarea></td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"><input type="submit" value="Enviar"/></td>
-			</tr>
-		</table>
-	</form>	
-	
-	
+		</div>
+				</div>
+</div>
+</div>
 </body>
+<%@include file="footer.jsp" %>
 </html>

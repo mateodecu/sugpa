@@ -36,9 +36,13 @@
     <servlet-name>ControladorInicio</servlet-name>
     <servlet-class>com.dgcactysv.controladores.ControladorInicio</servlet-class>
   </servlet>
+    <servlet>
+    <servlet-name>ControladorSalir</servlet-name>
+    <servlet-class>com.dgcactysv.controladores.ControladorSalir</servlet-class>
+  </servlet>
   <servlet>
-    <servlet-name>ControladorIngresar</servlet-name>
-    <servlet-class>com.dgcactysv.controladores.ControladorIngresar</servlet-class>
+    <servlet-name>ControladorIngresarVehiculo</servlet-name>
+    <servlet-class>com.dgcactysv.controladores.ControladorIngresarVehiculo</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>ControladorLogin</servlet-name>
@@ -92,9 +96,13 @@
     <servlet-name>ControladorInicio</servlet-name>
     <url-pattern>/inicioo</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ControladorIngresar</servlet-name>
+    <servlet-mapping>
+    <servlet-name>ControladorSalir</servlet-name>
     <url-pattern>/inicio</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ControladorIngresarVehiculo</servlet-name>
+    <url-pattern>/ingresarVehiculo</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>ControladorCargar</servlet-name>
@@ -128,5 +136,7 @@
 	<welcome-file-list>
 		<welcome-file>EmailForm.jsp</welcome-file>
 	</welcome-file-list>
+	
+
   
 </web-app>

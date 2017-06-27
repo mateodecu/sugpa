@@ -52,12 +52,12 @@ function visibility(select) {
 		   } else{
 		    document.getElementById('marcaO').style.display = "none";
 		   }
-	   if(select.value==1){
+	   if(select.value=="AUTO"){
 		    document.getElementById('marca').style.display = "block";
 		   } else{
 		    document.getElementById('marca').style.display = "none";
 		   }
-	   if(select.value==2){
+	   if(select.value=="MOTO"){
 		    document.getElementById('marcaM').style.display = "block";
 		   } else{
 		    document.getElementById('marcaM').style.display = "none";
@@ -83,7 +83,7 @@ function visibility(select) {
 </nav>
 
 
-
+<form method="post" action="ingresarVehiculo">
 <div class="container">
   <h2>Ingresar vehiculo:</h2> <br>
   <div class="panel-group">
@@ -93,7 +93,7 @@ function visibility(select) {
       <div class="panel-body">
     
 
-						<form method="post" action="inicioo">
+						
 						  <div class="row">
 						    <div class="col-lg-4">
 						          <div class="panel panel-primary">
@@ -102,37 +102,37 @@ function visibility(select) {
 									      				
 						  				<label for="motivo">Tipo:</label>
 						  				<p class="boton-margen-inferior">
-									    <select class="input-ingresar" id="tipo" onchange="visibility(this)">
+									    <select class="input-ingresar" id="tipo" name="tipo" onchange="visibility(this)">
 									      <option value="0" selected="">Selecciona</option>
-									      <option value="1">Vehiculo</option>
-									      <option value="2">Motovehiculo</option>
+									      <option value="AUTO">VEHICULO</option>
+									      <option value="MOTO">MOTOVEHICULO</option>
 									    </select></p>
 									    
 										<label for="dominio">Dominio: </label>
 										<p class="boton-margen-inferior">
-										<input class="input-ingresar"  required name="dominio" type="text"/></p>
+										<input class="input-ingresar"  required name="dominio" type="text" style="text-transform:uppercase"/></p>
 										
 										<label  for="marca">Marca:</label>
 										<p class="boton-margen-inferior">
-										<input class="input-ingresar"  required name="marca" type="text" id="marcaO"/></p>
-										<input class="input-ingresar"  required name="marca" type="text" id="marca" style="display:none;"/></p>
-										<input class="input-ingresar"  required name="marca" type="text" id="marcaM" style="display:none;"/></p>
+										<input class="input-ingresar"   name="marcaO" type="text" id="marcaO" /></p>
+										<input class="input-ingresar"   name="marca" type="text" id="marca" style="display:none;"/></p>
+										<input class="input-ingresar"   name="marcaM"  type="text" id="marcaM" style="display:none;"/></p>
 										
 										<label for="modelo">Modelo:</label>
 										<p class="boton-margen-inferior">
-										<input class="input-ingresar"  required name="modelo" type="text"/></p>
+										<input class="input-ingresar"  required name="modelo" type="text" style="text-transform:uppercase"/></p>
 									    
 									    <label for="motivo">Motivo:</label>
 									    <p class="boton-margen-inferior">
 									    <select class="input-ingresar" id="motivo" name="motivo">
 									      <option value="-1" selected="">Selecciona</option>
-									      <option value="doc">DOCUMENTACION</option>
-									      <option value="est">EST.PROHIBIDO</option>
-									      <option value="placas">PLACAS DE DOMINIO</option>
-									      <option value="alcoholemia">ALCOHOLEMIA</option>
-									      <option value="abandonado">ABANDONADO</option>
-									      <option value="uber">UBER</option>
-									      <option value="uber">ESTUPEFACIENTES</option>
+									      <option value="DOC">DOCUMENTACION</option>
+									      <option value="EST.PROHIBIDO">EST.PROHIBIDO</option>
+									      <option value="PLACAS">PLACAS DE DOMINIO</option>
+									      <option value="ALCHOLEMIA">ALCOHOLEMIA</option>
+									      <option value="ABANDONADO">ABANDONADO</option>
+									      <option value="UBER">UBER</option>
+									      <option value="ESTUPEFACIENTES">ESTUPEFACIENTES</option>
 									    </select></p>
 										<label for="chofer">N°Chasis:</label>
 										<p class="boton-margen-inferior">
@@ -179,29 +179,38 @@ function visibility(select) {
 						    <div class="col-lg-4">
 						      		<div class="panel panel-primary" >
      								 <div class="panel-heading">Confirmar ingreso</div>
-      								 <div class="panel-body">   
+      								 <div class="panel-body">  
+      								 
+      								 <label for="chofer">Levantado en:</label>
+										<p class="boton-margen-inferior">
+										<input class="input-ingresar"  required name="levantadoEn" type="text"/></p>
+      								  
 						      
 						      		<label for="dniDoc">Copia Inventario: </label> 
 									<p class="boton-margen-inferior">
-									<input type="file" required name="inventario" /></p>
+									<input type="file"  name="inventario" /></p>
 									
 						            <label for="inputdefault">Observaciones:</label>
 									<p class="boton-margen-inferior">
 									<textarea name="observaciones" rows="5" cols="30"></textarea></p>
 									
-									<p class="boton-margen-inferior">
-									<input onclick="mensajeConfirmaI()" class="boton input-ingresar" type="submit" name="Cargar" value="Cargar Registro"/></p>
-						     		
+
+						     		<p class="boton-margen-inferior">
+									<input class="boton input-ingresar"  name="ingresarRegistro" value="Registrar" type="submit" /></p>
+		
 						     </div>
 						     </div>
 						     </div>
 						     </div>
-				    </form>
+				   
 						     
 				</div>
+				
 		</div>		
+			</div>
 </div>
-</div>
+
+ </form>
 </body>
 
 <%@include file="footer.jsp" %>
