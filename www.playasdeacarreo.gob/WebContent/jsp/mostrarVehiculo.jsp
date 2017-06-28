@@ -150,11 +150,12 @@
 						
 											<%if(request.getAttribute("usuario").equals("Pizarro Maximiliano")==true && vehiculo.getRegistro().equals("null")==false){%>
 											<form action="egreso">
-											<div class="col-md-16 text-center">
-												<p class="boton-margen-inferior">
-												<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar vehiculo"/></p>	
-											</div>
+												<input class="boton input-ingresar" type="submit" name="egresar" value="Egresar"/>		
 											</form>	
+											<p class="boton-margen-inferior"></p>
+											<form action="editarRegistro">
+												<input class="boton input-ingresar" type="submit" name="editar" value="Editar Registro"/>
+											</form>
 											<%} %>
 											
 											<%if(request.getAttribute("usuario").equals("Pietrafesa Sergio")==true && vehiculo.getRegistro().equals("null")==false){%>

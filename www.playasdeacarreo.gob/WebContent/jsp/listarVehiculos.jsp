@@ -42,7 +42,7 @@
       <tr>
 		 <th>REGISTRO</th>
 		 <th>FECHA</th>
-		 <th>HORA</th>
+		 <th>DESCRIPCION</th>
 		 <th>DOMINIO</th>
 		 <th>MARCA</th>
 		 <th>MODELO</th>
@@ -59,7 +59,7 @@
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>
 						<td><%=Funciones.traerFechaCorta4(vehiculo.getFechaIng())%></td>
-						<td><%=vehiculo.getHoraIng()%></td>
+						<td><%=vehiculo.getDescripcion()%></td>
 						<td><%=vehiculo.getDominio()%></td>
 						<td><%=vehiculo.getMarca()%></td>
 						<td><%=vehiculo.getModelo()%></td>

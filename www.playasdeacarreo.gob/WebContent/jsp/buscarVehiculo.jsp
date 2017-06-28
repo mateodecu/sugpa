@@ -51,16 +51,16 @@ $(document).ready(function() {
   <div class="panel-group">
 
     <div class="panel panel-primary">
-      <div class="panel-heading">Complete los datos de busqueda</div>
+      <div class="panel-heading">Complete un dato de busqueda</div>
       <div class="panel-body">
 
 				  <table class="table table-striped">
 				    <thead>
 				      <tr>
 						 <th>DOMINIO:</th>
-						 <th>ACTA DE COMPROBACION:</th>
-						 <th>BOLETA DE CITACION:</th>
-						 <th>ACTA DE CONSTATACION:</th> 
+						 <th>AGENTE LABRANTE:</th>
+						 <th>INFRACTOR/CONTRAVENTOR:</th>
+						 <th>LEVANTADO EN:</th> 
 						 <th>FECHA DE INGRESO:</th> 
 						    
 				      </tr>
@@ -73,15 +73,15 @@ $(document).ready(function() {
 										<input class="input-ingresar"  name="dominio" type="text"/></p></td>
 										
 										<td><p class="boton-margen-inferior">
-										<input class="input-ingresar"  name="acta" type="text"/></p>	
+										<input class="input-ingresar"  name="agente" type="text"/></p>	
 										</td>
 				
 										<td><p class="boton-margen-inferior">
-										<input class="input-ingresar"  name="boleta" type="text"/></p>
+										<input class="input-ingresar"  name="infractor" type="text"/></p>
 										</td>
 										
 										<td><p class="boton-margen-inferior">
-										<input class="input-ingresar"  name="actaAlco" type="text"/></p>
+										<input class="input-ingresar"  name="levantadoEn" type="text"/></p>
 										</td>
 										
 										<td><p class="boton-margen-inferior"><input class="input-ingresar"	id="datepicker_fecha" /></p></td>

@@ -13,13 +13,13 @@ public class TestAgregarRegistro {
 	
 	
 	
-	//REGISTRO EXISTENTE
+	/*REGISTRO EXISTENTE
 	try {
 	adm.agregar(new GregorianCalendar(), Funciones.traerHora2(new GregorianCalendar()), "AUTO", "LOY554", "HONDA", "TITAN", "DOC", "Pedro escobar 1290", "C00123445", "S/D","S/D", "GALIAN MATIAS", "JUANJO MENDEZ", "PIZARRO", "MARTINEZ", "SI", "980981029809582ANNA");
 	} catch (Exception e) {
 	
 		e.printStackTrace();
-	}
+	}*/
 	
 	
 	//REGISTRO NUEVO

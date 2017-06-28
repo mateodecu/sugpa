@@ -44,7 +44,23 @@ public class RegistroDao {
 				}
 		return objeto;
 		}
-
+	
+	public Registro traerRegistro1(String registro) throws HibernateException {
+		Registro objeto = null;
+		try {
+			iniciaOperacion();
+	
+			String hql="from Registro where registro =:registro";
+			objeto=(Registro) session.createQuery(hql).setParameter("registro", (String)registro).uniqueResult();
+	
+		}catch (HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		} finally {
+				session.close();
+				}
+		return objeto;
+		}
 //Listar Vehiculos
 	
 	@SuppressWarnings("unchecked")
@@ -136,6 +152,21 @@ public class RegistroDao {
 			session.close();
 		}
 
+	}
+//Modificar
+	
+	public void actualizar(Registro objeto) throws HibernateException {
+
+		try {
+			iniciaOperacion();
+			session.update(objeto);
+			tx.commit();
+		} catch (HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		} finally {
+			session.close();
+		}
 	}
 	
 	

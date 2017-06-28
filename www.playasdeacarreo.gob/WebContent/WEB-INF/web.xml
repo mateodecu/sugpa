@@ -81,6 +81,12 @@
       <servlet-name>ControladorEditarRegistro</servlet-name>
     	<servlet-class>com.dgcactysv.controladores.ControladorEditarRegistro</servlet-class>
   </servlet>
+  <servlet>
+      <servlet-name>ControladorEditado</servlet-name>
+    	<servlet-class>com.dgcactysv.controladores.ControladorEditado</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -131,6 +137,10 @@
       <servlet-mapping>
     <servlet-name>ControladorEditarRegistro</servlet-name>
     <url-pattern>/editarRegistro</url-pattern>
+  </servlet-mapping>
+        <servlet-mapping>
+    <servlet-name>ControladorEditado</servlet-name>
+    <url-pattern>/editado</url-pattern>
   </servlet-mapping>
   
 	<welcome-file-list>

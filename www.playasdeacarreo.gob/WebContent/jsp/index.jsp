@@ -72,10 +72,6 @@
 		</div>
 	</div>
 
-	<div align="center">
-		<h3><a href="downloadExcel">Download Excel Document</a></h3>
-	</div>
-
 </body>    
 <%@include file="footer.jsp" %>	
 </html>

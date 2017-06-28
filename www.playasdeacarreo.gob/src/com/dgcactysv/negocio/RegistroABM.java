@@ -25,6 +25,12 @@ public class RegistroABM {
 		}
 		return a;
 	}
+	public Registro traerRegistro1(String registro) throws Exception{
+	
+		Registro r= daoA.traerRegistro1(registro);
+		if(r == null) throw new Exception ("No existe el registro");// implementar si c es null lanzar Exception
+		return r;
+	}
 	
 	public List<Registro> traerListaRegistro(){
 		
@@ -102,7 +108,16 @@ public class RegistroABM {
 			return max;
 		}
 
-	
+		public void modificar(Registro r) throws Exception{
+			/* implementar antes de actualizar que no exista un cliente con el mismo documento a modificar y con el mismo id, lanzar la Exception */
+			Registro r2=daoA.traerRegistro1(r.getRegistro());
+			if(r2!=null)
+			{
+			daoA.actualizar(r);
+			}else{
+				throw new Exception("No existe el registro en playa");
+			}
+		}
 	
 	}
 
