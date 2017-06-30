@@ -37,11 +37,7 @@ public class ControladorEditarRegistro extends HttpServlet {
 		
 		request.setAttribute("vehiculo", (Registro) session.getAttribute("vehiculo"));
 		
-/*		
-		Vehiculo vehiculo = (Vehiculo) request.getAttribute("vehiculo");
-		
-		request.setAttribute("vehiculo", vehiculo);
-*/		
+		request.setAttribute("demo", request.getParameter("demo"));
  		
 		request.getRequestDispatcher("/jsp/editarRegistro.jsp").forward(request, response);	
 	

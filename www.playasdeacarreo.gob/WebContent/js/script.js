@@ -50,6 +50,34 @@ function printPage() {
 }
 
 
+function Registro () {
+	this.registro = registro;
+	this.fechaIng = fechaIng;
+	this.horaIng = horaIng;
+	this.descripcion = descripcion;
+	this.dominio = dominio;
+	this.marca = marca;
+	this.modelo = modelo;
+	this.motivo = motivo;
+	this.levantadoEn = levantadoEn;
+	this.actaDeComprobacion = actaDeComprobacion;
+	this.actaContravencional = actaContravencional;
+	this.boletaDeCitacion = boletaDeCitacion;
+	this.agenteLabrante = agenteLabrante;
+	this.infractor = infractor;
+	this.agenteDePlaya = agenteDePlaya;
+	this.gruaChofer = gruaChofer;
+	this.inventario = inventario;
+	this.nChasisNmotor = nChasisNmotor;
+	this.fechaEgr = fechaEgr;
+	this.horaEgr = horaEgr;
+	this.personaQretiro = personaQretiro;
+	this.entregaAgente = entregaAgente;
+	this.notas = notas;
+	this.controlDeLegales = controlDeLegales;
+	this.trasladoAcompactacion = trasladoAcompactacion;
+}
+
 /*Generar tabla dinamica*/
 function format ( d ) {
 	var fecha = new Date();
@@ -63,12 +91,22 @@ function format ( d ) {
 		mes = "0" + mes
 		
 		
-    return 'Levantando en : '+d.levantadoEn+'<br>'+'Fecha de ingreso: '+dia+'/'+mes+'/'+anio+' Hora:'+d.horaIng+'<br>'+'Agente labrante: '+d.agenteLabrante+'<br>'+'Infractor/contraventor: '+d.infractor+'<br>'+'Agente de Playa: '+d.agenteDePlaya+'<br>'+'Chofer de grua: '+d.gruaChofer+'<br>';
+    return  'Registro: '+d.registro+'<br>'
+    		+'Levantando en: '+d.levantadoEn+'<br>'
+    		+'Fecha de ingreso: '+dia+'/'+mes+'/'+anio+' Hora:'+d.horaIng+'<br>'
+    		+'Agente labrante: '+d.agenteLabrante+'<br>'
+    		+'Infractor/contraventor: '+d.infractor+'<br>'
+    		+'Agente de Playa: '+d.agenteDePlaya+'<br>'
+    		+'Chofer de grua: '+d.gruaChofer+'<br>'
+		    +'<form action=editarRegistro>'
+			+'<input class=boton input-ingresar type=submit name=editar value=Editar />'
+			+'<input name="demo" style="display:none;" value="'+d.dominio+'" type="text">'
+			+'</form>';
 }
 
 $(document).ready(function(){
 
-	  
+//tabla dinamica con mostrar detalle	  
 	 var table = $('#mydata').DataTable({
 	        "processing": true,
 		    "sAjaxSource":"jsp/data.jsp",
@@ -128,11 +166,19 @@ $(document).ready(function(){
 	 
 } );
 
-$(document).ready(function(){	  
+$(document).ready(function(){
+	//tabla dinamica con popup
 	 var tabla2 = $('#mydata2').DataTable(); 
-	 
+	/*tabla2.row( this ).data
+	 * me trae todos los datos separados del td separados por ;
+	*tabla2.row( this ).index
+	*me trae el indice del array
+	*/
+	 $('#mydata2 tbody').on( 'click', 'tr', function () {
+		  var rowData = tabla2.row( this ).index();
+		  document.getElementById("row").innerHTML=rowData; 
 } );
-
+} );
 
 /*Calendario*/
 

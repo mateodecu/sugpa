@@ -39,6 +39,15 @@ public class ControladorEditado extends HttpServlet {
 		RegistroABM adm= facade.getRegistroABM();
 		
 		Registro r = (Registro) session.getAttribute("vehiculo");
+		
+		String d=(String) session.getAttribute("demo");
+		if(r==null){
+		try {
+			r= adm.traerRegistro(d);
+		} catch (Exception e1) {
+			request.getRequestDispatcher("/jsp/errorEdicion.jsp").forward(request, response);
+		}}
+		
 		r.setDominio(request.getParameter("dominio"));
 		r.setMarca(request.getParameter("marca"));
 		r.setModelo(request.getParameter("modelo"));
