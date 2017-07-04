@@ -65,8 +65,7 @@
 						      </tr>
 						    </thead>
 						    <tbody>
-							 			<%Registro vehiculo= new Registro();
-							 			vehiculo= (Registro) request.getAttribute("vehiculo");
+							 			<%Registro vehiculo = (Registro) request.getAttribute("vehiculo");
 							 			
 							 			//Automotor automotor=new Automotor();
 							 			//automotor=(Automotor) request.getAttribute("automotor");

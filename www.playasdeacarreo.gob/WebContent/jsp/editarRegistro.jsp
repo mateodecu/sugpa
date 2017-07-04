@@ -50,8 +50,7 @@
       </tr>
     </thead>
     <tbody>
-	 			<%Registro vehiculo= new Registro();
-	 			vehiculo= (Registro) request.getAttribute("vehiculo");
+	 			<%Registro vehiculo= (Registro) request.getAttribute("vehiculo");
 					 %>		 
 					<tr>
 						<td><%=vehiculo.getRegistro()%></td>

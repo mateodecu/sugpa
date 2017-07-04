@@ -50,33 +50,6 @@ function printPage() {
 }
 
 
-function Registro () {
-	this.registro = registro;
-	this.fechaIng = fechaIng;
-	this.horaIng = horaIng;
-	this.descripcion = descripcion;
-	this.dominio = dominio;
-	this.marca = marca;
-	this.modelo = modelo;
-	this.motivo = motivo;
-	this.levantadoEn = levantadoEn;
-	this.actaDeComprobacion = actaDeComprobacion;
-	this.actaContravencional = actaContravencional;
-	this.boletaDeCitacion = boletaDeCitacion;
-	this.agenteLabrante = agenteLabrante;
-	this.infractor = infractor;
-	this.agenteDePlaya = agenteDePlaya;
-	this.gruaChofer = gruaChofer;
-	this.inventario = inventario;
-	this.nChasisNmotor = nChasisNmotor;
-	this.fechaEgr = fechaEgr;
-	this.horaEgr = horaEgr;
-	this.personaQretiro = personaQretiro;
-	this.entregaAgente = entregaAgente;
-	this.notas = notas;
-	this.controlDeLegales = controlDeLegales;
-	this.trasladoAcompactacion = trasladoAcompactacion;
-}
 
 /*Generar tabla dinamica*/
 function format ( d ) {
@@ -98,8 +71,14 @@ function format ( d ) {
     		+'Infractor/contraventor: '+d.infractor+'<br>'
     		+'Agente de Playa: '+d.agenteDePlaya+'<br>'
     		+'Chofer de grua: '+d.gruaChofer+'<br>'
+    		+'<p class=boton-margen-inferior>'
 		    +'<form action=editarRegistro>'
 			+'<input class=boton input-ingresar type=submit name=editar value=Editar />'
+			+'<input name="demo" style="display:none;" value="'+d.dominio+'" type="text">'
+			+'</form>'
+			+'</p>'
+		    +'<form action=egreso>'
+			+'<input class=boton input-ingresar type=submit name=egresar value=Egresar />'
 			+'<input name="demo" style="display:none;" value="'+d.dominio+'" type="text">'
 			+'</form>';
 }
@@ -126,7 +105,7 @@ $(document).ready(function(){
 	                    { "data": "boletaDeCitacion" },	                    
 	                    { "data": "actaContravencional" }
 	                    ],
-	      "order": [[1, 'asc']]
+	      "order": [[1, 'dsc']]
 		  }
 			 );
 	

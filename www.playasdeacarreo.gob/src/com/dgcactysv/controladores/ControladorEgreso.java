@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.dgcactysv.modelo.Registro;
+import com.dgcactysv.negocio.Facade;
+import com.dgcactysv.negocio.RegistroABM;
+
 
 
 public class ControladorEgreso extends HttpServlet {
@@ -27,7 +31,19 @@ public class ControladorEgreso extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
+		Facade facade=new Facade();
+		RegistroABM adm= facade.getRegistroABM();
 
+		try {
+			Registro vehiculo=adm.traerRegistro(request.getParameter("demo"));
+			request.setAttribute("vehiculo",vehiculo);
+			session.setAttribute("vehiculo",vehiculo);
+		} catch (Exception e) {
+			request.getRequestDispatcher("/jsp/errorCarga.jsp").forward(request, response);	
+		}
+		
+	
+		
 		request.getRequestDispatcher("/jsp/egresarVehiculo.jsp").forward(request, response);	
 
 	}

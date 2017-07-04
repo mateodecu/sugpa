@@ -35,10 +35,17 @@ public class ControladorEditarRegistro extends HttpServlet {
 		HttpSession session= (HttpSession) request.getSession();
 		request.setAttribute("usuario", (String) session.getAttribute("usuario"));
 		
-		request.setAttribute("vehiculo", (Registro) session.getAttribute("vehiculo"));
+		Facade facade=new Facade();
+		RegistroABM adm= facade.getRegistroABM();
 		
-		request.setAttribute("demo", request.getParameter("demo"));
- 		
+		try {
+			Registro vehiculo=adm.traerRegistro(request.getParameter("demo"));
+			request.setAttribute("vehiculo",vehiculo);
+			session.setAttribute("vehiculo",vehiculo);
+		} catch (Exception e) {
+			request.setAttribute("vehiculo", (Registro) session.getAttribute("vehiculo"));
+		}
+		
 		request.getRequestDispatcher("/jsp/editarRegistro.jsp").forward(request, response);	
 	
 

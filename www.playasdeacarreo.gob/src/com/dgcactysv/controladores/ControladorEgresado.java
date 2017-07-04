@@ -1,11 +1,7 @@
 package com.dgcactysv.controladores;
 
-import com.dgcactysv.negocio.*;
-import com.dgcactysv.datos.*;
-import com.dgcactysv.modelo.Registro;
-
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.GregorianCalendar;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,11 +9,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.dgcactysv.funciones.Funciones;
+import com.dgcactysv.modelo.Registro;
+import com.dgcactysv.negocio.Facade;
+import com.dgcactysv.negocio.RegistroABM;
 
 
 
-
-public class ControladorEditado extends HttpServlet {
+public class ControladorEgresado extends HttpServlet {
 	//Hotel hotel=Hotel.getInstanciaHotel();		
 	private static final long serialVersionUID = 1L;
 	
@@ -39,21 +38,12 @@ public class ControladorEditado extends HttpServlet {
 		RegistroABM adm= facade.getRegistroABM();
 		
 		Registro r = (Registro) session.getAttribute("vehiculo");
-
-		r.setDominio(request.getParameter("dominio"));
-		r.setMarca(request.getParameter("marca"));
-		r.setModelo(request.getParameter("modelo"));
-		r.setMotivo(request.getParameter("motivo"));
-		r.setDescripcion(request.getParameter("descripcion"));
-		r.setActaDeComprobacion(request.getParameter("actac"));
-		r.setBoletaDeCitacion(request.getParameter("actaz"));
-		r.setActaContravencional(request.getParameter("acta"));
-		r.setAgenteLabrante(request.getParameter("agente"));
-		r.setInfractor(request.getParameter("infractor"));
-		r.setAgenteDePlaya(request.getParameter("agentep"));
-		r.setGruaChofer(request.getParameter("chofer"));
-		r.setLevantadoEn(request.getParameter("levantadoEn"));
 		
+		r.setFechaEgr(new GregorianCalendar());
+		r.setHoraIng(Funciones.traerHora2(new GregorianCalendar()));
+		r.setPersonaQretiro(request.getParameter("tipo")+request.getParameter("nombre")+request.getParameter("apellido")+request.getParameter("dni"));
+		r.setNotas(request.getParameter("observaciones"));
+	
 		
 		try {
 			adm.modificar(r);
@@ -68,15 +58,5 @@ public class ControladorEditado extends HttpServlet {
 			request.getRequestDispatcher("/jsp/errorEdicion.jsp").forward(request, response);	
 
 		}
-		
-		
-/*		
-		Vehiculo vehiculo = (Vehiculo) request.getAttribute("vehiculo");
-		
-		request.setAttribute("vehiculo", vehiculo);
-*/		
- 		
-	
-
-	}
+}
 }

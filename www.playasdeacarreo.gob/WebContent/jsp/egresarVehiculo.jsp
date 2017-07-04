@@ -1,5 +1,6 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="com.dgcactysv.modelo.Registro" %>
 <%@include file="header.jsp"%>	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -33,7 +34,7 @@
 
  
 
-<form method="post" action="/www.playasdeacarreo.gob/bienvenido">
+<form method="post" action="egresado">
 
 <div class="container">
   <h2>Egresar vehiculo:</h2> <br>
@@ -43,14 +44,39 @@
       <div class="panel-heading">Complete los datos del egreso</div>
       <div class="panel-body">
 								  <div class="row">
-								    <div class="col-lg-4">
+								  
+								  	<div class="col-lg-4">
+								          <div class="panel panel-primary">
+		     								 <div class="panel-heading">Datos del vehiculo</div>
+		      								 <div class="panel-body">
+										      		<%Registro vehiculo= (Registro) request.getAttribute("vehiculo"); %>		 
+												
+												<label for="tipo">Registro:</label>
+												<p class="boton-margen-inferior">
+												<%=vehiculo.getRegistro()%></p>
+												
+												<label for="apellido">Dominio:</label> 
+												<p class="boton-margen-inferior">
+												<%=vehiculo.getDominio()%></p>
+												
+												<label for="nombre">Marca:</label>
+												<p class="boton-margen-inferior">
+												<%=vehiculo.getMarca()%></p>
+												
+												<label for="dni">Modelo:</label> 
+												<p class="boton-margen-inferior">
+												<%=vehiculo.getModelo()%></p>
+									
+								    </div>
+								    </div>
+								    
+								  
+								  
+								   
 								          <div class="panel panel-primary">
 		     								 <div class="panel-heading">Datos de la persona</div>
 		      								 <div class="panel-body">
 										      	
-												<label for="registro">N°REGISTRO:</label> 
-												<p class="boton-margen-inferior">
-												<input class="input-ingresar" required name="registro" type="text"/></p>
 												
 												<label for="tipo">Tipo:</label>
 												<p class="boton-margen-inferior">
@@ -83,23 +109,23 @@
 		      								 <div class="panel-body">
 												<label for="dniDoc">Copia DNI: </label> 
 												<p class="boton-margen-inferior">
-												<input type="file" required name="dniDoc" /></p>
+												<input type="file"  name="dniDoc" /></p>
 												 
 												<label for="licencia">Copia Licencia: </label> 
 												<p class="boton-margen-inferior">
-												<input type="file" required name="licencia" /></p>
+												<input type="file"  name="licencia" /></p>
 												
 												<label for="cedula">Copia Cedula: </label> 
 												<p class="boton-margen-inferior">				
-												<input type="file" required name="cedula" /></p>
+												<input type="file"  name="cedula" /></p>
 												 
 												<label for="seguro">Copia Seguro: </label> 
 												<p class="boton-margen-inferior">
-												<input type="file" required name="seguro" /></p>
+												<input type="file"  name="seguro" /></p>
 												 
 												<label for="comunicado">Copia DGAI: </label> 
 												<p class="boton-margen-inferior">
-												<input type="file" required name="comunicado" /></p>
+												<input type="file"  name="comunicado" /></p>
 														
 								    </div>
 								    </div>

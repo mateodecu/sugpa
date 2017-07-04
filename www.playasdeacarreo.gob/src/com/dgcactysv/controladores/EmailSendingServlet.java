@@ -1,5 +1,6 @@
 package com.dgcactysv.controladores;
 
+import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.ServletContext;
@@ -8,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import com.dgcactysv.negocio.EmailUtility;
 /**
  * A servlet that takes message details from user and send it as a new e-mail
  * through an SMTP server.
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * 
  */
 @WebServlet("/EmailSendingServlet")
+@SuppressWarnings("deprecation")
 public class EmailSendingServlet extends HttpServlet {
 	private String host;
 	private String port;
@@ -39,13 +41,15 @@ public class EmailSendingServlet extends HttpServlet {
 		String subject = request.getParameter("subject");
 		String content = request.getParameter("content");
 		
+		File file=new File(request.getRealPath("img/Logo.png"));
+		
 		content=content+"Enviado por Pizarro Maximiliano";
 		
 		String resultMessage = "";
 
 		try {
 			EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
-					content);
+					content,file);
 			resultMessage = "El email fue enviado con exito";
 		} catch (Exception ex) {
 			ex.printStackTrace();
