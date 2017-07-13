@@ -3418,7 +3418,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
 	color: #fff;
-	background-color: black;
+	background-color: rgb(029, 029, 027);
 	border-color: black
 }
 
@@ -5000,7 +5000,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 
 .navbar-inverse {
-	background-color: #222;
+	background-color: rgb(029, 029, 027);
 	border-color: #080808
 }
 
@@ -6230,7 +6230,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus,
 
 .panel-default>.panel-heading {
 	color: white;
-	background-color: black;
+	background-color: rgb(029, 029, 027);
 	border-color: #ddd
 }
 
